@@ -31,7 +31,7 @@ In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes se
 (In Mainsail main page choose: Interface settings --> Macros --> Add group name).<br><br>
 
 <b> Movement: (adjusted to: not displayed when pinting) </b><br>
-- Temp_homing <br>
+- Temp_Homing <br>
 - E Stepper off <br>
 - Park_toolhead <br>
 
@@ -57,6 +57,22 @@ In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes se
 - set pause next layer <br>
 - Activate power off <br>
 - Deactivate power off
+
+
+<h3>Filament Runout Sensor and Runout Distance:</h3>
+<b>Description:</b> Adjustable distance delay (to run PAUSE) triggered when filament sensor is activated to save filament.<br>
+Distance = Length from filament runout switch to extruder gear (set to <distance> variable below with some reserve).<br>
+Filament sensor connected to Octopus Board pin: PG11<br><br>
+
+>[gcode_macro runout_distance] <br>
+>description: Filament Runout Distance <br>
+>variable_distance_end: 0 <br>
+>gcode: <br>
+>   {% set distance = 930 %}    ## <<<< ADJUSTABLE LENGTH of PTFE tube (in mm, from filament sensor to extruder gear with some reserve) <br>
+>   {% set start_point = printer.print_stats.filament_used | int %} <br>
+>   {% set end_point = (start_point + distance) | int %}  <br>
+>   SET_GCODE_VARIABLE MACRO=runout_distance VARIABLE=distance_end VALUE={end_point}  <br>
+>   UPDATE_DELAYED_GCODE ID=runout_check DURATION=1 <br>
 
 <h3>Information about Proximity inductive probe SN-04 PNP and initial Z homing:</h3>
 For the initial Z home (after starting the printer), it is recommended to preheat the nozzle, <br>

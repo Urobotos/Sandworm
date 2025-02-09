@@ -135,7 +135,7 @@ home\biqu\printer_data\config\ <br><br>
 
 And restart your printer for the first <b>Sandworm</b> launch...<br><br>
 
-
+That's it, you've reached the end and your circle has closed. Thank you for your patience with the tutorials and for stay with them until the end. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy the printing!
 
 ![Urobotos Project](https://github.com/zacharcc/Sandworm/blob/urobotos/Urobotos.png))
 

@@ -1,26 +1,18 @@
 
 # <h2> Sandworm 3D printer - Klipper macros: </h2>
 
-# <h3>Basic information, for get started: </h3>
-When marking and distinguishing variables from regular text, I use <> brackets; always enter values ​​into code macros without <> brackets.<br>
-For example, for a note in the text: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change <value> to your length in mm in the distance variable below:   # And your lenght value will be for example 930 mm<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% set distance = <value> %}                                          # Original code with <> brackets<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% set distance = 930 %}                                              # Modified code after changing to the yours length (without <> brackets)<br>
-
 # <h3>In macros I use my modified mainsail.cfg file called mainsail_custom.cfg </h3>
-(the redirected incude is included in the printer.cfg file, no need edit)
-The modifications include:
+(the redirected incude is included in the printer.cfg file, no need edit)<br>
+The modifications include:<br>
 
-1. The fan (part cooling) turns off during PAUSE, and then resumes to its previous print speed during RESUME.
-Benefits: Fan will not spin unnecessarily during the pause, which can take longer with Filament Runout.
+1. The fan (part cooling) turns off during PAUSE, and then resumes to its previous print speed during RESUME.<br>
+Benefits: Fan will not spin unnecessarily during the pause, which can take longer with Filament Runout.<br>
 
-2. The second added modification is the <point_unretract> macro, this is the last code sent when printing is RESUMED (after PAUSE). 
-This is the coordinate point of the tool head on the print object when printing was paused and serves for 
-a small filling of the nozzle directly at the point when continuation of printing.
+2. The second added modification is the <point_unretract> macro, this is the last code sent when printing is RESUMED (after PAUSE). <br>
+This is the coordinate point of the tool head on the print object when printing was paused and serves for <br>
+a small filling of the nozzle directly at the point when continuation of printing.<br>
 Benefit: No more empty layers on printed parts after a pause.
 					  
-
 #  <h3>PrusaSlicer START and END gcodes: </h3>
 In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes sections:
 
@@ -31,12 +23,11 @@ BED_MESH_CLEAR <br>
 start_gcode BED_TMP=[first_layer_bed_temperature] EXT_TMP=[first_layer_temperature] CHAMBER_TMP=[chamber_temperature] CHAMBER_MIN_TMP=[chamber_minimal_temperature] <br>
 
 <b> End gcodes:</b><br>
-end_gcode <br>
-
+end_gcode
 
 # <h3>Mainsail and macro Buttons:</h3>
 (find the macro names below in the list of available macros and add them to the main page as buttons).<br>
-(In Mainsail main page choose: Interface settings --> <> Macros --> Add Group).<br>
+(In Mainsail main page choose: Interface settings --> Macros --> Add Group).<br>
 
 <b> Movement: (adjusted to: not displayed when pinting) </b><br>
 Temp_homong <br>
@@ -47,12 +38,12 @@ Park_toolhaead <br>
 Filament load <br>
 Filament unload <br>
 M600 <br>
-Noozle Clean (via brush) <br>
+Noozle Clean  &nbsp;&nbsp;&nbsp; # (via brush) <br>
 E stepper off <br>
 
 <b> Chamber Lights (always on) </b><br>
-Lights on off (toogle button) <br>
-Lights max (lights on maximum brithness) <br>
+Lights on off  &nbsp;&nbsp; &nbsp;&nbsp; # (toogle button - ON or OFF, its depends on previous Lights state) <br>
+Lights max     &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;# (lights on maximum brithness) <br>
 
 <b> Calibration: (not displayed when pinting and Pause) </b><br>
 Z Endstop calibrate 01 <br>
@@ -64,8 +55,7 @@ Bed mesh calibrate 04 <br>
 set pause at layer <br>
 set pause next layer <br>
 Activate power off <br>
-Deactivate power off <br>
-
+Deactivate power off
 
 # <h3>Information about Proximity inductive probe SN-04 PNP and initial Z homing:</h3>
 For the initial Z home (after starting the printer), it is recommended to preheat the nozzle, <br>
@@ -78,12 +68,12 @@ just preheat the nozzle remotely and start Z homing, after which the filament wi
 remain bent and the next Z homing can be performed normally. <br>
 
 <b> Buil-in macros: </b><br>
-The printer handles this situation with a built-in automatic G28 XYZ macro <Temp_Homing>, <br>
+The printer handles this situation with a built-in automatic G28 XYZ macro <b>Temp_Homing</b>, <br>
 which preheats the nozzle (a little) and then performs Z homing. The macro is implemented in: <br>
 
 - Start Gcodes <br>
 - Noozle Clean (via brush, only when axis is not homed) <br>
-- And in the last row, <Temp_Homing> will appear as a clickable macro in the Mainsail console every time the printer is started. <br>
+- And in the last row, <b>Temp_Homing</b> will appear as a clickable macro in the Mainsail console every time the printer is started.
 
 # <h3> Language change:</h3>
 The current language version can be changed in the menu on the LCD display: <br>

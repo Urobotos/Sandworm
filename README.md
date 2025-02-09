@@ -70,7 +70,7 @@ set distance = <b>your_value_in_mm</b> . Subtract about 100mm from the measured 
 >description: Filament Runout Distance <br>
 >variable_distance_end: 0 <br>
 >gcode: <br>
->&nbsp;&nbsp;&nbsp;&nbsp;<b>{% set distance = 930 %}&nbsp;&nbsp;&nbsp;# <<< ADJUSTABLE length of PTFE tube (in mm)</b><br>
+>&nbsp;&nbsp;&nbsp;&nbsp;<b>{% set distance = 930 %} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # <<< ADJUSTABLE length of PTFE tube (in mm)</b><br>
 >&nbsp;&nbsp;&nbsp;&nbsp;{% set start_point = printer.print_stats.filament_used | int %} <br>
 >&nbsp;&nbsp;&nbsp;&nbsp;{% set end_point = (start_point + distance) | int %}  <br>
 >&nbsp;&nbsp;&nbsp;&nbsp;SET_GCODE_VARIABLE MACRO=runout_distance VARIABLE=distance_end VALUE={end_point}  <br>

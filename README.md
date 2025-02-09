@@ -61,7 +61,7 @@ In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes se
 
 <h3>Filament Runout Sensor and Runout Distance macro:</h3>
 <b>Description:</b> Adjustable distance delay (to run PAUSE) that is triggered when the filament sensor is activated to save filament, with a millimetres countdown to the end on the LCD display.<br>
-<b>Distance</b> = Length from filament runout switch to extruder gear.<br>
+<b>Distance</b> = Length of PTFE tube from filament runout switch to extruder gear.<br>
 <b>Instructions:</b> Measure your PTFE tube length and enter value it into the <b>runout_distance</b> macro (in the <b>macros.cfg</b> file) and its variable:<br> 
 set distance = your_value_in_mm . Subtract about 100mm from the measured length of PTFE tube to allow for manual removal of the filament from the extruder gear. <br><br>
 

@@ -118,19 +118,18 @@ English, Cestina or Deutch <br>
 
 For remote control power ON/OFF by Relay it is need add somewhere to <b>moonraker.conf</b> file codes below: <br>
 
-[power printer] <br>
-type: gpio <br>
-pin: gpiochip0/gpio72  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # can be revesed by "!" , BTT-PI GPIO pin PC8 <br>
-initial_state: off  <br>
-off_when_shutdown: True  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Turning off when a shutdown/error occurs <br>
-locked_while_printing: True  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Preventing you from turning it off during a print <br>
-on_when_job_queued: True &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Toggling the power On when you send a file from the slicer to print <br>
-restart_klipper_when_powered: True <br>
-restart_delay: 1 <br>
-bound_service: klipper &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Making sure the Klipper service is started/restarted with the toggle <br>
+>[power printer] <br>
+>type: gpio <br>
+>pin: gpiochip0/gpio72  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # can be revesed by "!" , BTT-PI GPIO pin PC8 <br>
+>initial_state: off  <br>
+>off_when_shutdown: True  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Turning off when a >shutdown/error occurs <br>
+>locked_while_printing: True  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Preventing you from turning it off during a print <br>
+>on_when_job_queued: True &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Toggling the power On when you send a file >from the slicer to print <br>
+>restart_klipper_when_powered: True <br>
+>restart_delay: 1 <br>
+>bound_service: klipper &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Making sure the Klipper service is started/restarted with the toggle <br><br>
 
 
-<hr>
 <b>Now you have everything ready</b>, copy and paste all .cfg files (from here) into your directory: (overwrite printer.cfg file):<br> 
 home\biqu\printer_data\config\ <br><br>
 

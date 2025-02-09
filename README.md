@@ -1,6 +1,5 @@
 
-# <h2> Sandworm 3D printer - Klipper macros: </h2>
-
+# <h2>Sandworm 3D printer - Klipper macros: Urobotos DIY Project </h2>
 # <h3>In macros I use my modified mainsail.cfg file called mainsail_custom.cfg </h3>
 (the redirected incude is included in the printer.cfg file, no need edit)<br>
 The modifications include:<br>

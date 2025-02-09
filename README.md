@@ -13,10 +13,11 @@ This is the coordinate point of the tool head on the print object when printing 
 a small filling of the nozzle directly at the point when continuation of printing.<br>
 Benefit: No more empty layers on printed parts after a pause.
 					  
-<h3>PrusaSlicer START and END gcodes: </h3>
-In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes sections:
+<h3>PrusaSlicer - START and END gcodes: </h3>
 
-<b> Start gcodes:</b> (all single-line gcodes):<br>
+In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes sections:<br>
+
+<b> Start gcodes:</b> (all single-line gcodes):
 >SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count] <br>
 >CLEAR_PAUSE <br>
 >BED_MESH_CLEAR <br>
@@ -61,9 +62,9 @@ In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes se
 For the initial Z home (after starting the printer), it is recommended to preheat the nozzle, <br>
 due to filament leakage from the Volcano nozzle after the previous print. <br>
 Longer sticking filament does not cause much of a problem, it will bend on the SN-04 probe, <br>
-but short and hard could cause a shock displacement of the probe. <br>
+but short and hard could cause a shock displacement of the probe. <br><br>
 
-Solution: It is not required to go to the printer to manually clean the nozzle, <br>
+Solution: There is no required to go to the printer and manually clean the nozzle, <br>
 just preheat the nozzle remotely and start Z homing, after which the filament will <br>
 remain bent and the next Z homing can be performed normally. <br>
 

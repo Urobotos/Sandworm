@@ -34,7 +34,7 @@ In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes se
 - Temp_Homing <br>
 - steppers_off <br>
 - e_stepper_off <br>
-- Park_toolhead <br>
+- Park_Toolhead <br>
 
 <b> Filament: (not displayed when pinting) </b><br>
 - FILAMENT_LOAD <br>
@@ -44,8 +44,8 @@ In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes se
 - e_stepper_off <br>
 
 <b> Chamber Lights (always on) </b><br>
-- Lights on off  &nbsp;&nbsp; &nbsp;&nbsp; # (toggle button - ON or OFF, its depends on previous Lights state) <br>
-- Lights max     &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;# (lights on maximum brithness) <br>
+- lights_ON_OFF  &nbsp;&nbsp; &nbsp;&nbsp; # (toggle button - ON or OFF, its depends on previous Lights state) <br>
+- lights_max     &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;# (lights on maximum brithness) <br>
 
 <b> Calibration: (not displayed when pinting and Pause) </b><br>
 - Z_ENDSTOP_CALIBRATE_01 <br>
@@ -58,7 +58,6 @@ In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes se
 - set pause next layer <br>
 - ACTIVATE_POWER_OFF <br>
 - DEACTIVATE_POWER_OFF
-
 
 <h3>Filament Runout Sensor and Runout Distance:</h3>
 <b>Description:</b> Adjustable distance delay (to run PAUSE) triggered when filament sensor is activated to save filament.<br>

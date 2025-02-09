@@ -32,31 +32,32 @@ In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes se
 
 <b> Movement: (adjusted to: not displayed when pinting) </b><br>
 - Temp_Homing <br>
-- E Stepper off <br>
+- steppers_off <br>
+- e_stepper_off <br>
 - Park_toolhead <br>
 
 <b> Filament: (not displayed when pinting) </b><br>
-- Filament load <br>
-- Filament unload <br>
+- FILAMENT_LOAD <br>
+- FILAMENT_UNLOAD <br>
 - M600 <br>
-- Noozle Clean  &nbsp;&nbsp;&nbsp; # (via brush) <br>
-- E stepper off <br>
+- Nozzle_Clean  &nbsp;&nbsp;&nbsp; # (via brush) <br>
+- e_stepper_off <br>
 
 <b> Chamber Lights (always on) </b><br>
 - Lights on off  &nbsp;&nbsp; &nbsp;&nbsp; # (toggle button - ON or OFF, its depends on previous Lights state) <br>
 - Lights max     &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;# (lights on maximum brithness) <br>
 
 <b> Calibration: (not displayed when pinting and Pause) </b><br>
-- Z Endstop calibrate 01 <br>
-- Probe calibrate 02 <br>
-- Z tilt adjust 03 <br>
-- Bed mesh calibrate 04 <br>
+- Z_ENDSTOP_CALIBRATE_01 <br>
+- PROBE_CALIBRATE_02 <br>
+- Z_TILT_ADJUST_03 <br>
+- BED_MESH_CALIBRATE_04 <br>
 
 <b> Adjust print: (displayed only when pinting) </b><br>
 - set pause at layer <br>
 - set pause next layer <br>
-- Activate power off <br>
-- Deactivate power off
+- ACTIVATE_POWER_OFF <br>
+- DEACTIVATE_POWER_OFF
 
 
 <h3>Filament Runout Sensor and Runout Distance:</h3>

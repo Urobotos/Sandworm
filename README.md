@@ -17,14 +17,17 @@ Benefit: No more empty layers on printed parts after a pause.
 
 In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes sections:<br>
 
-<b> Start gcodes:</b> (the last start_gcode is single-line gcode, not wrapped!):
->SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count] <br>
->CLEAR_PAUSE <br>
->BED_MESH_CLEAR <br>
->start_gcode BED_TMP=[first_layer_bed_temperature] EXT_TMP=[first_layer_temperature] CHAMBER_TMP=[chamber_temperature] CHAMBER_MIN_TMP=[chamber_minimal_temperature] <br>
-
-<b> End gcodes:</b><br>
->end_gcode
+<b> START gcodes:</b>
+```
+SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
+CLEAR_PAUSE
+BED_MESH_CLEAR
+start_gcode BED_TMP=[first_layer_bed_temperature] EXT_TMP=[first_layer_temperature] CHAMBER_TMP=[chamber_temperature] CHAMBER_MIN_TMP=[chamber_minimal_temperature]
+```
+<b> END gcodes:</b><br>
+```
+end_gcode
+```
 
 <h3>Mainsail and custom macro buttons:</h3>
 (find the macro names below in the list of available macros and add them to the main page as buttons).<br>
@@ -66,15 +69,17 @@ In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes se
 
 <b>In macros.cfg you will look for the exact macro and distance variable to set as in the example below: </b><br>
 *(change the length value 930 to your current one, or leave 930 as default)*<br>
->[gcode_macro runout_distance] <br>
->description: Filament Runout Distance <br>
->variable_distance_end: 0 <br>
->gcode: <br>
->&nbsp;&nbsp;&nbsp;&nbsp;<b>{% set distance = 930 %} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # <<< ADJUSTABLE length of PTFE tube (in mm)</b><br>
->&nbsp;&nbsp;&nbsp;&nbsp;{% set start_point = printer.print_stats.filament_used | int %} <br>
->&nbsp;&nbsp;&nbsp;&nbsp;{% set end_point = (start_point + distance) | int %}  <br>
->&nbsp;&nbsp;&nbsp;&nbsp;SET_GCODE_VARIABLE MACRO=runout_distance VARIABLE=distance_end VALUE={end_point}  <br>
->&nbsp;&nbsp;&nbsp;&nbsp;UPDATE_DELAYED_GCODE ID=runout_check DURATION=1 <br>
+```
+[gcode_macro runout_distance]
+description: Filament Runout Distance
+variable_distance_end: 0
+gcode:
+   {% set distance = 930 %}       ## <<<< ADJUSTABLE LENGTH of PTFE tube (in mm, from filament sensor to extruder gear).
+   {% set start_point = printer.print_stats.filament_used | int %}
+   {% set end_point = (start_point + distance) | int %}
+   SET_GCODE_VARIABLE MACRO=runout_distance VARIABLE=distance_end VALUE={end_point}
+   UPDATE_DELAYED_GCODE ID=runout_check DURATION=1
+```
 
 <h3>Information about Proximity inductive probe SN-04 PNP and initial Z homing:</h3>
 For the initial Z home (after starting the printer), it is recommended to preheat the nozzle, <br>

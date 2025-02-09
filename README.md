@@ -65,7 +65,7 @@ In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes se
 <b>Instructions:</b> Measure your PTFE tube length and enter value it into the <b>runout_distance</b> macro (in the <b>macros.cfg</b> file) and its variable:<br> 
 set distance = your_value_in_mm . Subtract about 100mm from the measured length of PTFE tube to allow for manual removal of the filament from the extruder gear. The distance value is set to 930 by default. <br><br>
 
-<b>In macros.cfg you will look for the exact macro and distance variable like in the example below: </b><br>
+<b>In macros.cfg you will look for the exact macro and distance variable to set as in the example below: </b><br>
 >[gcode_macro runout_distance] <br>
 >description: Filament Runout Distance <br>
 >variable_distance_end: 0 <br>

@@ -3,7 +3,7 @@
 Author: Zachar Čuřík <br>
 Launch date: Q1 2025 <br>
 All code name: Sandworm Mach3 Y2025 GS556 (game_save_556) <br>
-Branch: Urobotos codes <br>
+Branch: Urobotos codes project <br>
 
 <h3>The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg: </h3>
 (the redirected incude is included in the printer.cfg file, no need edit, it is listed here for information only)<br>

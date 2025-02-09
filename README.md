@@ -44,7 +44,7 @@ In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes se
 - e_stepper_off <br>
 
 <b> Chamber Lights (always on) </b><br>
-- lights_ON_OFF  &nbsp;&nbsp; &nbsp;&nbsp; # (toggle button - ON or OFF, its depends on previous Lights state) <br>
+- lights_ON_OFF  &nbsp;&nbsp; &nbsp;&nbsp; # (toggle button - Lights ON or OFF, its depends on previous Lights state) <br>
 - lights_max     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;# (lights on maximum brithness) <br>
 
 <b> Calibration: (not displayed when pinting and Pause) </b><br>

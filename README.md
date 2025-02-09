@@ -92,7 +92,7 @@ English, Cestina or Deutch <br>
 # <h3>Manual for remotely control printer power ON and OFF via Relay:</h3>
 (The original code and setup instructions can be found at: https://github.com/tinntbg/auto-power-off-klipper ) <br>
 
-For remote control power ON/OFF by Relay it is need add somewhere to moonraker.conf file codes below: <br>
+For remote control power ON/OFF by Relay it is need add somewhere to <b>moonraker.conf</b> file codes below: <br>
 
 [power printer] <br>
 type: gpio <br>
@@ -107,8 +107,9 @@ bound_service: klipper &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb
 
 
 <hr>
-Niní máte vše připravené, <br>
+<b>Now you have everything ready</b>, copy and paste all .cfg files (from here) into your directory: (overwrite printer.cfg file):<br> 
+home\biqu\printer_data\config\ <br><br>
 
-home\biqu\printer_data\config\
+And restart your printer for the first <b>Sandworm</b> launch...
 
 

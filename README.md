@@ -114,7 +114,7 @@ English, Cestina or Deutch <br>
   SET_MENU_LANGUAGE LANGUAGE=3
 
 <h3>Setup for remotely control printer power ON and OFF via Relay:</h3>
-(The original code and setup instructions can be found at: https://github.com/tinntbg/auto-power-off-klipper ) <br>
+(The original code and setup instructions (from author Tinntbg) can be found at: https://github.com/tinntbg/auto-power-off-klipper ) <br>
 
 For remote control power ON/OFF by Relay it is need add somewhere to <b>moonraker.conf</b> file codes below: <br>
 
@@ -135,7 +135,7 @@ home\biqu\printer_data\config\ <br>
 And restart your printer for the first <b>Sandworm</b> launch...<br>
 
 <h3>I also recommend the feature: Klipper Adaptive Meshing Purging (KAMP)</h3>
-Great feature (from user Kyleisah) to Calibrate Bed Mesh only in the printed part area, to save time.<br>
+Great feature (from author Kyleisah) to Calibrate Bed Mesh only in the printed part area, to save time.<br>
 https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging <br><br><br>
 
 

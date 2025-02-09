@@ -8,7 +8,7 @@ The modifications include:<br>
 1. The fan (part cooling) turns off during PAUSE, and then resumes to its previous print speed during RESUME.<br>
 Benefits: Fan will not spin unnecessarily during the pause, which can take longer with Filament Runout.<br>
 
-2. The second added modification is the <point_unretract> macro, this is the last code sent when printing is RESUMED (after PAUSE). <br>
+2. The second added modification is the <b>point_unretract</b> macro, this is the last code sent when printing is RESUMED (after PAUSE). <br>
 This is the coordinate point of the tool head on the print object when printing was paused and serves for <br>
 a small filling of the nozzle directly at the point when continuation of printing.<br>
 Benefit: No more empty layers on printed parts after a pause.
@@ -17,15 +17,15 @@ Benefit: No more empty layers on printed parts after a pause.
 In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes sections:
 
 <b> Start gcodes:</b><br>
-SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count] <br>
-CLEAR_PAUSE <br>
-BED_MESH_CLEAR <br>
-start_gcode BED_TMP=[first_layer_bed_temperature] EXT_TMP=[first_layer_temperature] CHAMBER_TMP=[chamber_temperature] CHAMBER_MIN_TMP=[chamber_minimal_temperature] <br>
+>SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count] <br>
+>CLEAR_PAUSE <br>
+>BED_MESH_CLEAR <br>
+>start_gcode BED_TMP=[first_layer_bed_temperature] EXT_TMP=[first_layer_temperature] CHAMBER_TMP=[chamber_temperature] CHAMBER_MIN_TMP=[chamber_minimal_temperature] <br>
 
 <b> End gcodes:</b><br>
-end_gcode
+>end_gcode
 
-<h3>Mainsail and macro Buttons:</h3>
+<h3>Mainsail and custom macro Buttons:</h3>
 (find the macro names below in the list of available macros and add them to the main page as buttons).<br>
 (In Mainsail main page choose: Interface settings --> Macros --> Add Group).<br>
 

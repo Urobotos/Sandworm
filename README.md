@@ -87,7 +87,7 @@ just preheat the nozzle remotely and start Z homing, after which the filament wi
 remain bent and the next Z homing can be performed normally. <br>
 
 <b> Buil-in macros: </b><br>
-The printer handles this situation with a built-in automatic G28 XYZ macro <b>Temp_Homing</b>, <br>
+The Sandworm printer handles this situation with a built-in automatic G28 XYZ macro <b>Temp_Homing</b>, <br>
 which preheats the nozzle (a little) and then performs Z homing. The macro is implemented in: <br>
 
 - Start Gcodes <br>

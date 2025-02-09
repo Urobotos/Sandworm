@@ -17,7 +17,8 @@ a small filling of the nozzle directly at the point when continuation of printin
 Benefit: No more empty layers on printed parts after a pause.
 
 <h3>Copy and Paste Config Files: </h3>
-Copy all .cfg files (from config folder) and paste them into your printer config directory: (When asked if you want to overwrite the printer.cfg file, select yes):<br> 
+Copy the entire contents of the Config folder (including subdirectories) with .cfg files here and paste them into your printer's config directory, <br> 
+(choose yes when asked if you want to overwrite the printer.cfg file), to the a path that will look something like this:<br> 
 home\biqu\printer_data\config\ <br>
        
 <h3>PrusaSlicer - START and END gcodes: </h3>

@@ -26,7 +26,7 @@ In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes se
 <b> End gcodes:</b><br>
 >end_gcode
 
-<h3>Mainsail and custom macro Buttons:</h3>
+<h3>Mainsail and custom macro buttons:</h3>
 (find the macro names below in the list of available macros and add them to the main page as buttons).<br>
 (In Mainsail main page choose: Interface settings --> Macros --> Add group name).<br><br>
 

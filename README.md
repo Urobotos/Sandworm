@@ -19,7 +19,9 @@ Benefit: No more empty layers on printed parts after a pause.
 <h3>Copy and Paste Config Files: </h3>
 Copy the entire contents of the Config folder (including subdirectories) with .cfg files here and paste them into your printer's config directory, <br> 
 (choose yes when asked if you want to overwrite the printer.cfg file), to the a path that will look something like this:<br> 
-home\biqu\printer_data\config\ <br>
+home\biqu\printer_data\config\ <br><br>
+
+You can then restart the printer for the first <b>Sandworm</b> launch...<br>
        
 <h3>PrusaSlicer - START and END gcodes: </h3>
 
@@ -149,9 +151,8 @@ bound_service: klipper             # Making sure the Klipper service is started/
 
 <h3>I also recommend the feature: Klipper Adaptive Meshing Purging (KAMP)</h3>
 Great feature (from author Kyleisah) to Calibrate Bed Mesh only in the printed part area, to save time.<br>
-https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging <br><br>
+https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging <br><br><br>
 
-And now you can restart your printer for the first <b>Sandworm</b> launch...<br><br>
 
 That's it, you've reached the end and your circle has closed. Thank you for your patience with the tutorials and for stay with them until the end. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy the printing!
 

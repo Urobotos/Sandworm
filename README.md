@@ -126,7 +126,8 @@ start_gcode BED_TMP=[first_layer_bed_temperature] EXT_TMP=[first_layer_temperatu
 ```
 end_gcode
 ```
-<b> Chamer_TMP and Chamer_min_TMP: </b>
+
+<b> CHAMBER_TMP and CHAMBER_MIN_TMP: </b>
 
 <h3>Information about Proximity inductive probe SN-04 PNP and initial Z homing:</h3>
 For the initial Z home (after starting the printer), it is recommended to preheat the nozzle, <br>

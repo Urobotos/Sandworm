@@ -60,6 +60,7 @@ gcode:
 ```
 
 <h3> Language change:</h3>
+Language translation is for the entire LCD menu and some macros.<br>
 The current language version can be changed in the menu on the LCD display: <br>
 Click on knob for Menu --> Setup --> Language --> and choice: English, Cestina or Deutch.<br><br>
 

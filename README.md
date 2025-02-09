@@ -1,7 +1,7 @@
 
 <h2>Sandworm 3D printer - Description of Klipper macros: <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Coding by the Urobotos Project)</h2>
 
-<h3>The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg </h3>
+<h3>The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg: </h3>
 (the redirected incude is included in the printer.cfg file, no need edit)<br>
 The modifications include:<br>
 

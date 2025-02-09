@@ -16,7 +16,7 @@ Benefit: No more empty layers on printed parts after a pause.
 <h3>PrusaSlicer START and END gcodes: </h3>
 In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes sections:
 
-<b> Start gcodes:</b><br>
+<b> Start gcodes:</b> (all single-line codes):<br>
 >SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count] <br>
 >CLEAR_PAUSE <br>
 >BED_MESH_CLEAR <br>

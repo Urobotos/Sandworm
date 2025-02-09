@@ -42,7 +42,7 @@ Noozle Clean  &nbsp;&nbsp;&nbsp; # (via brush) <br>
 E stepper off <br>
 
 <b> Chamber Lights (always on) </b><br>
-Lights on off  &nbsp;&nbsp; &nbsp;&nbsp; # (toogle button - ON or OFF, its depends on previous Lights state) <br>
+Lights on off  &nbsp;&nbsp; &nbsp;&nbsp; # (toggle button - ON or OFF, its depends on previous Lights state) <br>
 Lights max     &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;# (lights on maximum brithness) <br>
 
 <b> Calibration: (not displayed when pinting and Pause) </b><br>

@@ -30,32 +30,32 @@ In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes se
 (In Mainsail main page choose: Interface settings --> Macros --> Add group name).<br><br>
 
 <b> Movement: (adjusted to: not displayed when pinting) </b><br>
-Temp_homong <br>
-E Stepper off <br>
-Park_toolhaead <br>
+- Temp_homing <br>
+- E Stepper off <br>
+- Park_toolhead <br>
 
 <b> Filament: (not displayed when pinting) </b><br>
-Filament load <br>
-Filament unload <br>
-M600 <br>
-Noozle Clean  &nbsp;&nbsp;&nbsp; # (via brush) <br>
-E stepper off <br>
+- Filament load <br>
+- Filament unload <br>
+- M600 <br>
+- Noozle Clean  &nbsp;&nbsp;&nbsp; # (via brush) <br>
+- E stepper off <br>
 
 <b> Chamber Lights (always on) </b><br>
-Lights on off  &nbsp;&nbsp; &nbsp;&nbsp; # (toggle button - ON or OFF, its depends on previous Lights state) <br>
-Lights max     &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;# (lights on maximum brithness) <br>
+- Lights on off  &nbsp;&nbsp; &nbsp;&nbsp; # (toggle button - ON or OFF, its depends on previous Lights state) <br>
+- Lights max     &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;# (lights on maximum brithness) <br>
 
 <b> Calibration: (not displayed when pinting and Pause) </b><br>
-Z Endstop calibrate 01 <br>
-Probe calibrate 02 <br>
-Z tilt adjust 03 <br>
-Bed mesh calibrate 04 <br>
+- Z Endstop calibrate 01 <br>
+- Probe calibrate 02 <br>
+- Z tilt adjust 03 <br>
+- Bed mesh calibrate 04 <br>
 
 <b> Adjust print: (displayed only when pinting) </b><br>
-set pause at layer <br>
-set pause next layer <br>
-Activate power off <br>
-Deactivate power off
+- set pause at layer <br>
+- set pause next layer <br>
+- Activate power off <br>
+- Deactivate power off
 
 <h3>Information about Proximity inductive probe SN-04 PNP and initial Z homing:</h3>
 For the initial Z home (after starting the printer), it is recommended to preheat the nozzle, <br>

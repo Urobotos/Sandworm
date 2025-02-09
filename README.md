@@ -16,7 +16,7 @@ This is the coordinate point of the tool head on the print object when printing 
 a small filling of the nozzle directly at the point when continuation of printing.<br>
 Benefit: No more empty layers on printed parts after a pause.
 
-<h3>Copy Config Files: </h3>
+<h3>Copy and Paste Config Files: </h3>
 Copy all .cfg files (from config folder) and paste them into your printer config directory: (When asked if you want to overwrite the printer.cfg file, select yes):<br> 
 home\biqu\printer_data\config\ <br>
        

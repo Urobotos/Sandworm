@@ -1,5 +1,9 @@
 <h2>Sandworm 3D printer - Description of Klipper macros:<br> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Coding by the Urobotos Project)</h2>
+Author: Zachar Čuřík <br>
+Launch date: Q1 2025 <br>
+All code name: Sandworm Mach3 Y2025 GS556 (game_save_556) <br>
+Branch: Urobotos codes <br>
 
 <h3>The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg: </h3>
 (the redirected incude is included in the printer.cfg file, no need edit, it is listed here for information only)<br>
@@ -149,7 +153,7 @@ Great feature (from author Kyleisah) to Calibrate Bed Mesh only in the printed p
 https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging <br><br><br>
 
 
-That's it, you've reached the end and your circle has closed. Thank you for your patience with the tutorials and for stay with them until the end. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy the printing!
+That's it, you've reached the end and your circle has closed. Thank you for your patience with the tutorials and for stay with them until the end. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy the printing! Zachar Čuřík from Urobotos
 
 ![Urobotos Project](https://github.com/zacharcc/Sandworm/blob/urobotos/Urobotos.png))
 

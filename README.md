@@ -64,7 +64,7 @@ due to filament leakage from the Volcano nozzle after the previous print. <br>
 Longer sticking filament does not cause much of a problem, it will bend on the SN-04 probe, <br>
 but short and hard could cause a shock displacement of the probe. <br><br>
 
-Solution: There is no required to go to the printer and manually clean the nozzle, <br>
+<b>Solution:</b> There is no required to go to the printer and manually clean the nozzle, <br>
 just preheat the nozzle remotely and start Z homing, after which the filament will <br>
 remain bent and the next Z homing can be performed normally. <br>
 

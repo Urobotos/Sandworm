@@ -82,9 +82,9 @@ due to filament leakage from the Volcano nozzle after the previous print. <br>
 Longer sticking filament does not cause much of a problem, it will bend on the SN-04 probe, <br>
 but short and hard could cause a shock displacement of the probe. <br><br>
 
-The probe detects the brass nozzle at a height of Z of approximately 0.6 - 0.7mm from the bed (when the edge of the probe <br>
-is horizontally aligned with the PEI sheet), the nozzle is then approximately 1mm away from the probe itself <br>
-(which has a recess in the middle). Different nozzle materials will affect the height of capture by the probe,<br> 
+The probe detects the brass nozzle at a height of Z of approximately 0.6 - 0.7mm from the bed (when the edge <br>
+of the probe is horizontally aligned with the PEI sheet), the nozzle is then approximately 1mm away from the probe <br>
+itself (which has a recess in the middle). Different nozzle materials will affect the height of capture by the probe,<br> 
 for example a carbide nozzle will be captured earlier (at a higher distance from the PEI sheet).<br>
 
 <b>Solution:</b> There is no required to go to the printer and manually clean the nozzle, <br>

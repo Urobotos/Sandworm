@@ -106,9 +106,7 @@ which preheats the nozzle (a little) and then performs Z homing. The macro is im
 
 <h3> Language change:</h3>
 The current language version can be changed in the menu on the LCD display: <br>
-Click on knob for Menu --> Setup --> Language --> and choice: <br>
-
-English, Cestina or Deutch <br>
+Click on knob for Menu --> Setup --> Language --> and choice: English, Cestina or Deutch.<br><br>
 
 <b>Or run one of the macros below: </b><br>
 - <b>For English: </b><br>

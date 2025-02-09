@@ -111,8 +111,8 @@ home\biqu\printer_data\config\ <br><br>
 
 And restart your printer for the first <b>Sandworm</b> launch...
 
-<hr>
 
+<br>
 ![Urobotos Project](https://github.com/zacharcc/Sandworm/blob/urobotos/Urobotos.png))
 
 

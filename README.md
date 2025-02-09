@@ -22,21 +22,41 @@ Copy the entire contents of the Config folder (including subdirectories) with .c
 home\biqu\printer_data\config\ <br><br>
 
 You can then restart the printer for the first <b>Sandworm</b> launch...<br>
-       
-<h3>PrusaSlicer - START and END gcodes: </h3>
 
-In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes sections:<br>
+<h3>Setup for remotely control printer power ON and OFF via Relay:</h3>
+(The original code and setup instructions (from author Tinntbg) can be found at: https://github.com/tinntbg/auto-power-off-klipper ) <br>
 
-<b> START gcodes:</b>
+For remote control power ON/OFF by Relay it is need add somewhere to <b>moonraker.conf</b> file codes below: <br>
 ```
-SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
-CLEAR_PAUSE
-BED_MESH_CLEAR
-start_gcode BED_TMP=[first_layer_bed_temperature] EXT_TMP=[first_layer_temperature] CHAMBER_TMP=[chamber_temperature] CHAMBER_MIN_TMP=[chamber_minimal_temperature]
+[power printer]
+type: gpio
+pin: gpiochip0/gpio72              # can be revesed by "!" , BTT-PI GPIO pin PC8
+initial_state: off
+off_when_shutdown: True            # Turning off when a >shutdown/error occurs
+locked_while_printing: True        # Preventing you from turning it off during a print
+on_when_job_queued: True           # Toggling the power On when you send a file >from the slicer to print
+restart_klipper_when_powered: True
+restart_delay: 1
+bound_service: klipper             # Making sure the Klipper service is started/restarted with the toggle
 ```
-<b> END gcodes:</b><br>
+
+<h3>Filament Runout Sensor and Runout Distance macro:</h3>
+<b>Description:</b> Adjustable distance delay (to run PAUSE) that is triggered when the filament sensor is activated to save filament, with a millimetres countdown to the end on the LCD display.<br>
+<b>Distance</b> = Length of PTFE tube from filament runout switch to extruder gear.<br>
+<b>Instructions:</b> Measure your PTFE tube length and enter value it into the <b>macros.cfg</b> file --> the <b>runout_distance</b> macro and its variable: <b>set distance = your_value_in_mm</b> . Subtract about 100mm from the measured length of PTFE tube to allow for manual removal of the filament from the extruder gear. The distance value is set to 930 by default. <br><br>
+
+<b>In macros.cfg you will look for the exact macro and distance variable to set as in the example below: </b><br>
+*(change the length value 930 to your current one, or leave 930 as default)*<br>
 ```
-end_gcode
+[gcode_macro runout_distance]
+description: Filament Runout Distance
+variable_distance_end: 0
+gcode:
+   {% set distance = 930 %}         ## <<<< ADJUSTABLE LENGTH of PTFE tube (in mm, from filament sensor to extruder gear).
+   {% set start_point = printer.print_stats.filament_used | int %}
+   {% set end_point = (start_point + distance) | int %}
+   SET_GCODE_VARIABLE MACRO=runout_distance VARIABLE=distance_end VALUE={end_point}
+   UPDATE_DELAYED_GCODE ID=runout_check DURATION=1
 ```
 
 <h3>Mainsail and custom macro buttons:</h3>
@@ -72,23 +92,20 @@ end_gcode
 - ACTIVATE_POWER_OFF <br>
 - DEACTIVATE_POWER_OFF
 
-<h3>Filament Runout Sensor and Runout Distance macro:</h3>
-<b>Description:</b> Adjustable distance delay (to run PAUSE) that is triggered when the filament sensor is activated to save filament, with a millimetres countdown to the end on the LCD display.<br>
-<b>Distance</b> = Length of PTFE tube from filament runout switch to extruder gear.<br>
-<b>Instructions:</b> Measure your PTFE tube length and enter value it into the <b>macros.cfg</b> file --> the <b>runout_distance</b> macro and its variable: <b>set distance = your_value_in_mm</b> . Subtract about 100mm from the measured length of PTFE tube to allow for manual removal of the filament from the extruder gear. The distance value is set to 930 by default. <br><br>
+<h3>PrusaSlicer - START and END gcodes: </h3>
 
-<b>In macros.cfg you will look for the exact macro and distance variable to set as in the example below: </b><br>
-*(change the length value 930 to your current one, or leave 930 as default)*<br>
+In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes sections:<br>
+
+<b> START gcodes:</b>
 ```
-[gcode_macro runout_distance]
-description: Filament Runout Distance
-variable_distance_end: 0
-gcode:
-   {% set distance = 930 %}         ## <<<< ADJUSTABLE LENGTH of PTFE tube (in mm, from filament sensor to extruder gear).
-   {% set start_point = printer.print_stats.filament_used | int %}
-   {% set end_point = (start_point + distance) | int %}
-   SET_GCODE_VARIABLE MACRO=runout_distance VARIABLE=distance_end VALUE={end_point}
-   UPDATE_DELAYED_GCODE ID=runout_check DURATION=1
+SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
+CLEAR_PAUSE
+BED_MESH_CLEAR
+start_gcode BED_TMP=[first_layer_bed_temperature] EXT_TMP=[first_layer_temperature] CHAMBER_TMP=[chamber_temperature] CHAMBER_MIN_TMP=[chamber_minimal_temperature]
+```
+<b> END gcodes:</b><br>
+```
+end_gcode
 ```
 
 <h3>Information about Proximity inductive probe SN-04 PNP and initial Z homing:</h3>
@@ -130,23 +147,6 @@ Click on knob for Menu --> Setup --> Language --> and choice: English, Cestina o
 - <b>For Deutch </b><br>
 ```
   SET_MENU_LANGUAGE LANGUAGE=3
-```
-
-<h3>Setup for remotely control printer power ON and OFF via Relay:</h3>
-(The original code and setup instructions (from author Tinntbg) can be found at: https://github.com/tinntbg/auto-power-off-klipper ) <br>
-
-For remote control power ON/OFF by Relay it is need add somewhere to <b>moonraker.conf</b> file codes below: <br>
-```
-[power printer]
-type: gpio
-pin: gpiochip0/gpio72              # can be revesed by "!" , BTT-PI GPIO pin PC8
-initial_state: off
-off_when_shutdown: True            # Turning off when a >shutdown/error occurs
-locked_while_printing: True        # Preventing you from turning it off during a print
-on_when_job_queued: True           # Toggling the power On when you send a file >from the slicer to print
-restart_klipper_when_powered: True
-restart_delay: 1
-bound_service: klipper             # Making sure the Klipper service is started/restarted with the toggle
 ```
 
 <h3>I also recommend the feature: Klipper Adaptive Meshing Purging (KAMP)</h3>

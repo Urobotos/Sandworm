@@ -34,7 +34,7 @@ Temp_homong <br>
 E Stepper off <br>
 Park_toolhaead <br>
 
-<b> Filament: (not displayed when pinting, only on Pause and Printer Ready state) </b><br>
+<b> Filament: (not displayed when pinting) </b><br>
 Filament load <br>
 Filament unload <br>
 M600 <br>

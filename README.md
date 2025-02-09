@@ -40,12 +40,12 @@ In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes se
 - FILAMENT_LOAD <br>
 - FILAMENT_UNLOAD <br>
 - M600 <br>
-- Nozzle_Clean  &nbsp;&nbsp;&nbsp; # (via brush) <br>
+- Nozzle_Clean  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # (via brush) <br>
 - e_stepper_off <br>
 
 <b> Chamber Lights (always on) </b><br>
 - lights_ON_OFF  &nbsp;&nbsp; &nbsp;&nbsp; # (toggle button - ON or OFF, its depends on previous Lights state) <br>
-- lights_max     &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;# (lights on maximum brithness) <br>
+- lights_max     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;# (lights on maximum brithness) <br>
 
 <b> Calibration: (not displayed when pinting and Pause) </b><br>
 - Z_ENDSTOP_CALIBRATE_01 <br>
@@ -54,8 +54,8 @@ In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes se
 - BED_MESH_CALIBRATE_04 <br>
 
 <b> Adjust print: (displayed only when pinting) </b><br>
-- set pause at layer <br>
-- set pause next layer <br>
+- SET_PAUSE_AT_LAYER <br>
+- SET_PAUSE_NEXT_LAYER <br>
 - ACTIVATE_POWER_OFF <br>
 - DEACTIVATE_POWER_OFF
 

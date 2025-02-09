@@ -131,9 +131,13 @@ For remote control power ON/OFF by Relay it is need add somewhere to <b>moonrake
 
 
 <b>Now you have everything ready</b>, copy and paste all .cfg files (from here) into your directory: (overwrite printer.cfg file):<br> 
-home\biqu\printer_data\config\ <br><br>
+home\biqu\printer_data\config\ <br>
 
-And restart your printer for the first <b>Sandworm</b> launch...<br><br>
+And restart your printer for the first <b>Sandworm</b> launch...<br>
+
+<h3>Also recommended Klipper feature: Adaptive Meshing Purging (KAMP)</h3>
+Great feature (from user Kyleisah) to Calibrate Bed Mesh only in the printed part area, to save time.<br>
+https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging <br><br><br>
 
 That's it, you've reached the end and your circle has closed. Thank you for your patience with the tutorials and for stay with them until the end. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy the printing!
 

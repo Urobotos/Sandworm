@@ -109,10 +109,10 @@ bound_service: klipper &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb
 <b>Now you have everything ready</b>, copy and paste all .cfg files (from here) into your directory: (overwrite printer.cfg file):<br> 
 home\biqu\printer_data\config\ <br><br>
 
-And restart your printer for the first <b>Sandworm</b> launch...
+And restart your printer for the first <b>Sandworm</b> launch...<br><br>
 
 
-<br>
+
 ![Urobotos Project](https://github.com/zacharcc/Sandworm/blob/urobotos/Urobotos.png))
 
 

@@ -15,7 +15,11 @@ Benefits: Fan will not spin unnecessarily during the pause, which can take longe
 This is the coordinate point of the tool head on the print object when printing was paused and serves for <br>
 a small filling of the nozzle directly at the point when continuation of printing.<br>
 Benefit: No more empty layers on printed parts after a pause.
-					  
+
+<h3>Copy Config Files: </h3>
+Copy all .cfg files (from config folder) and paste them into your printer config directory: (When asked if you want to overwrite the printer.cfg file, select yes):<br> 
+home\biqu\printer_data\config\ <br>
+       
 <h3>PrusaSlicer - START and END gcodes: </h3>
 
 In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes sections:<br>
@@ -142,15 +146,11 @@ restart_delay: 1
 bound_service: klipper             # Making sure the Klipper service is started/restarted with the toggle
 ```
 
-<b>Now you have everything ready</b>, copy and paste all .cfg files (from here) into your directory: (overwrite printer.cfg file):<br> 
-home\biqu\printer_data\config\ <br>
-
-And restart your printer for the first <b>Sandworm</b> launch...<br>
-
 <h3>I also recommend the feature: Klipper Adaptive Meshing Purging (KAMP)</h3>
 Great feature (from author Kyleisah) to Calibrate Bed Mesh only in the printed part area, to save time.<br>
-https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging <br><br><br>
+https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging <br><br>
 
+And now you can restart your printer for the first <b>Sandworm</b> launch...<br><br>
 
 That's it, you've reached the end and your circle has closed. Thank you for your patience with the tutorials and for stay with them until the end. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy the printing!
 

@@ -1,5 +1,5 @@
-
-<h2>Sandworm 3D printer - Description of Klipper macros: <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Coding by the Urobotos Project)</h2>
+<h2>Sandworm 3D printer - Description of Klipper macros:<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Coding by the Urobotos Project)</h2>
 
 <h3>The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg: </h3>
 (the redirected incude is included in the printer.cfg file, no need edit, it is listed here for information only)<br>
@@ -112,11 +112,17 @@ English, Cestina or Deutch <br>
 
 <b>Or run one of the macros below: </b><br>
 - <b>For English: </b><br>
+```
   SET_MENU_LANGUAGE LANGUAGE=1
+```
 - <b>For Czech: </b><br>
+```
   SET_MENU_LANGUAGE LANGUAGE=2
+```
 - <b>For Deutch </b><br>
+```
   SET_MENU_LANGUAGE LANGUAGE=3
+```
 
 <h3>Setup for remotely control printer power ON and OFF via Relay:</h3>
 (The original code and setup instructions (from author Tinntbg) can be found at: https://github.com/tinntbg/auto-power-off-klipper ) <br>
@@ -147,6 +153,8 @@ https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging <br><br><br>
 That's it, you've reached the end and your circle has closed. Thank you for your patience with the tutorials and for stay with them until the end. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy the printing!
 
 ![Urobotos Project](https://github.com/zacharcc/Sandworm/blob/urobotos/Urobotos.png))
+
+
 
 
 

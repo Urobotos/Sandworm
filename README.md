@@ -74,7 +74,7 @@ end_gcode
 description: Filament Runout Distance
 variable_distance_end: 0
 gcode:
-   {% set distance = 930 %}       ## <<<< ADJUSTABLE LENGTH of PTFE tube (in mm, from filament sensor to extruder gear).
+   {% set distance = 930 %}         ## <<<< ADJUSTABLE LENGTH of PTFE tube (in mm, from filament sensor to extruder gear).
    {% set start_point = printer.print_stats.filament_used | int %}
    {% set end_point = (start_point + distance) | int %}
    SET_GCODE_VARIABLE MACRO=runout_distance VARIABLE=distance_end VALUE={end_point}

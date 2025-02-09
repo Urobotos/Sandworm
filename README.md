@@ -27,7 +27,7 @@ In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes se
 
 <h3>Mainsail and custom macro Buttons:</h3>
 (find the macro names below in the list of available macros and add them to the main page as buttons).<br>
-(In Mainsail main page choose: Interface settings --> Macros --> Add Group).<br>
+(In Mainsail main page choose: Interface settings --> Macros --> Add group name).<br><br>
 
 <b> Movement: (adjusted to: not displayed when pinting) </b><br>
 Temp_homong <br>

@@ -70,11 +70,11 @@ set distance = your_value_in_mm . Subtract about 100mm from the measured length 
 >description: Filament Runout Distance <br>
 >variable_distance_end: 0 <br>
 >gcode: <br>
->  <b> {% set distance = 930 %}    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# <<< ADJUSTABLE length of PTFE tube (in mm, from filament sensor to extruder gear with some reserve)</b> <br>
->   {% set start_point = printer.print_stats.filament_used | int %} <br>
->   {% set end_point = (start_point + distance) | int %}  <br>
->   SET_GCODE_VARIABLE MACRO=runout_distance VARIABLE=distance_end VALUE={end_point}  <br>
->   UPDATE_DELAYED_GCODE ID=runout_check DURATION=1 <br>
+>&nbsp;&nbsp;&nbsp;&nbsp;<b>{% set distance = 930 %}&nbsp;&nbsp;&nbsp;# <<< ADJUST. length of PTFE tube (in mm, from filament sensor to extruder gear with some reserve)</b><br>
+>&nbsp;&nbsp;&nbsp;&nbsp;{% set start_point = printer.print_stats.filament_used | int %} <br>
+>&nbsp;&nbsp;&nbsp;&nbsp;{% set end_point = (start_point + distance) | int %}  <br>
+>&nbsp;&nbsp;&nbsp;&nbsp;SET_GCODE_VARIABLE MACRO=runout_distance VARIABLE=distance_end VALUE={end_point}  <br>
+>&nbsp;&nbsp;&nbsp;&nbsp;UPDATE_DELAYED_GCODE ID=runout_check DURATION=1 <br>
 
 <h3>Information about Proximity inductive probe SN-04 PNP and initial Z homing:</h3>
 For the initial Z home (after starting the printer), it is recommended to preheat the nozzle, <br>

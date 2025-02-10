@@ -72,7 +72,7 @@ gcode:
 
 Language translation is for the entire LCD menu and some macros.<br>
 The current language version can be changed in the menu on the LCD display: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click on knob for Menu --> Setup --> Language --> Choice: English, Cestina or Deutsch.<br>
+`Click on knob for Menu --> Setup --> Language --> Choice: English, Cestina or Deutsch` <br>
 
 <b>Or run one of the macros below: </b><br>
 - <b>For English: </b>

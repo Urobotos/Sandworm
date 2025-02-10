@@ -21,6 +21,12 @@ Copy the entire contents of the Config folder (including subdirectories) with .c
 (choose yes when asked if you want to overwrite the printer.cfg file), to the a path that will look something like this:<br> 
 home\biqu\printer_data\config\ <br><br>
 
+
+
+
+...
+
+...
 You can then restart the printer for the first <b>Sandworm</b> launch...<br>
 
 <h3>Setup for remotely control printer power ON and OFF via Relay:</h3>

@@ -150,12 +150,12 @@ These two parameters are set via <b>PrusaSlicer :</b><br>
 
   (You can set different values ​​for different Filaments, or completely disable temperature automation for a selected Filament). <br>
   
-  > ![note](images/note.svg)**Note:** for minimal chamber temp: Always set the minimum temperature in the printing chamber adequately considering the ambient temperature.
+  > ![note](images/info-circle.svg) **Note:** for minimal chamber temp: Always set the minimum temperature in the printing chamber adequately considering the ambient temperature.
   > The macro is evaluated using TEMPERATURE_WAIT (similar to: Set extruder temperature and wait: M109) and the printer does not accept
   > any commands during this time (incoming codes are paused). It is good to remember that to cancel the TEMPERATURE_WAIT loop at the very beginning of the print,
   > the easiest way is to restart the printer using the Emergency Stop and start the print again with a different temperature setting for the chamber. <br>
 
-  > ![note](images/note.svg)**Note:** Some data: Temperatures (in °C) measured during about an hour of printing:<br>
+  > ![note](images/info-circle.svg) **Note:** Some data: Temperatures (in °C) measured during about an hour of printing:<br>
   > Bed: 60, Ambient: 25, Chamber: 41 <br>
   > Bed: 95, Ambient: 20, Chamber: 46 <br>
   > Bed: 50, Ambient: 12, Chamber: 28 <br>

@@ -139,7 +139,7 @@ These two parameters are set via <b>PrusaSlicer :</b><br>
 - The second parameter `CHAMBER_MIN_TMP` checks (during the print start routine) the temperature in the chamber and if it is lower than the desired one, it pauses the print and starts heating the chamber using 
   the bed at 100°C until the temperature in the chamber reaches the desired value (especially suitable for filaments prone to warping, such as ABS, PETG, etc.).<br><br>
 
-  <b>Where to find these parameters in PrusaSlicer: </b><br>
+<b>Where to find these parameters in PrusaSlicer: </b><br>
 - <b>For automatic Cooling / Filtering of the Chamber:</b> `Filament profile --> Temperature --> Chamber --> Nominal: YOUR_VALUE °C`
 - <b>To preheat the Chamber when printing start:</b> `Filament profile --> Temperature --> Chamber --> Minimum: YOUR_VALUE °C` <br>
 
@@ -147,7 +147,7 @@ These two parameters are set via <b>PrusaSlicer :</b><br>
   
   > Note for minimal chamber temp: Always set the minimum temperature in the printing chamber adequately considering the ambient temperature.
   > The macro is evaluated using TEMPERATURE_WAIT (similar to: Set extruder temperature and wait: M109) and the printer does not accept
-  > any commands during this time (it is paused). It is good to remember that to cancel the TEMPERATURE_WAIT loop at the very beginning of the print,
+  > any commands during this time (incoming codes are paused). It is good to remember that to cancel the TEMPERATURE_WAIT loop at the very beginning of the print,
   > the easiest way is to restart the printer using the Emergency Stop and start the print again with a different temperature setting for the chamber. <br>
   
   > Some data: Temperatures (in °C) measured during about an hour of printing:<br>

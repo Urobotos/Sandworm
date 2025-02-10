@@ -18,7 +18,7 @@ Benefit: No more empty layers on printed parts after a pause.
 
 <h3>Copy and Paste Config Files: </h3>
 
-- Copy from here the entire contents of Sandworm GitHub folder (including subdirectories) with .cfg files and paste them into your printer's config directory, (choose yes when asked if you want to overwrite the printer.cfg file), to the a path which will look something like this:
+- Copy from here the entire contents of Sandworm GitHub folder (including subdirectories) with all.cfg files and paste them into your printer's config directory, (choose yes when asked if you want to overwrite the printer.cfg file), to the a path which will look something like this:
 
   ```
   home\biqu\printer_data\config\ 

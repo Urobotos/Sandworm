@@ -133,7 +133,9 @@ start_gcode BED_TMP=[first_layer_bed_temperature] EXT_TMP=[first_layer_temperatu
 end_gcode
 ```
 
-<b> CHAMBER_TMP and CHAMBER_MIN_TMP: </b>
+<b> CHAMBER_TMP and CHAMBER_MIN_TMP: </b><br>
+These two parameters serve two purposes in <b>PrusaSlicer</b>, the `CHAMBER_TMP` parameter sets the automatic temperature for the chamber at which the <b>Cooling / or Filtration Exhaust fans</b> are activated (suitable for filaments susceptible to heat, such as PLA). <br>
+The second parameter `CHAMBER_MIN_TMP` checks (during the print_start gcode routine) the temperature in the chamber and if it is lower than the desired one, postpones the print and starts heating the chamber with the bed at 100°C until the temperature in the chamber reaches the desired one (suitable especially for filaments susceptible to warping, such as ABS, PETG, etc.).
 
 <h3>Information about Proximity inductive probe SN-04 PNP and initial Z homing:</h3>
 For the initial Z home (after starting the printer), it is recommended to preheat the nozzle, <br>

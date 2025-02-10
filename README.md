@@ -6,8 +6,10 @@ Launch date: Q2 2025
 All code name: Sandworm Mach3 Y2025 GS556 (game_save_556)
 Branch: Urobotos coding
 ```
+📁 <span style="font-size: 100px;"> ## Nadpis TEST</span>
+
 <details>
-  <summary>📁 **The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg:** </summary>
+  <summary>📁 <span style="font-size: 18px;"><strong>The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg:</strong></span></summary>
   (the redirected incude is included in the printer.cfg file, no need edit, it is listed here for information only).<br>
   The modifications include:<br>
 
@@ -21,7 +23,8 @@ Branch: Urobotos coding
 </details>
 
 ### Copy and Paste Config Files:
-- Copy from here the entire contents of Sandworm GitHub folder (including subdirectories) with all.cfg files and paste them into your printer's config directory, (choose yes when asked if you want to overwrite 
+- Copy from here the entire contents of Sandworm GitHub folder (including subdirectories) with all.cfg files and paste them into your printer's config directory, 
+  (choose yes when asked if you want to overwrite 
   the printer.cfg file), to the a path which will look something like this: `home\biqu\printer_data\config\ `
  
 - Or you can clone this repository from your `printer_data/config` directory in the command line using the following command:

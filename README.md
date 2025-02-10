@@ -162,7 +162,7 @@ which preheats the nozzle (a little) and then performs XYZ homing. The macro is 
 
 - Start Gcodes <br>
 - Noozle Clean (via brush, only when axis is not homed) <br>
-- And in the last row, <b>Temp_Homing</b> will appear as a clickable macro in the Mainsail console every time the printer is started.
+- And in the last row, `Temp_Homing` will appear as a clickable macro in the Mainsail console every time the printer is started.
 
 ### I also recommend the feature: Klipper Adaptive Meshing Purging (KAMP)
 Great feature (from author Kyleisah) to Calibrate Bed Mesh only in the printed part area, to save time.<br>

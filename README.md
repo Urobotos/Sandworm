@@ -143,12 +143,12 @@ These two parameters can be set in <b>PrusaSlicer :</b><br>
 - The first`CHAMBER_TMP` parameter: Sets the automatic temperature for the chamber at which the <b>Cooling / Filtration Exhaust fans</b> are activated (suitable for filaments susceptible to heat, such as PLA). 
   <br>
 
-- The second parameter `CHAMBER_MIN_TMP` checks (during the print_start gcode routine) the temperature in the chamber and if it is lower than the desired one, postpones the print and starts heating the chamber 
-  with the bed at 100°C until the temperature in the chamber reaches the desired one (suitable especially for filaments susceptible to warping, such as ABS, PETG, etc.).
+- The second parameter `CHAMBER_MIN_TMP` checks (during the print start routine) the temperature in the chamber and if it is lower than the desired one, it pauses the print and starts heating the chamber using 
+  the bed at 100°C until the temperature in the chamber reaches the desired value (especially suitable for filaments prone to warping, such as ABS, PETG, etc.).
 
 <b>Where to find these parameters in PrusaSlicer: </b><br>
-- <b>For Cooling / Filtering:</b> `Filament profile --> Temperature --> Chamber --> Nominal: YOUR_VALUE °C`
-- <b>For preheat the Chamber on print start:</b> `Filament profile --> Temperature --> Chamber --> Minimum: YOUR_VALUE °C` <br>
+- <b>For automatic Cooling / Filtering of the Chamber:</b> `Filament profile --> Temperature --> Chamber --> Nominal: YOUR_VALUE °C`
+- <b>To preheat the Chamber when printing start:</b> `Filament profile --> Temperature --> Chamber --> Minimum: YOUR_VALUE °C` <br>
 
 *(You can set different values ​​for different Filaments, or completely disable temperature automation for a selected Filament).*
 

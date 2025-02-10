@@ -27,7 +27,7 @@ Benefit: No more empty layers on printed parts after a pause.
   ```
   git clone https://github.com/zacharcc/Sandworm.git
   ```
-  After copying the configuration files, you can restart the printer for the first <b>Sandworm</b> launch...<br><br>
+  Then restart the printer for the first <b>Sandworm</b> launch...<br><br>
 
 
 <h3>Setup for remotely control printer power ON and OFF via Relay:</h3>

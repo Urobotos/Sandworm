@@ -6,7 +6,6 @@ Launch date: Q2 2025
 All code name: Sandworm Mach3 Y2025 GS556 (game_save_556)
 Branch: Urobotos codes
 ```
-
 <h3>The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg: </h3>
 
 (the redirected incude is included in the printer.cfg file, no need edit, it is listed here for information only)<br>
@@ -73,7 +72,7 @@ gcode:
 
 Language translation is for the entire LCD menu and some macros.<br>
 The current language version can be changed in the menu on the LCD display: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click on knob for Menu --> Setup --> Language --> Choice: English, Cestina or Deutsch.<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click on knob for Menu --> Setup --> Language --> Choice: English, Cestina or Deutsch.<br>
 
 <b>Or run one of the macros below: </b><br>
 - <b>For English: </b>

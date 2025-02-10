@@ -1,13 +1,12 @@
-<h2>Sandworm 3D printer - Klipper macros:</h2>
 
+## Sandworm 3D printer - Klipper macros:
 ```
 Author: Zachar Čuřík
 Launch date: Q2 2025
 All code name: Sandworm Mach3 Y2025 GS556 (game_save_556)
 Branch: Urobotos coding
 ```
-<h3>The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg: </h3>
-
+### The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg:
 (the redirected incude is included in the printer.cfg file, no need edit, it is listed here for information only)<br>
 The modifications include:<br>
 
@@ -19,8 +18,7 @@ This is the coordinate point of the tool head on the print object when printing 
 a small filling of the nozzle directly at the point when continuation of printing.<br>
 Benefit: No more empty layers on printed parts after a pause.
 
-<h3>Copy and Paste Config Files: </h3>
-
+### Copy and Paste Config Files:
 - Copy from here the entire contents of Sandworm GitHub folder (including subdirectories) with all.cfg files and paste them into your printer's config directory, (choose yes when asked if you want to overwrite the printer.cfg file), to the a path which will look something like this: `home\biqu\printer_data\config\ `
  
 - Or you can clone this repository from your `printer_data/config` directory in the command line using the following command:
@@ -30,8 +28,7 @@ Benefit: No more empty layers on printed parts after a pause.
   Then restart the printer for the first <b>Sandworm</b> launch...<br><br>
 
 
-<h3>Setup for remotely control printer power ON and OFF via Relay:</h3>
-
+### Setup for remotely control printer power ON and OFF via Relay:
 The original code and setup instructions (from author Tinntbg) can be found at: https://github.com/tinntbg/auto-power-off-klipper  <br>
 For remote control power ON/OFF by Relay it is need add somewhere to `moonraker.conf` file codes below: <br>
 ```
@@ -47,8 +44,7 @@ restart_delay: 1
 bound_service: klipper             # Making sure the Klipper service is started/restarted with the toggle
 ```
 
-<h3>Filament Runout Sensor and Runout Distance macro:</h3>
-
+### Filament Runout Sensor and Runout Distance macro:
 - <b>Description:</b> Adjustable distance delay (to run PAUSE) that is triggered when the filament sensor is activated to save filament, with a millimetres countdown to the end on the LCD display.<br> 
 - <b>Distance</b> = Length of PTFE tube from filament runout switch to extruder gear.<br>
 - <b>Instructions:</b> Measure your PTFE tube distance length and enter value it into the: `file: macros.cfg --> macro: runout_distance --> its variable: set distance = your_value_in_mm`. Subtract about 100mm from the measured length of PTFE tube to allow for manual removal of the filament from the extruder gear. The distance value is set to 930 by default. <br>
@@ -66,9 +62,7 @@ gcode:
    SET_GCODE_VARIABLE MACRO=runout_distance VARIABLE=distance_end VALUE={end_point}
    UPDATE_DELAYED_GCODE ID=runout_check DURATION=1
 ```
-
-<h3> Language change:</h3>
-
+### Language change:
 Language translation is for the entire LCD menu and some macros.<br>
 The current language version can be changed in the menu on the LCD display: <br>
 `Click on knob for Menu --> Setup --> Language --> Choice: English, Cestina or Deutsch` <br>
@@ -87,8 +81,7 @@ The current language version can be changed in the menu on the LCD display: <br>
   SET_MENU_LANGUAGE LANGUAGE=3
 ```
 
-<h3>Custom macro buttons for the Mainsail:</h3>
-
+### Custom macro buttons for the Mainsail:
 (find the macro names below in the list of available macros and add them to the main page as buttons).<br>
 `In Mainsail main page choose: Interface settings --> Macros --> Add group name` <br>
 
@@ -121,21 +114,20 @@ The current language version can be changed in the menu on the LCD display: <br>
 - ACTIVATE_POWER_OFF <br>
 - DEACTIVATE_POWER_OFF
 
-<h3>PrusaSlicer - START and END gcodes: </h3>
-
+### PrusaSlicer - START and END gcodes:
 In PrusaSlicer, insert these codes below into the `Start gcodes` and `End gcodes` sections:<br>
 
-<b> START gcodes:</b>
-```
-SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
-CLEAR_PAUSE
-BED_MESH_CLEAR
-start_gcode BED_TMP=[first_layer_bed_temperature] EXT_TMP=[first_layer_temperature] CHAMBER_TMP=[chamber_temperature] CHAMBER_MIN_TMP=[chamber_minimal_temperature]
-```
-<b> END gcodes:</b><br>
-```
-end_gcode
-```
+- <b> START gcodes:</b>
+  ```
+  SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
+  CLEAR_PAUSE
+  BED_MESH_CLEAR
+  start_gcode BED_TMP=[first_layer_bed_temperature] EXT_TMP=[first_layer_temperature] CHAMBER_TMP=[chamber_temperature] CHAMBER_MIN_TMP=[chamber_minimal_temperature]
+  ```
+- <b> END gcodes:</b><br>
+  ```
+  end_gcode
+  ```
 
 <b> About CHAMBER_TMP and CHAMBER_MIN_TMP parameters from start_gcode macro: </b><br>
 These two parameters are set via <b>PrusaSlicer :</b><br> 
@@ -149,8 +141,7 @@ These two parameters are set via <b>PrusaSlicer :</b><br>
 
    *(You can set different values ​​for different Filaments, or completely disable temperature automation for a selected Filament).*
 
-<h3>Information about Proximity inductive probe SN-04 PNP and initial Z homing:</h3>
-
+### Information about Proximity inductive probe SN-04 PNP and initial Z homing:
 For the initial Z home (after starting the printer), it is recommended to preheat the nozzle, <br>
 due to filament leakage from the Volcano nozzle after the previous print. <br>
 Longer sticking filament does not cause much of a problem, it will bend on the SN-04 probe, <br>
@@ -173,7 +164,7 @@ which preheats the nozzle (a little) and then performs XYZ homing. The macro is 
 - Noozle Clean (via brush, only when axis is not homed) <br>
 - And in the last row, <b>Temp_Homing</b> will appear as a clickable macro in the Mainsail console every time the printer is started.
 
-<h3>I also recommend the feature: Klipper Adaptive Meshing Purging (KAMP)</h3>
+### I also recommend the feature: Klipper Adaptive Meshing Purging (KAMP)
 Great feature (from author Kyleisah) to Calibrate Bed Mesh only in the printed part area, to save time.<br>
 https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging <br><br><br>
 

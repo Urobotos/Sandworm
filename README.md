@@ -95,15 +95,15 @@ The current language version can be changed in the menu on the LCD display: <br>
 - Park_Toolhead <br>
 
 <b> Filament: (not displayed when pinting) </b><br>
-- FILAMENT_LOAD <br>
-- FILAMENT_UNLOAD <br>
+- FILAMENT_LOAD &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;# with Load temperature customize on the button (default 200 °C for PLA) <br>
+- FILAMENT_UNLOAD &nbsp;&nbsp;&nbsp;# with Unload temperature customize on the button (default 200 °C for PLA) <br>
 - M600 <br>
-- Nozzle_Clean  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # (via brush) <br>
+- Nozzle_Clean  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # (via brush) <br>
 - e_stepper_off <br>
 
 <b> Chamber Lights (always on) </b><br>
-- lights_ON_OFF  &nbsp;&nbsp; &nbsp;&nbsp; # (toggle button - Lights ON or OFF, its depends on previous Lights state) <br>
-- lights_max     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;# (lights on maximum brithness) <br>
+- lights_ON_OFF  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # (toggle button - Lights ON or OFF, its depends on previous Lights state) <br>
+- lights_max     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # (lights on maximum brithness) <br>
 
 <b> Calibration: (not displayed when pinting and Pause) </b><br>
 - Z_ENDSTOP_CALIBRATE_01 <br>
@@ -119,7 +119,7 @@ The current language version can be changed in the menu on the LCD display: <br>
 
 <h3>PrusaSlicer - START and END gcodes: </h3>
 
-In PrusaSlicer, insert these codes below into the Start gcodes and End gcodes sections:<br>
+In PrusaSlicer, insert these codes below into the `Start gcodes` and `End gcodes` sections:<br>
 
 <b> START gcodes:</b>
 ```

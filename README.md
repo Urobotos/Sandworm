@@ -7,7 +7,7 @@ All code name: Sandworm Mach3 Y2025 GS556 (game_save_556)
 Branch: Urobotos coding
 ```
 <details>
-  <summary class="bold">📁 **The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg:** </summary>
+  <summary>📁 **The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg:** </summary>
   (the redirected incude is included in the printer.cfg file, no need edit, it is listed here for information only).<br>
   The modifications include:<br>
 
@@ -15,8 +15,8 @@ Branch: Urobotos coding
   Benefits: Fan will not spin unnecessarily during the pause, which can take longer with Filament Runout.<br>
 
   2. The second added modification is the <b>point_unretract</b> macro, this is the last code sent when printing is RESUMED (after PAUSE). <br>
-  This is the coordinate point of the tool head on the print object when printing was paused and serves for <br>
-  a small filling of the nozzle directly at the point when continuation of printing.<br>
+  This is the coordinate point of the tool head on the print object when printing was paused and serves fora small filling of the nozzle
+  directly at the point when continuation of printing.<br>
   Benefit: No more empty layers on printed parts after a pause.
 </details>
 

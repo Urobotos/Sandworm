@@ -1,9 +1,11 @@
 <h2>Sandworm 3D printer - Klipper macros:</h2>
 
-Author: Zachar Čuřík <br>
-Launch date: Q2 2025 <br>
-All code name: Sandworm Mach3 Y2025 GS556 (game_save_556) <br>
-Branch: Urobotos codes <br>
+```
+Author: Zachar Čuřík
+Launch date: Q2 2025
+All code name: Sandworm Mach3 Y2025 GS556 (game_save_556)
+Branch: Urobotos codes
+```
 
 <h3>The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg: </h3>
 

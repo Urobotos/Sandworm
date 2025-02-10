@@ -32,8 +32,7 @@ Benefit: No more empty layers on printed parts after a pause.
 
 <h3>Setup for remotely control printer power ON and OFF via Relay:</h3>
 
-(The original code and setup instructions (from author Tinntbg) can be found at: https://github.com/tinntbg/auto-power-off-klipper ) <br>
-
+The original code and setup instructions (from author Tinntbg) can be found at: https://github.com/tinntbg/auto-power-off-klipper  <br>
 For remote control power ON/OFF by Relay it is need add somewhere to `moonraker.conf` file codes below: <br>
 ```
 [power printer]

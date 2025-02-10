@@ -19,14 +19,14 @@ a small filling of the nozzle directly at the point when continuation of printin
 Benefit: No more empty layers on printed parts after a pause.
 
 ### Copy and Paste Config Files:
-- Copy from here the entire contents of Sandworm GitHub folder (including subdirectories) with all.cfg files and paste them into your printer's config directory, (choose yes when asked if you want to overwrite the printer.cfg file), to the a path which will look something like this: `home\biqu\printer_data\config\ `
+- Copy from here the entire contents of Sandworm GitHub folder (including subdirectories) with all.cfg files and paste them into your printer's config directory, (choose yes when asked if you want to overwrite 
+  the printer.cfg file), to the a path which will look something like this: `home\biqu\printer_data\config\ `
  
 - Or you can clone this repository from your `printer_data/config` directory in the command line using the following command:
   ```
   git clone https://github.com/zacharcc/Sandworm.git
   ```
-  Then restart the printer for the first <b>Sandworm</b> launch...<br><br>
-
+  Then restart the printer for the first <b>Sandworm</b> launch...<br>
 
 ### Setup for remotely control printer power ON and OFF via Relay:
 The original code and setup instructions (from author Tinntbg) can be found at: https://github.com/tinntbg/auto-power-off-klipper  <br>
@@ -80,7 +80,6 @@ The current language version can be changed in the menu on the LCD display: <br>
   ```
   SET_MENU_LANGUAGE LANGUAGE=3
   ```
-
 ### Custom macro buttons for the Mainsail:
 (find the macro names below in the list of available macros and add them to the main page as buttons).<br>
 `In Mainsail main page choose: Interface settings --> Macros --> Add group name` <br>
@@ -116,7 +115,6 @@ The current language version can be changed in the menu on the LCD display: <br>
 
 ### PrusaSlicer - START and END gcodes:
 In PrusaSlicer, insert these codes below into the `Start gcodes` and `End gcodes` sections:<br>
-
 - <b> START gcodes:</b>
   ```
   SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
@@ -128,7 +126,6 @@ In PrusaSlicer, insert these codes below into the `Start gcodes` and `End gcodes
   ```
   end_gcode
   ```
-
 <b> About CHAMBER_TMP and CHAMBER_MIN_TMP parameters from start_gcode macro: </b><br>
 These two parameters are set via <b>PrusaSlicer :</b><br> 
 - The first`CHAMBER_TMP` parameter: Sets the automatic temperature for the chamber at which the <b>Cooling / Filtration Exhaust fans</b> are activated (suitable for filaments susceptible to heat, such as PLA). 

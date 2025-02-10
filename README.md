@@ -53,14 +53,14 @@ bound_service: klipper             # Making sure the Klipper service is started/
 - <b>Distance</b> = Length of PTFE tube from filament runout switch to extruder gear.<br>
 - <b>Instructions:</b> Measure your PTFE tube distance length and enter value it into the: `file: macros.cfg --> macro: runout_distance --> its variable: set distance = your_value_in_mm`. Subtract about 100mm from the measured length of PTFE tube to allow for manual removal of the filament from the extruder gear. The distance value is set to 930 by default. <br>
 
-<b>In your macros.cfg file you will look for the exact macro and distance variable to set as in the example below: </b><br>
+<b>In your</b> `macros.cfg` <b>file you will look for the exact macro and distance variable to set as in the example below: </b><br>
 *(Change the length value 930 to your current one, or leave 930 as default if matches)*<br>
 ```
 [gcode_macro runout_distance]
 description: Filament Runout Distance
 variable_distance_end: 0
 gcode:
-   {% set distance = 930 %}         ## <<<< ADJUSTABLE LENGTH of PTFE tube (in mm, from filament sensor to extruder gear).
+   {% set distance = 930 %}  # <<<< ADJUSTABLE LENGTH of PTFE tube (in mm, from filament sensor to extruder gear with some reserve)
    {% set start_point = printer.print_stats.filament_used | int %}
    {% set end_point = (start_point + distance) | int %}
    SET_GCODE_VARIABLE MACRO=runout_distance VARIABLE=distance_end VALUE={end_point}

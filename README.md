@@ -1,26 +1,27 @@
+<p align="center">Toto bude uprostřed</p>
+📁  ## Nadpis TEST
+
 
 ## Sandworm 3D printer - Klipper macros:
+
 ```
 Author: Zachar Čuřík
 Launch date: Q2 2025
 All code name: Sandworm Mach3 Y2025 GS556 (game_save_556)
 Branch: Urobotos coding
 ```
-📁 <span style="font-size: 100px;"> ## Nadpis TEST</span>
+### The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg:
+(the redirected incude is included in the printer.cfg file, no need edit, it is listed here for information only).<br>
+The modifications include:<br>
 
-<details>
-  <summary>📁 <span style="font-size: 18px;"><strong>The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg:</strong></span></summary>
-  (the redirected incude is included in the printer.cfg file, no need edit, it is listed here for information only).<br>
-  The modifications include:<br>
+1. The fan (part cooling) turns off during PAUSE, and then resumes to its previous print speed during RESUME.<br>
+Benefits: Fan will not spin unnecessarily during the pause, which can take longer with Filament Runout.<br>
 
-  1. The fan (part cooling) turns off during PAUSE, and then resumes to its previous print speed during RESUME.<br>
-  Benefits: Fan will not spin unnecessarily during the pause, which can take longer with Filament Runout.<br>
+2. The second added modification is the <b>point_unretract</b> macro, this is the last code sent when printing is RESUMED (after PAUSE). <br>
+This is the coordinate point of the tool head on the print object when printing was paused and serves fora small filling of the nozzle
+directly at the point when continuation of printing.<br>
+Benefit: No more empty layers on printed parts after a pause.
 
-  2. The second added modification is the <b>point_unretract</b> macro, this is the last code sent when printing is RESUMED (after PAUSE). <br>
-  This is the coordinate point of the tool head on the print object when printing was paused and serves fora small filling of the nozzle
-  directly at the point when continuation of printing.<br>
-  Benefit: No more empty layers on printed parts after a pause.
-</details>
 
 ### Copy and Paste Config Files:
 - Copy from here the entire contents of Sandworm GitHub folder (including subdirectories) with all.cfg files and paste them into your printer's config directory, 
@@ -74,17 +75,17 @@ The current language version can be changed in the menu on the LCD display: <br>
 
 <b>Or run one of the macros below: </b><br>
 - <b>For English: </b>
-  ```
-  SET_MENU_LANGUAGE LANGUAGE=1
-  ```
+``` 
+SET_MENU_LANGUAGE LANGUAGE=1
+```
 - <b>For Czech: </b>
-  ```
-  SET_MENU_LANGUAGE LANGUAGE=2
-  ```
+``` 
+SET_MENU_LANGUAGE LANGUAGE=2
+```
 - <b>For Deutsch: </b>
-  ```
-  SET_MENU_LANGUAGE LANGUAGE=3
-  ```
+```  
+SET_MENU_LANGUAGE LANGUAGE=3
+```
 ### Custom macro buttons for the Mainsail:
 (find the macro names below in the list of available macros and add them to the main page as buttons).<br>
 `In Mainsail main page choose: Interface settings --> Macros --> Add group name` <br>

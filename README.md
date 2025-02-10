@@ -69,17 +69,17 @@ The current language version can be changed in the menu on the LCD display: <br>
 
 <b>Or run one of the macros below: </b><br>
 - <b>For English: </b>
-```
+  ```
   SET_MENU_LANGUAGE LANGUAGE=1
-```
+  ```
 - <b>For Czech: </b>
-```
+  ```
   SET_MENU_LANGUAGE LANGUAGE=2
-```
+  ```
 - <b>For Deutsch: </b>
-```
+  ```
   SET_MENU_LANGUAGE LANGUAGE=3
-```
+  ```
 
 ### Custom macro buttons for the Mainsail:
 (find the macro names below in the list of available macros and add them to the main page as buttons).<br>
@@ -165,7 +165,7 @@ which preheats the nozzle (a little) and then performs XYZ homing. The macro is 
 - And in the last row, `Temp_Homing` will appear as a clickable macro in the Mainsail console every time the printer is started.
 
 ### I also recommend the feature: Klipper Adaptive Meshing Purging (KAMP)
-Great feature (from author Kyleisah) to Calibrate Bed Mesh only in the printed part area, to save time.<br>
+Great feature (from author Kyleisah) to Calibrate Bed Mesh only in the printed part area: <br>
 https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging <br><br><br>
 
 

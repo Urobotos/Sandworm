@@ -91,7 +91,7 @@ The current language version can be changed in the menu on the LCD display: <br>
 <h3>Custom macro buttons for the Mainsail:</h3>
 
 (find the macro names below in the list of available macros and add them to the main page as buttons).<br>
-(In Mainsail main page choose: Interface settings --> Macros --> Add group name).<br>
+`In Mainsail main page choose: Interface settings --> Macros --> Add group name` <br>
 
 <b> Movement: (Group adjusted to: not displayed when pinting) </b><br>
 - Temp_Homing <br>

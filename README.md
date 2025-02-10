@@ -144,6 +144,11 @@ These two parameters are set via <b>PrusaSlicer :</b><br>
   > any commands during this time (it is paused). It is good to remember that to cancel the TEMPERATURE_WAIT loop at the very beginning of the print,
   > the easiest way is to restart the printer using the Emergency Stop and start the print again with a different temperature setting for the chamber. <br>
   
+  > Some data: Temperatures measured during about an hour of printing:<br>
+  > Bed: 60, Ambient: 25, Chamber: 41 <br>
+  > Bed: 95, Ambient: 20, Chamber: 46 <br>
+  > Bed: 50, Ambient: 12, Chamber: 28 <br>
+  
 ### Information about Proximity inductive probe SN-04 PNP and initial Z homing:
 For the initial Z home (after starting the printer), it is recommended to preheat the nozzle, <br>
 due to filament leakage from the Volcano nozzle after the previous print. <br>

@@ -52,7 +52,7 @@ bound_service: klipper             # Making sure the Klipper service is started/
 <b>Instructions:</b> Measure your PTFE tube length and enter value it into the <b>macros.cfg</b> file --> the <b>runout_distance</b> macro and its variable: <b>set distance = your_value_in_mm</b> . Subtract about 100mm from the measured length of PTFE tube to allow for manual removal of the filament from the extruder gear. The distance value is set to 930 by default. <br><br>
 
 <b>In macros.cfg you will look for the exact macro and distance variable to set as in the example below: </b><br>
-*(change the length value 930 to your current one, or leave 930 as default)*<br>
+*(In your macros.cfg file change the length value 930 to your current one, or leave 930 as default)*<br>
 ```
 [gcode_macro runout_distance]
 description: Filament Runout Distance
@@ -134,8 +134,14 @@ end_gcode
 ```
 
 <b> CHAMBER_TMP and CHAMBER_MIN_TMP: </b><br>
-These two parameters serve two purposes in <b>PrusaSlicer</b>, the `CHAMBER_TMP` parameter sets the automatic temperature for the chamber at which the <b>Cooling / or Filtration Exhaust fans</b> are activated (suitable for filaments susceptible to heat, such as PLA). <br>
+These two parameters serve two purposes in <b>PrusaSlicer</b>, the `CHAMBER_TMP` parameter sets the automatic temperature for the chamber at which the <b>Cooling / Filtration Exhaust fans</b> are activated (suitable for filaments susceptible to heat, such as PLA). <br>
 The second parameter `CHAMBER_MIN_TMP` checks (during the print_start gcode routine) the temperature in the chamber and if it is lower than the desired one, postpones the print and starts heating the chamber with the bed at 100°C until the temperature in the chamber reaches the desired one (suitable especially for filaments susceptible to warping, such as ABS, PETG, etc.).
+
+<b>Where to find these parameters in PrusaSlicer: </b><br>
+- <b>For Cooling / Filtering:</b> Filament profile --> Temperature --> Chamber --> Nominal: `YOUR_VALUE` °C
+- <b>For Preheat Chamber on print start:</b> Filament profile --> Temperature --> Chamber --> Minimum: `YOUR_VALUE` °C <br>
+
+*(You can set different values ​​for different Filaments, or completely disable temperature automation for a selected Filament).*
 
 <h3>Information about Proximity inductive probe SN-04 PNP and initial Z homing:</h3>
 For the initial Z home (after starting the printer), it is recommended to preheat the nozzle, <br>

@@ -139,9 +139,13 @@ start_gcode BED_TMP=[first_layer_bed_temperature] EXT_TMP=[first_layer_temperatu
 end_gcode
 ```
 
-<b> CHAMBER_TMP and CHAMBER_MIN_TMP: </b><br>
-These two parameters serve two purposes in <b>PrusaSlicer</b>, the `CHAMBER_TMP` parameter sets the automatic temperature for the chamber at which the <b>Cooling / Filtration Exhaust fans</b> are activated (suitable for filaments susceptible to heat, such as PLA). <br>
-The second parameter `CHAMBER_MIN_TMP` checks (during the print_start gcode routine) the temperature in the chamber and if it is lower than the desired one, postpones the print and starts heating the chamber with the bed at 100°C until the temperature in the chamber reaches the desired one (suitable especially for filaments susceptible to warping, such as ABS, PETG, etc.).
+<b> About CHAMBER_TMP and CHAMBER_MIN_TMP parameters from start_gcode mocro: </b><br>
+These two parameters serve two purposes in <b>PrusaSlicer :</b><br> 
+- The first`CHAMBER_TMP` parameter: Sets the automatic temperature for the chamber at which the <b>Cooling / Filtration Exhaust fans</b> are activated (suitable for filaments susceptible to heat, such as PLA). 
+  <br>
+
+- The second parameter `CHAMBER_MIN_TMP` checks (during the print_start gcode routine) the temperature in the chamber and if it is lower than the desired one, postpones the print and starts heating the chamber 
+  with the bed at 100°C until the temperature in the chamber reaches the desired one (suitable especially for filaments susceptible to warping, such as ABS, PETG, etc.).
 
 <b>Where to find these parameters in PrusaSlicer: </b><br>
 - <b>For Cooling / Filtering:</b> Filament profile --> Temperature --> Chamber --> Nominal: `YOUR_VALUE` °C
@@ -154,7 +158,7 @@ The second parameter `CHAMBER_MIN_TMP` checks (during the print_start gcode rout
 For the initial Z home (after starting the printer), it is recommended to preheat the nozzle, <br>
 due to filament leakage from the Volcano nozzle after the previous print. <br>
 Longer sticking filament does not cause much of a problem, it will bend on the SN-04 probe, <br>
-but short and hard could cause a shock displacement of the probe. <br><br>
+but short and hard could cause a shock displacement of the probe. <br>
 
 The probe detects the brass nozzle at a height of Z of approximately 0.6 - 0.7mm from the bed (when the edge <br>
 of the probe is horizontally aligned with the PEI sheet), the nozzle is then approximately 1mm away from the probe <br>

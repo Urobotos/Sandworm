@@ -76,15 +76,15 @@ The current language version can be changed in the menu on the LCD display: <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click on knob for Menu --> Setup --> Language --> Choice: English, Cestina or Deutch.<br><br>
 
 <b>Or run one of the macros below: </b><br>
-- <b>For English: </b><br>
+- <b>For English: </b>
 ```
   SET_MENU_LANGUAGE LANGUAGE=1
 ```
-- <b>For Czech: </b><br>
+- <b>For Czech: </b>
 ```
   SET_MENU_LANGUAGE LANGUAGE=2
 ```
-- <b>For Deutch </b><br>
+- <b>For Deutch: </b>
 ```
   SET_MENU_LANGUAGE LANGUAGE=3
 ```
@@ -140,7 +140,7 @@ end_gcode
 ```
 
 <b> About CHAMBER_TMP and CHAMBER_MIN_TMP parameters from start_gcode mocro: </b><br>
-These two parameters serve two purposes in <b>PrusaSlicer :</b><br> 
+These two parameters can be set in <b>PrusaSlicer :</b><br> 
 - The first`CHAMBER_TMP` parameter: Sets the automatic temperature for the chamber at which the <b>Cooling / Filtration Exhaust fans</b> are activated (suitable for filaments susceptible to heat, such as PLA). 
   <br>
 

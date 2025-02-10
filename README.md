@@ -1,10 +1,12 @@
 <h2>Sandworm 3D printer - Klipper macros:</h2>
+
 Author: Zachar Čuřík <br>
 Launch date: Q2 2025 <br>
 All code name: Sandworm Mach3 Y2025 GS556 (game_save_556) <br>
 Branch: Urobotos codes <br>
 
 <h3>The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg: </h3>
+
 (the redirected incude is included in the printer.cfg file, no need edit, it is listed here for information only)<br>
 The modifications include:<br>
 
@@ -18,20 +20,17 @@ Benefit: No more empty layers on printed parts after a pause.
 
 <h3>Copy and Paste Config Files: </h3>
 
-- Copy from here the entire contents of Sandworm GitHub folder (including subdirectories) with all.cfg files and paste them into your printer's config directory, (choose yes when asked if you want to overwrite the printer.cfg file), to the a path which will look something like this:
-
-  ```
-  home\biqu\printer_data\config\ 
-  ```
+- Copy from here the entire contents of Sandworm GitHub folder (including subdirectories) with all.cfg files and paste them into your printer's config directory, (choose yes when asked if you want to overwrite the printer.cfg file), to the a path which will look something like this: `home\biqu\printer_data\config\ `
+ 
 - Or you can clone this repository from the `printer_data/config` directory in the command line using the following command:
-
   ```
   git clone https://github.com/zacharcc/Sandworm.git
   ```
+  And now you can restart the printer for the first <b>Sandworm</b> launch...<br><br>
 
-And now you can restart the printer for the first <b>Sandworm</b> launch...<br>
 
 <h3>Setup for remotely control printer power ON and OFF via Relay:</h3>
+
 (The original code and setup instructions (from author Tinntbg) can be found at: https://github.com/tinntbg/auto-power-off-klipper ) <br>
 
 For remote control power ON/OFF by Relay it is need add somewhere to `moonraker.conf` file codes below: <br>
@@ -49,9 +48,10 @@ bound_service: klipper             # Making sure the Klipper service is started/
 ```
 
 <h3>Filament Runout Sensor and Runout Distance macro:</h3>
+
 <b>Description:</b> Adjustable distance delay (to run PAUSE) that is triggered when the filament sensor is activated to save filament, with a millimetres countdown to the end on the LCD display.<br>
 <b>Distance</b> = Length of PTFE tube from filament runout switch to extruder gear.<br>
-<b>Instructions:</b> Measure your PTFE tube length and enter value it into the <b>macros.cfg</b> file --> the <b>runout_distance</b> macro and its variable: <b>set distance = your_value_in_mm</b> . Subtract about 100mm from the measured length of PTFE tube to allow for manual removal of the filament from the extruder gear. The distance value is set to 930 by default. <br><br>
+<b>Instructions:</b> Measure your PTFE tube length and enter value it into the <b>macros.cfg</b> file --> the <b>runout_distance</b> macro and its variable: `set distance = your_value_in_mm` . Subtract about 100mm from the measured length of PTFE tube to allow for manual removal of the filament from the extruder gear. The distance value is set to 930 by default. <br><br>
 
 <b>In your macros.cfg file you will look for the exact macro and distance variable to set as in the example below: </b><br>
 *(Change the length value 930 to your current one, or leave 930 as default if matches)*<br>
@@ -68,6 +68,7 @@ gcode:
 ```
 
 <h3> Language change:</h3>
+
 Language translation is for the entire LCD menu and some macros.<br>
 The current language version can be changed in the menu on the LCD display: <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click on knob for Menu --> Setup --> Language --> Choice: English, Cestina or Deutch.<br><br>
@@ -87,6 +88,7 @@ The current language version can be changed in the menu on the LCD display: <br>
 ```
 
 <h3>Mainsail and custom macro buttons:</h3>
+
 (find the macro names below in the list of available macros and add them to the main page as buttons).<br>
 (In Mainsail main page choose: Interface settings --> Macros --> Add group name).<br><br>
 
@@ -146,6 +148,7 @@ The second parameter `CHAMBER_MIN_TMP` checks (during the print_start gcode rout
 *(You can set different values ​​for different Filaments, or completely disable temperature automation for a selected Filament).*
 
 <h3>Information about Proximity inductive probe SN-04 PNP and initial Z homing:</h3>
+
 For the initial Z home (after starting the printer), it is recommended to preheat the nozzle, <br>
 due to filament leakage from the Volcano nozzle after the previous print. <br>
 Longer sticking filament does not cause much of a problem, it will bend on the SN-04 probe, <br>

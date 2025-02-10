@@ -147,8 +147,8 @@ These two parameters can be set in <b>PrusaSlicer :</b><br>
   with the bed at 100°C until the temperature in the chamber reaches the desired one (suitable especially for filaments susceptible to warping, such as ABS, PETG, etc.).
 
 <b>Where to find these parameters in PrusaSlicer: </b><br>
-- <b>For Cooling / Filtering:</b> Filament profile --> Temperature --> Chamber --> Nominal: `YOUR_VALUE` °C
-- <b>For Preheat Chamber on print start:</b> Filament profile --> Temperature --> Chamber --> Minimum: `YOUR_VALUE` °C <br>
+- <b>For Cooling / Filtering:</b> `Filament profile --> Temperature --> Chamber --> Nominal: YOUR_VALUE °C`
+- <b>For preheat the Chamber on print start:</b> `Filament profile --> Temperature --> Chamber --> Minimum: YOUR_VALUE °C` <br>
 
 *(You can set different values ​​for different Filaments, or completely disable temperature automation for a selected Filament).*
 

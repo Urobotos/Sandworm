@@ -34,7 +34,7 @@ And now you can restart the printer for the first <b>Sandworm</b> launch...<br>
 <h3>Setup for remotely control printer power ON and OFF via Relay:</h3>
 (The original code and setup instructions (from author Tinntbg) can be found at: https://github.com/tinntbg/auto-power-off-klipper ) <br>
 
-For remote control power ON/OFF by Relay it is need add somewhere to <b>moonraker.conf</b> file codes below: <br>
+For remote control power ON/OFF by Relay it is need add somewhere to `moonraker.conf` file codes below: <br>
 ```
 [power printer]
 type: gpio

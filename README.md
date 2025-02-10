@@ -5,7 +5,7 @@
 
 :information_source:
 
-&#xF252;
+![note](images/note.svg =100x200)
 
 ## Sandworm 3D printer - Klipper macros:
 

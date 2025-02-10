@@ -1,13 +1,12 @@
 <p align="center">Toto bude uprostřed</p>
 📁  ## Nadpis TEST
 
-<img vertical-align: "middle" src="images/info-circle.svg" alt="info"> ahoj
+<br>
+<p align="center" width="100%">
+    This text is also aligned to the right.<br>
+    <img width="2%" src="images/info-circle.svg">
+</p>
 
-:information_desk_person:
-
-:information_source:
-
-![note](images/note.svg)
 
 ## Sandworm 3D printer - Klipper macros:
 

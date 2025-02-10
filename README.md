@@ -17,9 +17,9 @@ a small filling of the nozzle directly at the point when continuation of printin
 Benefit: No more empty layers on printed parts after a pause.
 
 <h3>Copy and Paste Config Files: </h3>
-Copy the entire contents of the Config folder (including subdirectories) with .cfg files here and paste them into your printer's config directory, <br> 
-(choose yes when asked if you want to overwrite the printer.cfg file), to the a path that will look something like this:<br> 
-home\biqu\printer_data\config\ <br><br>
+Copy from here the entire contents of Sandworm GitHub folder (including subdirectories) with .cfg files and paste them into your printer's config directory, <br> 
+(choose yes when asked if you want to overwrite the printer.cfg file), to the a path which will look something like this:<br> 
+`home\biqu\printer_data\config\` <br><br>
 
 Or you can clone this repository from the `printer_data/config` directory in the command line using the following command:<br>
 

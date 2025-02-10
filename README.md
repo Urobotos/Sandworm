@@ -17,17 +17,19 @@ a small filling of the nozzle directly at the point when continuation of printin
 Benefit: No more empty layers on printed parts after a pause.
 
 <h3>Copy and Paste Config Files: </h3>
-Copy from here the entire contents of Sandworm GitHub folder (including subdirectories) with .cfg files and paste them into your printer's config directory, <br> 
-(choose yes when asked if you want to overwrite the printer.cfg file), to the a path which will look something like this:<br> 
-`home\biqu\printer_data\config\` <br><br>
 
-Or you can clone this repository from the `printer_data/config` directory in the command line using the following command:<br>
+- Copy from here the entire contents of Sandworm GitHub folder (including subdirectories) with .cfg files and paste them into your printer's config directory, (choose yes when asked if you want to overwrite the printer.cfg file), to the a path which will look something like this:
 
-```
-git clone https://github.com/zacharcc/Sandworm.git
-```
+  ```
+  home\biqu\printer_data\config\ 
+  ```
+- Or you can clone this repository from the `printer_data/config` directory in the command line using the following command:
 
-You can then restart the printer for the first <b>Sandworm</b> launch...<br>
+  ```
+  git clone https://github.com/zacharcc/Sandworm.git
+  ```
+
+And now you can restart the printer for the first <b>Sandworm</b> launch...<br>
 
 <h3>Setup for remotely control printer power ON and OFF via Relay:</h3>
 (The original code and setup instructions (from author Tinntbg) can be found at: https://github.com/tinntbg/auto-power-off-klipper ) <br>

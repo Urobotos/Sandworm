@@ -23,7 +23,7 @@ Benefit: No more empty layers on printed parts after a pause.
 
 - Copy from here the entire contents of Sandworm GitHub folder (including subdirectories) with all.cfg files and paste them into your printer's config directory, (choose yes when asked if you want to overwrite the printer.cfg file), to the a path which will look something like this: `home\biqu\printer_data\config\ `
  
-- Or you can clone this repository from the `printer_data/config` directory in the command line using the following command:
+- Or you can clone this repository from your `printer_data/config` directory in the command line using the following command:
   ```
   git clone https://github.com/zacharcc/Sandworm.git
   ```

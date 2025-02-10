@@ -21,7 +21,7 @@ Copy the entire contents of the Config folder (including subdirectories) with .c
 (choose yes when asked if you want to overwrite the printer.cfg file), to the a path that will look something like this:<br> 
 home\biqu\printer_data\config\ <br><br>
 
-<b>Or To install the macros, first clone this repository inside of your `printer_data/config` directory with the following command:</b><br>
+Or you can clone this repository from the `printer_data/config` directory in the command line using the following command:<br>
 
 ```
 git clone https://github.com/zacharcc/Sandworm.git

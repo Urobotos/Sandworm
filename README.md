@@ -179,7 +179,6 @@ which preheats the nozzle (a little) and then performs XYZ homing. The macro is 
 Great feature (from author Kyleisah) to Calibrate Bed Mesh only in the printed part area: <br>
 https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging <br><br><br>
 
-
 That's it, you've reached the end and your circle has closed. Thank you for your patience with the tutorials and for stay with them until the end. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy the printing!
 
 ![Urobotos Project](images/Urobotos.gif)

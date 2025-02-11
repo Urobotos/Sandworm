@@ -1,11 +1,9 @@
-<p align="center">Toto bude uprostřed</p>
-📁  ## Nadpis TEST
 
-<br>
-<p align="center" width="100%">
-    This text is also aligned to the right.<br>
-    <img width="2%" src="images/info-circle.svg">
-</p>
+
+   | Syntax    | Description |
+   | ---       | ----------- |
+   | Header    | Title       |
+   | Paragraph | Text        |
 
 
 ## Sandworm 3D printer - Klipper macros:

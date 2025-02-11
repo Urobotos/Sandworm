@@ -8,7 +8,7 @@ Click the "Fork" button at the top-right corner of this page to create a copy of
 ### 2️⃣ Clone the repository
 Run the following command in your terminal:
 ```
-git clone https://github.com/YOUR-USERNAME/MyProject.git
+git clone https://github.com/zacharcc/Sandworm.git
 ```
 ### 3️⃣ Create a new branch
 Create a new branch to make your changes:

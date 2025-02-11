@@ -1,11 +1,5 @@
 
 
-   | Syntax    | Description |
-   | ---       | ----------- |
-   | Header    | Title       |
-   | Paragraph | Text        |
-
-
 ## Sandworm 3D printer - Klipper macros:
 
 ```

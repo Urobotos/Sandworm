@@ -48,7 +48,7 @@ restart_delay: 1
 bound_service: klipper             # Making sure the Klipper service is started/restarted with the toggle
 ```
 
-### Filament Runout Sensor and Runout Distance macro:
+### Filament Runout Sensor and runout_distance macro:
 - <b>Description:</b> Adjustable distance delay (to run PAUSE) that is triggered when the filament sensor is activated to save filament, with a millimetres countdown to the end on the LCD display.<br> 
 - <b>Distance</b> = Length of PTFE tube from filament runout switch to extruder gear.<br>
 - <b>Instructions:</b> Measure your PTFE tube distance length and enter value it into the: `file: macros.cfg --> macro: runout_distance --> its variable: set distance = your_value_in_mm`. Subtract about 100mm from the measured length of PTFE tube to allow for manual removal of the filament from the extruder gear. The distance value is set to 930 by default. <br>

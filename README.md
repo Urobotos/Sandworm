@@ -15,7 +15,7 @@
 Author: Zachar Čuřík
 Launch date: Q2 2025
 All code name: Sandworm Mach3 Y2025 GS556 (*game_save: "556") - (†game_over_date: "unknown")
-Branch: Urobotos coding
+Project by: Urobotos coding
 ```
 *(This project is part of **Urobotos** coding – a DIY initiative for Klipper-based 3D printing).*
 

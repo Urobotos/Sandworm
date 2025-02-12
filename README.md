@@ -18,6 +18,8 @@ Launch date: Q2 2025
 All code name: Sandworm Mach3 Y2025 GS556 (game_save_556)
 Branch: Urobotos coding
 ```
+*(This project is part of **Urobotos** coding – a DIY initiative for Klipper-based 3D printing).*
+
 ### The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg:
 (the redirected incude is included in the printer.cfg file, no need edit, it is listed here for information only).<br>
 The modifications include:<br>

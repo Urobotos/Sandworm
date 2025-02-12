@@ -1,13 +1,3 @@
-[!NOTE]
-> ![note](images/info-circle-blue.svg) **Note:** Some temperature data (in °C) measured after about an hour of printing:<br>
-  > Bed: 60, Ambient: 25, Chamber: 41 <br>
-  > Bed: 95, Ambient: 20, Chamber: 46 <br>
-  > Bed: 50, Ambient: 12, Chamber: 28 <br>
-
-- ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `#f03c15`
-- ![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png) `#c5f015`
-- ![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png) `#1589F0`
-
 
 ## Sandworm 3D printer - Klipper macros:
 

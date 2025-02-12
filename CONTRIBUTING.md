@@ -1,4 +1,4 @@
-## 🛠️ Contributing to MyProject
+## 🛠️ Contributing to Urobotos/Sandworm
 
 Thanks for your interest in contributing! 🚀 Please follow these steps:
 
@@ -8,7 +8,7 @@ Click the "Fork" button at the top-right corner of this page to create a copy of
 ### 2️⃣ Clone the repository
 Run the following command in your terminal:
 ```
-git clone https://github.com/zacharcc/Sandworm.git
+git clone https://github.com/Urobotos/Sandworm.git
 ```
 ### 3️⃣ Create a new branch
 Create a new branch to make your changes:
@@ -26,13 +26,14 @@ git commit -m "Added feature XYZ"
 git push origin feature-name
 ```
 ### 6️⃣ Create a Pull Request (PR)
-- Go to the original repository.
+- Go to the **Urobotos/Sandworm** repository.
 - Click on "Pull Requests".
 - Click "New pull request".
 - Select your fork and branch.
 - Write a short description of your changes and submit the PR.
 
-🎉 Your contribution will be reviewed! Thanks for making the project better! 🚀
+🎉 Your contribution will be reviewed! Thanks for making the Urobotos project better! 🚀
+
 
 
 

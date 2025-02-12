@@ -1,304 +1,126 @@
-
-## Sandworm 3D printer - Klipper macros:
+## Sandworm 3D Printer - Klipper Macros
 
 ```
 Author: Zachar Čuřík
-Launch date: Q2 2025
-All code name: Sandworm Mach3 Y2025 GS556 (*game_save: "556") - (†game_over_date: "unknown")
-Project by: Urobotos coding
+Launch Date: Q2 2025
+Code Name: Sandworm Mach3 Y2025 GS556 (*game_save: "556") - (†game_over_date: "unknown")
+Project by: Urobotos Coding
 ```
-*(This project is part of **Urobotos** coding – a DIY initiative for Klipper-based 3D printing).*
+*(This project is part of **Urobotos** – a DIY initiative for Klipper-based 3D printing.)*
 
-### The Sandworm printer uses a modified mainsail.cfg file called mainsail_custom.cfg:
-(the redirected incude is included in the printer.cfg file, no need edit, it is listed here for information only).<br>
-The modifications include:<br>
+### The Sandworm printer uses a modified `mainsail.cfg` file called `mainsail_custom.cfg`:
+(The redirected include is listed in `printer.cfg`, so no manual edits are needed. This is provided for information only.)<br>
+Modifications include:<br>
 
-1. The fan (part cooling) turns off during PAUSE, and then resumes to its previous print speed during RESUME.<br>
-Benefits: Fan will not spin unnecessarily during the pause, which can take longer with Filament Runout.<br>
+1. **Fan Control**: The part cooling fan turns off during `PAUSE` and then resumes to its previous speed when `RESUME` is triggered.<br>
+   - **Benefit**: The fan does not run unnecessarily during a pause, which can be extended when using a filament sensor for runout detection.<br>
 
-2. The second added modification is the <b>point_unretract</b> macro, this is the last code sent when printing is RESUMED (after PAUSE). <br>
-This is the coordinate point of the tool head on the print object when printing was paused and serves fora small filling of the nozzle
-directly at the point when continuation of printing.<br>
-Benefit: No more empty layers on printed parts after a pause.
+2. **Nozzle Priming After Pause**: The `<b>point_unretract</b>` macro is executed when printing resumes after a pause.<br>
+   - **How it works**: The print head returns to the paused position and performs a small filament extrusion to refill the nozzle.<br>
+   - **Benefit**: Prevents gaps in the print caused by filament leakage during the pause.<br>
 
+### 📂 Copy & Paste Config Files
+- Copy all contents from the Sandworm GitHub folder (including subdirectories) and paste them into your printer’s config directory.
+  - Example path: `home/biqu/printer_data/config/`
+  - Choose **Yes** if prompted to overwrite `printer.cfg`.
 
-### Copy and Paste Config Files:
-- Copy from here the entire contents of Sandworm GitHub folder (including subdirectories) with all.cfg files and paste them into your printer's config directory, 
-  (choose yes when asked if you want to overwrite 
-  the printer.cfg file), to the a path which will look something like this: `home\biqu\printer_data\config\ `
- 
-- Or you can clone this repository from your `printer_data/config` directory in the command line using the following command:
+- Alternatively, clone this repository directly from your `printer_data/config` directory using:
   ```
-  git clone https://github.com/zacharcc/Sandworm.git
+  git clone https://github.com/Urobotos/Sandworm.git
   ```
-  Then restart the printer for the first <b>Sandworm</b> launch...<br>
+  - Restart your printer for the first **Sandworm** launch.<br>
 
-### Setup for remotely control printer power ON and OFF via Relay:
-The original code and setup instructions (from author Tinntbg) can be found at: https://github.com/tinntbg/auto-power-off-klipper  <br>
-For remote control power ON/OFF by Relay it is need add somewhere to `moonraker.conf` file codes below: <br>
+### 🔌 Remote Power Control via Relay
+The original setup guide (by `Tinntbg`) can be found at: [Auto Power Off Klipper](https://github.com/tinntbg/auto-power-off-klipper).<br>
+To enable relay-based power control, add the following to your `moonraker.conf` file:<br>
+
 ```
 [power printer]
 type: gpio
-pin: gpiochip0/gpio72              # can be revesed by "!" , BTT-PI GPIO pin PC8
+pin: gpiochip0/gpio72   # Can be reversed with "!", BTT-PI GPIO pin PC8
 initial_state: off
-off_when_shutdown: True            # Turning off when a >shutdown/error occurs
-locked_while_printing: True        # Preventing you from turning it off during a print
-on_when_job_queued: True           # Toggling the power On when you send a file >from the slicer to print
+off_when_shutdown: True  # Turn off power on shutdown/error
+locked_while_printing: True  # Prevent power-off during a print
+on_when_job_queued: True  # Power on when a print job is sent
 restart_klipper_when_powered: True
 restart_delay: 1
-bound_service: klipper             # Making sure the Klipper service is started/restarted with the toggle
+bound_service: klipper  # Ensures Klipper service starts/restarts with power toggle
 ```
 
-### Filament runout sensor and runout_distance macro:
-- <b>Description:</b> Adjustable distance delay (to run PAUSE) that is triggered when the filament sensor is activated to save filament, with a millimetres countdown to the end on the LCD display.<br> 
-- <b>Distance</b> = Length of PTFE tube from filament runout switch to extruder gear.<br>
-- <b>Instructions:</b> Measure your PTFE tube distance length and enter value it into the: `file: macros.cfg --> macro: runout_distance --> its variable: set distance = your_value_in_mm`. Subtract about 100mm from the measured length of PTFE tube to allow for manual removal of the filament from the extruder gear. The distance value is set to 930 by default. <br>
+### 🎞️ Filament Runout Sensor & `runout_distance` Macro
+- **Description**: A configurable distance delay before `PAUSE` is triggered when the filament sensor is activated.
+- **Purpose**: Saves filament by allowing extra material to be used before pausing.
+- **Setup Instructions**:
+  - Measure your PTFE tube length (from filament sensor to extruder gear).
+  - In `macros.cfg`, find `runout_distance` and set `distance = your_value_in_mm`.
+  - **Default value**: `930mm` (includes a ~100mm buffer for manual filament removal).
 
-<b>In your</b> `macros.cfg` <b>file you will look for the exact macro and distance variable to set as in the example below: </b><br>
-*(Change the length value 930 to your current one, or leave 930 as default if matches)*<br>
-```
+```ini
 [gcode_macro runout_distance]
 description: Filament Runout Distance
 variable_distance_end: 0
 gcode:
-   {% set distance = 930 %}  # <<<< ADJUSTABLE LENGTH of PTFE tube (in mm, from filament sensor to extruder gear with some reserve)
+   {% set distance = 930 %}  # <<<< ADJUSTABLE LENGTH (in mm)
    {% set start_point = printer.print_stats.filament_used | int %}
    {% set end_point = (start_point + distance) | int %}
    SET_GCODE_VARIABLE MACRO=runout_distance VARIABLE=distance_end VALUE={end_point}
    UPDATE_DELAYED_GCODE ID=runout_check DURATION=1
 ```
-### Language change:
-Language translation is for the entire LCD menu and some macros.<br>
-The current language version can be changed in the menu on the LCD display: <br>
-`Click on knob for Menu --> Setup --> Language --> Choice: English, Cestina or Deutsch` <br>
 
-<b>Or run one of the macros below: </b><br>
-- <b>For English: </b>
-``` 
-SET_MENU_LANGUAGE LANGUAGE=1
-```
-- <b>For Czech: </b>
-``` 
-SET_MENU_LANGUAGE LANGUAGE=2
-```
-- <b>For Deutsch: </b>
-```  
-SET_MENU_LANGUAGE LANGUAGE=3
-```
-### Custom macro buttons for the Mainsail:
-(find the macro names below in the list of available macros and add them to the main page as buttons).<br>
-`In Mainsail main page choose: Interface settings --> Macros --> Add group name` <br>
+### 🌐 Language Selection
+The LCD menu and some macros support multiple languages.<br>
+To change the language:
+1. **LCD Menu**: `Menu -> Setup -> Language -> Choose: English, Cestina, Deutsch`
+2. **G-code Macros**:
+   - **English:**
+     ```
+     SET_MENU_LANGUAGE LANGUAGE=1
+     ```
+   - **Czech:**
+     ```
+     SET_MENU_LANGUAGE LANGUAGE=2
+     ```
+   - **German:**
+     ```
+     SET_MENU_LANGUAGE LANGUAGE=3
+     ```
 
-<b> Movement: (Group adjusted to: not displayed when pinting) </b><br>
-- Temp_Homing <br>
-- steppers_off <br>
-- e_stepper_off <br>
-- Park_Toolhead <br>
+### 🖲️ Custom Macro Buttons in Mainsail
+Find the macro names below and add them as buttons in **Mainsail**:
 
-<b> Filament: (not displayed when pinting) </b><br>
-- FILAMENT_LOAD &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;# With temperature customize on the button (default 200°C for PLA) <br>
-- FILAMENT_UNLOAD &nbsp;&nbsp;&nbsp;# With temperature customize on the button (default 200°C for PLA) <br>
-- M600 <br>
-- Nozzle_Clean  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Via brush <br>
-- e_stepper_off <br>
+- **Movement (Hidden during prints)**:
+  - `Temp_Homing`
+  - `steppers_off`
+  - `e_stepper_off`
+  - `Park_Toolhead`
 
-<b> Chamber Lights (always on) </b><br>
-- lights_ON_OFF  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Toggle button - Lights ON or OFF, its depends on previous Lights state <br>
-- lights_max     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Lights on maximum brithness <br>
+- **Filament (Hidden during prints)**:
+  - `FILAMENT_LOAD`  *(Customizable temperature button, default: 200°C for PLA)*
+  - `FILAMENT_UNLOAD` *(Customizable temperature button, default: 200°C for PLA)*
+  - `M600`
+  - `Nozzle_Clean` *(Uses brush, only if the axis is not homed)*
+  - `e_stepper_off`
 
-<b> Calibration: (not displayed when pinting and Pause) </b><br>
-- Z_ENDSTOP_CALIBRATE_01 <br>
-- PROBE_CALIBRATE_02 <br>
-- Z_TILT_ADJUST_03 <br>
-- BED_MESH_CALIBRATE_04 <br>
+- **Chamber Lights (Always visible)**:
+  - `lights_ON_OFF` *(Toggle ON/OFF based on previous state)*
+  - `lights_max` *(Set lights to max brightness)*
 
-<b> Adjust print: (displayed only when pinting) </b><br>
-- SET_PAUSE_AT_LAYER <br>
-- SET_PAUSE_NEXT_LAYER <br>
-- ACTIVATE_POWER_OFF <br>
-- DEACTIVATE_POWER_OFF
+- **Calibration (Hidden during prints & pauses)**:
+  - `Z_ENDSTOP_CALIBRATE_01`
+  - `PROBE_CALIBRATE_02`
+  - `Z_TILT_ADJUST_03`
+  - `BED_MESH_CALIBRATE_04`
 
-### PrusaSlicer - START and END gcodes:
-In PrusaSlicer, insert these codes below into the `Start gcodes` and `End gcodes` sections:<br>
-- <b> START gcodes:</b>
-  ```
-  SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
-  CLEAR_PAUSE
-  BED_MESH_CLEAR
-  start_gcode BED_TMP=[first_layer_bed_temperature] EXT_TMP=[first_layer_temperature] CHAMBER_TMP=[chamber_temperature] CHAMBER_MIN_TMP=[chamber_minimal_temperature]
-  ```
-- <b> END gcodes:</b><br>
-  ```
-  end_gcode
-  ```
-<b> About CHAMBER_TMP and CHAMBER_MIN_TMP parameters from start_gcode macro: </b><br>
-These two parameters are set via <b>PrusaSlicer :</b><br> 
-- The first`CHAMBER_TMP` parameter: Sets the automatic temperature for the chamber at which the <b>Cooling / Filtration Exhaust fans</b> are activated (suitable for filaments susceptible to heat, such as PLA). 
-- The second parameter `CHAMBER_MIN_TMP` checks (during the print start routine) the temperature in the chamber and if it is lower than the desired one, it pauses the print and starts heating the chamber using 
-  the bed at 100°C until the temperature in the chamber reaches the desired value (especially suitable for filaments prone to warping, such as ABS, PETG, etc.).<br><br>
-
-<b>Where to find these parameters in PrusaSlicer: </b><br>
-- <b>For automatic Cooling / Filtering of the Chamber:</b> `Filament profile --> Temperature --> Chamber --> Nominal: YOUR_VALUE °C`
-- <b>To preheat the Chamber when printing start:</b> `Filament profile --> Temperature --> Chamber --> Minimum: YOUR_VALUE °C` <br>
-
-  (You can set different values ​​for different Filaments, or completely disable temperature automation for a selected Filament). <br>
-  
-  > <span align="bottom"> ![note](images/info-circle-blue.svg) **Note:** </span> For minimal chamber temp: Always set the minimum temperature in the printing chamber adequately considering the ambient temperature.
-  > The macro is evaluated using TEMPERATURE_WAIT (similar to: M109 set extruder temperature and wait) and the printer does not accept
-  > any commands during this time (incoming codes are paused). It is good to remember that to cancel the TEMPERATURE_WAIT loop at the very beginning of the print,
-  > the easiest way is to restart the printer using the Emergency Stop and start the print again with a different temperature setting for the chamber. <br>
-
-  > ![note](images/info-circle-blue.svg) **Note:** Some temperature data (in °C) measured after about an hour of printing:<br>
-  > Bed: 60, Ambient: 25, Chamber: 41 <br>
-  > Bed: 95, Ambient: 20, Chamber: 46 <br>
-  > Bed: 50, Ambient: 12, Chamber: 28 <br>
-  
-### Information about Proximity inductive probe SN-04 PNP and initial Z homing:
-For the initial Z home (after starting the printer), it is recommended to preheat the nozzle, <br>
-due to filament leakage from the Volcano nozzle after the previous print. <br>
-Longer sticking filament does not cause much of a problem, it will bend on the SN-04 probe, <br>
-but short and hard could cause a shock displacement of the probe. <br>
-
-The probe detects the brass nozzle at a height of Z of approximately 0.6 - 0.7mm from the bed (when the edge <br>
-of the probe is horizontally aligned with the PEI sheet), the nozzle is then approximately 1mm away from the probe <br>
-itself (which has a recess in the middle). Different nozzle materials will affect the height of capture by the probe,<br> 
-for example a carbide nozzle will be captured earlier (at a higher distance from the PEI sheet).<br>
-
-<b>Solution:</b> There is no required to go to the printer and manually clean the nozzle, <br>
-just preheat the nozzle remotely and start Z homing, after which the filament will <br>
-remain bent and the next Z homing can be performed normally. <br>
-
-<b> Buil-in macros: </b><br>
-The Sandworm printer solves this situation with a built-in automatic G28 XYZ `Temp_Homing` macro, <br>
-which preheats the nozzle (a little) and then performs XYZ homing. The macro is implemented in: <br>
-
-- Start Gcodes <br>
-- Noozle Clean (via brush, only when axis is not homed) <br>
-- And in the last row, `Temp_Homing` will appear as a clickable macro in the Mainsail console every time the printer is started.<br>
-
-<hr>
-
-### I also recommend the feature: Klipper Adaptive Meshing Purging (KAMP)
-Great feature (from author Kyleisah) to Calibrate Bed Mesh only in the printed part area: <br>
-https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging
+### 🛠️ Klipper Adaptive Meshing Purging (KAMP)
+A great feature by `Kyleisah` to calibrate only the printed area:
+🔗 [Klipper Adaptive Meshing Purging](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)
 
 ### 🤝 Contributing
-We welcome contributions! If you'd like to contribute, please follow the guidelines in  
-[CONTRIBUTING.md](./CONTRIBUTING.md). 🚀 <br>
+We welcome contributions! If you'd like to contribute, follow the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines. 🚀
 
-<hr>
+---
 
-That's it, you've reached the end and your circle has closed. Thank you for your patience with the tutorials and for stay with them until the end. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy the printing!
+That's it, you've reached the end! Thank you for your patience and for following the guide to the end. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy printing!
 
 ![Urobotos Project](images/Urobotos.gif)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                             
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	  
 

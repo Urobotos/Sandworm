@@ -88,7 +88,7 @@ To change the language:
 ### 🖲️ Custom Macro Buttons in Mainsail
 Find the macro names below and add them as buttons in **Mainsail**:
 
-- **Movement ( Set Group to: Hidden during prints)**:
+- **Movement (Hidden during prints)**:
   - `Temp_Homing`
   - `steppers_off`
   - `e_stepper_off`

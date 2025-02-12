@@ -98,7 +98,7 @@ Find the macro names below and add them as buttons in **Mainsail**:
   - `FILAMENT_LOAD`  *(Customizable temperature button, default: 200°C for PLA)*
   - `FILAMENT_UNLOAD` *(Customizable temperature button, default: 200°C for PLA)*
   - `M600`
-  - `Nozzle_Clean` *(Uses brush, only if the axis is not homed)*
+  - `Nozzle_Clean` *(Uses brush)*
   - `e_stepper_off`
 
 - **Chamber Lights (Always visible)**:

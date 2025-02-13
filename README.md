@@ -15,7 +15,7 @@ Modifications include:<br>
 1. **Fan Control**: The part cooling fan turns off during `PAUSE` and then resumes to its previous speed when `RESUME` is triggered.<br>
    - **Benefit**: The fan does not run unnecessarily during a pause, which can be extended when using a filament sensor for runout detection.<br>
 
-2. **Nozzle Priming After Pause**: The `<b>point_unretract</b>` macro is executed when printing resumes after a pause.<br>
+2. **Nozzle Priming After Pause**: The `point_unretract` macro is executed when printing resumes after a pause.<br>
    - **How it works**: The print head returns to the paused position and performs a small filament extrusion to refill the nozzle.<br>
    - **Benefit**: Prevents gaps in the print caused by filament leakage during the pause.<br>
 

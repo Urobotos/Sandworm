@@ -111,6 +111,62 @@ Find the macro names below and add them as buttons in **Mainsail**:
   - `Z_TILT_ADJUST_03`
   - `BED_MESH_CALIBRATE_04`
 
+### PrusaSlicer - START and END Gcodes
+In **PrusaSlicer**, insert the following G-code snippets into the `Start G-codes` and `End G-codes` sections:
+
+#### **🟢 Start G-codes:**
+```gcode
+SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
+CLEAR_PAUSE
+BED_MESH_CLEAR
+start_gcode BED_TMP=[first_layer_bed_temperature] EXT_TMP=[first_layer_temperature] CHAMBER_TMP=[chamber_temperature] CHAMBER_MIN_TMP=[chamber_minimal_temperature]
+```
+
+#### **🔴 End G-codes:**
+```gcode
+end_gcode
+```
+
+#### **📌 About CHAMBER_TMP and CHAMBER_MIN_TMP Parameters**
+These two parameters are set via **PrusaSlicer**:
+- **`CHAMBER_TMP`** → Sets the automatic chamber temperature at which the **Cooling/Filtration Exhaust fans** activate (useful for heat-sensitive filaments like PLA).
+- **`CHAMBER_MIN_TMP`** → Ensures the chamber temperature is above a minimum threshold before starting the print. If the temperature is too low, the printer **pauses** and uses the **heated bed at 100°C** to warm the chamber until it reaches the required value (especially useful for filaments prone to warping, such as ABS, PETG, etc.).
+
+#### **📍 Where to Find These Parameters in PrusaSlicer:**
+- **For automatic Cooling/Filtration:** `Filament Profile → Temperature → Chamber → Nominal: YOUR_VALUE °C`
+- **To Preheat the Chamber Before Printing:** `Filament Profile → Temperature → Chamber → Minimum: YOUR_VALUE °C`
+
+💡 **Tip:** You can set different values for different filaments or completely disable temperature automation for a specific filament.
+
+> ![note](images/info-circle-blue.svg) **Note:** Always set the **minimum chamber temperature** with respect to ambient conditions. The macro relies on `TEMPERATURE_WAIT` (similar to `M109` for the hotend), meaning the printer **pauses all commands** during this phase. If needed, you can cancel the wait loop early by using an **Emergency Stop** and restarting the print with a different chamber temperature setting.
+
+> ![note](images/info-circle-blue.svg) **Example Chamber Temperatures (after ~1 hour of printing):**
+> - Bed: 60°C | Ambient: 25°C | Chamber: 41°C
+> - Bed: 95°C | Ambient: 20°C | Chamber: 46°C
+> - Bed: 50°C | Ambient: 12°C | Chamber: 28°C
+
+#### **📡 Proximity Inductive Probe SN-04 PNP and Initial Z Homing**
+For accurate **Z homing**, it's recommended to **preheat the nozzle** to prevent residual filament from interfering with the probe.
+
+#### **Why Preheat the Nozzle?**
+- Long filament strands may bend harmlessly on the **SN-04 probe**, but short and hardened pieces could cause **probe displacement errors**.
+- The probe detects a **brass nozzle** at **Z ≈ 0.6 - 0.7mm from the bed** (when aligned with the PEI sheet). The nozzle itself is then **≈1mm away** from the probe (which has a recessed detection point).
+- **Different nozzle materials** (e.g., **carbide nozzles**) may trigger detection at slightly different heights.
+
+#### **🚀 Solution: Automatic Nozzle Preheating**
+Instead of manually cleaning the nozzle, simply **preheat it remotely** before running Z homing. This avoids probe interference and ensures a clean homing process.
+
+#### **🛠️ Built-in Macros for Z Homing**
+The **Sandworm printer** includes an automatic `Temp_Homing` macro that:
+1. **Preheats the nozzle slightly** before performing XYZ homing.
+2. **Prevents filament from interfering with the probe.**
+3. **Is integrated into multiple processes:**
+   - **Start G-codes** (before every print)
+   - **Nozzle Cleaning** (via brush, only when the axis is not homed)
+   - **As a clickable macro (`Temp_Homing`) in the Mainsail console every time the printer starts**
+
+<hr>
+
 ### 🛠️ Klipper Adaptive Meshing Purging (KAMP)
 A great feature by `Kyleisah` to calibrate only the printed area:
 🔗 [Klipper Adaptive Meshing Purging](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)

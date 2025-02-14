@@ -145,7 +145,8 @@ These two parameters are set via **PrusaSlicer**:
 > - Bed: 95°C | Ambient: 20°C | Chamber: 46°C
 > - Bed: 50°C | Ambient: 12°C | Chamber: 28°C
 
-#### **📡 Proximity Inductive Probe SN-04 PNP and Initial Z Homing**
+
+### **📡 Proximity Inductive Probe SN-04 PNP and Initial Z Homing**
 For accurate **Z homing**, it's recommended to **preheat the nozzle** to prevent residual filament from interfering with the probe.
 
 #### **Why Preheat the Nozzle?**

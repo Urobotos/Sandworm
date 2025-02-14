@@ -142,7 +142,7 @@ These two parameters are set via **PrusaSlicer**:
 the hotend), meaning the printer **pauses all commands** during this phase. If needed, you can cancel the wait loop early by using an **Emergency Stop** and restarting the print with a 
 different chamber temperature setting).
 
-**Example Chamber Temperatures (after ~1 hour of printing):**
+**Example Chamber Temperatures on Sandworm printer (after ~1 hour of printing):**
 - Bed: 60°C | Ambient: 25°C | Chamber: 41°C
 - Bed: 95°C | Ambient: 20°C | Chamber: 46°C
 - Bed: 50°C | Ambient: 12°C | Chamber: 28°C
@@ -178,6 +178,8 @@ The **Sandworm printer** includes an automatic `Temp_Homing` macro that:
    - **As a clickable macro (`Temp_Homing`) in the Mainsail console every time the printer starts**
 
 <hr>
+
+### Others:
 
 ### 🛠️ Klipper Adaptive Meshing Purging (KAMP)
 A great feature by `Kyleisah` to calibrate only the printed area:

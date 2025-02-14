@@ -152,7 +152,7 @@ different chamber temperature setting.
 For accurate **Z homing**, it's recommended to **preheat the nozzle** to prevent residual filament from interfering with the probe. 
 
 #### **Why Preheat the Nozzle?**
-- During printing, **some filament may leak out** and solidify at the tip of the nozzle. If this filament remains after cooling, it can interfere with homing.
+- Especially after printing is complete, during nozzle cooling, **some filament may leak out** and solidify at the tip of the nozzle. If this filament remains after cooling, it can interfere with homing.
 - **Longer filament strands** may bend harmlessly when contacting the **SN-04 probe**, but **short and hardened pieces** could lead to inaccurate measurements or even slight displacement of the probe itself.
 - The **SN-04 inductive probe detects the brass nozzle** at **Z ≈ 0.6 - 0.7mm from the bed**, provided the probe is **aligned with the PEI sheet**. The nozzle itself remains **≈1mm away from the probe sensor**, which has a recessed detection point.
 - **Different nozzle materials** (e.g., **carbide nozzles**) may cause the probe to trigger at slightly different heights **due to variations in electromagnetic properties**, meaning detection may occur **earlier, at a greater distance from the PEI sheet**.

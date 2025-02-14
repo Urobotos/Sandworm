@@ -138,24 +138,35 @@ These two parameters are set via **PrusaSlicer**:
 
 💡 **Tip:** You can set different values for different filaments or completely disable temperature automation for a specific filament.
 
-> ![note](images/info-circle-blue.svg) **Note:** Always set the **minimum chamber temperature** with respect to ambient conditions. The macro relies on `TEMPERATURE_WAIT` (similar to `M109` for the hotend), meaning the printer **pauses all commands** during this phase. If needed, you can cancel the wait loop early by using an **Emergency Stop** and restarting the print with a different chamber temperature setting.
+![note](images/info-circle-blue.svg) **Note:** Always set the **minimum chamber temperature** with respect to ambient conditions. The macro relies on `TEMPERATURE_WAIT` (similar to `M109` for 
+the hotend), meaning the printer **pauses all commands** during this phase. If needed, you can cancel the wait loop early by using an **Emergency Stop** and restarting the print with a 
+different chamber temperature setting.
 
-> ![note](images/info-circle-blue.svg) **Example Chamber Temperatures on Sandworm (after ~1 hour of printing):**
-> - Bed: 60°C | Ambient: 25°C | Chamber: 41°C
-> - Bed: 95°C | Ambient: 20°C | Chamber: 46°C
-> - Bed: 50°C | Ambient: 12°C | Chamber: 28°C
+![note](images/info-circle-blue.svg) **Example Chamber Temperatures on Sandworm (after ~1 hour of printing):**
+- Bed: 60°C | Ambient: 25°C | Chamber: 41°C
+- Bed: 95°C | Ambient: 20°C | Chamber: 46°C
+- Bed: 50°C | Ambient: 12°C | Chamber: 28°C
 
 
-### **📡 Proximity Inductive Probe SN-04 PNP and Initial Z Homing** 
-For accurate **Z homing**, it's recommended to **preheat the nozzle** to prevent residual filament from interfering with the probe.
+### **📡 Proximity Inductive Probe SN-04 PNP and Initial Z Homing**
+For accurate **Z homing**, it's recommended to **preheat the nozzle** to prevent residual filament from interfering with the probe. 
 
 #### **Why Preheat the Nozzle?**
-- Long filament strands may bend harmlessly on the **SN-04 probe**, but short and hardened pieces could cause **probe displacement errors**.
-- The probe detects a **brass nozzle** at **Z ≈ 0.6 - 0.7mm from the bed** (when aligned with the PEI sheet). The nozzle itself is then **≈1mm away** from the probe (which has a recessed detection point).
-- **Different nozzle materials** (e.g., **carbide nozzles**) may trigger detection at slightly different heights.
+- During printing, **some filament may leak out** and solidify at the tip of the nozzle. If this filament remains after cooling, it can interfere with homing.
+- **Longer filament strands** may bend harmlessly when contacting the **SN-04 probe**, but **short and hardened pieces** could lead to inaccurate measurements or even slight displacement of the probe itself.
+- The **SN-04 inductive probe detects the brass nozzle** at **Z ≈ 0.6 - 0.7mm from the bed**, provided the probe is **aligned with the PEI sheet**. The nozzle itself remains **≈1mm away from the probe sensor**, which has a recessed detection point.
+- **Different nozzle materials** (e.g., **carbide nozzles**) may cause the probe to trigger at slightly different heights **due to variations in electromagnetic properties**, meaning detection may occur **earlier, at a greater distance from the PEI sheet**.
 
 #### **🚀 Solution: Automatic Nozzle Preheating**
-Instead of manually cleaning the nozzle, simply **preheat it remotely** before running Z homing. This avoids probe interference and ensures a clean homing process.
+Instead of requiring manual cleaning of the nozzle, the **Sandworm printer automates this process**. The recommended solution is to **preheat the nozzle remotely before initiating Z homing**. This softens any residual filament, allowing it to deform harmlessly when making contact with the probe, ensuring accurate homing.
+
+#### **How Does It Work?**
+1. The **nozzle is gently preheated** to a low temperature (e.g., **100°C**) before homing.
+2. Any residual filament **bends** rather than obstructing the probe.
+3. The nozzle **immediately cools** after homing, keeping the filament in its deformed shape for future homing cycles.
+4. Subsequent homing operations can proceed normally, even with residual filament.
+
+💡 **Potential Enhancement:** An additional feature could be implemented in the `Temp_Homing` macro to briefly activate the **part cooling fan** just before homing, rapidly cooling and fixing the filament's shape in place. This would further minimize any chance of interference with the probe.
 
 #### **🛠️ Built-in Macros for Z Homing**
 The **Sandworm printer** includes an automatic `Temp_Homing` macro that:

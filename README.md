@@ -190,7 +190,7 @@ We welcome contributions! If you'd like to contribute, follow the [CONTRIBUTING.
 
 ---
 
-That's it, you've reached the end! Thank you for your patience and for following the guide to the end. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy printing!
+✌️ That's it, you've reached the end! Thank you for your patience and for following the guide to the end. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy printing!
 
 ![Urobotos Project](images/Urobotos.gif)
 

@@ -189,6 +189,7 @@ A great feature by `Kyleisah` to calibrate only the printed area:
 We welcome contributions! If you'd like to contribute, follow the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines. 🚀
 
 ---
+<br>
 
 ✌️ That's all, your journey has come to an end! Thank you for your patience and for following the guide to the end. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy printing!
 

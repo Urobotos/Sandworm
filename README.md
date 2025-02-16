@@ -191,7 +191,7 @@ We welcome contributions! If you'd like to contribute, follow the [CONTRIBUTING.
 ---
 <br>
 
-✌️ That's it, your journey has come to an end! Thank you for your patience and for following the guide up to this point. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy printing!
+✌️ That's it, your journey has come to an end! Thank you for your patience and for following the guide up to this point. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy printing, the game has begun!
 
 ![Urobotos Project](images/Urobotos.gif)
 

@@ -165,8 +165,6 @@ Instead of requiring manual cleaning of the nozzle, the **Sandworm printer autom
 3. The nozzle **immediately cools** after homing, keeping the filament in its deformed shape for future homing cycles.
 4. Subsequent homing operations can proceed normally, even with residual filament.
 
-💡 **Potential Enhancement:** An additional feature could be implemented in the `Temp_Homing` macro to briefly activate the **part cooling fan** just before homing, rapidly cooling and fixing the filament's shape in place. This would further minimize any chance of interference with the probe.
-
 #### **🛠️ Built-in Macros for Z Homing**
 The **Sandworm printer** includes an automatic `Temp_Homing` macro that:
 1. **Preheats the nozzle slightly** before performing XYZ homing.

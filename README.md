@@ -183,7 +183,7 @@ A great feature by `Kyleisah` to calibrate only the printed area:
 🔗 [Klipper Adaptive Meshing Purging](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)
 
 ### 🤝 Contributing
-We welcome contributions! If you'd like to contribute, follow the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines. 🚀
+Contributions are welcome! If you'd like to contribute, follow the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines. 🚀
 
 ---
 <br>

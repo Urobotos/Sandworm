@@ -166,7 +166,7 @@ Instead of requiring manual cleaning of the nozzle, the **Sandworm printer autom
 4. Subsequent homing operations can proceed normally, even with residual filament.
 
 #### **🛠️ Built-in Macros for Z Homing**
-The **Sandworm printer** includes an automatic `Temp_Homing` macro that:
+The **Sandworm printer** includes an automatic **`Temp_Homing`** macro that:
 1. **Preheats the nozzle slightly** before performing XYZ homing.
 2. **Prevents filament from interfering with the probe.**
 3. **Is integrated into multiple processes:**

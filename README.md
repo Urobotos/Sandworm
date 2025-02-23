@@ -37,13 +37,13 @@ To enable relay-based power control, add the following to your `moonraker.conf` 
 ```
 [power printer]
 type: gpio
-pin: gpiochip0/gpio72   # Can be reversed with "!", BTT-PI GPIO pin PC8
+pin: gpiochip0/gpio72               # Can be reversed with "!", BTT-PI GPIO pin PC8
 initial_state: off
-off_when_shutdown: True  # Turn off power on shutdown/error
-locked_while_printing: True  # Prevent power-off during a print
+off_when_shutdown: True             # Turn off power on shutdown/error
+locked_while_printing: True         # Prevent power-off during a print
 restart_klipper_when_powered: True
 restart_delay: 1
-bound_service: klipper  # Ensures Klipper service starts/restarts with power toggle
+bound_service: klipper              # Ensures Klipper service starts/restarts with power toggle
 ```
 
 ### 🎞️ Filament Runout Sensor & `runout_distance` Macro

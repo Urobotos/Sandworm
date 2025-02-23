@@ -70,7 +70,7 @@ gcode:
 The LCD menu and user-defined macros support multiple languages (not included in Klipper macros).<br>
 To change the language:
 1. **LCD Menu**: `Menu -> Setup -> Language -> Choose: English, Cestina, Deutsch`
-2. **G-code Macros**:
+2. **or G-code Macros**:
    - **English:**
      ```
      SET_MENU_LANGUAGE LANGUAGE=1

@@ -68,7 +68,7 @@ start_end_gcodes.cfg
     *All steppers OFF.*
   
   - **[e_stepper_off]** <br>
-    *E Stepper Off.*
+    *E Stepper OFF.*
   
   - **[Park_Toolhead]** <br>
     *Park Toolhead.*

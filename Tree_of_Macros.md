@@ -1,5 +1,5 @@
 
-Navigation:
+### Navigation:
 
 macros.cfg
 lights_chamber.cfg
@@ -8,24 +8,6 @@ fans.cfg
 mainsail_custom.cfg
 start_end_gcodes.cfg
 
-
-
-------------
-
-macros.cfg
-
-lights_chamber.cfg
-
-display.cfg
-
-fans.cfg
-
-mainsail_custom.cfg
-
-start_end_gcodes.cfg
-
-
-----------------------
 
 ### macros.cfg:
   - **[delayed_gcode strartup_message]** <br> 

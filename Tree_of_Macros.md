@@ -106,7 +106,7 @@ start_end_gcodes.cfg
     *Set R, G and B values to <lights_var> variable.*
 
   - **[lights_off]**  <br>
-    *Lights Off.*
+    *Lights OFF.*
 	
   - **[lights_on]** <br>
     *Lights ON.*

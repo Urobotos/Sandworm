@@ -83,7 +83,7 @@ start_end_gcodes.cfg
     *For Printer remote control power ON/OFF by Relay.*
 
   - **[Bed_Lowrider]** <br>
-    *Bed joint bearing test moves*
+    *Bed joint bearing test moves.*
 
 
 ### lights_chamber.cfg:

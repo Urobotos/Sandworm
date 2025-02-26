@@ -1,12 +1,12 @@
 
 ### Navigation:
 
-- [macros.cfg](#macros.cfg)
-- [lights_chamber.cfg](#lights_chamber.cfg)
-- [display.cfg](#display.cfg)
-- [fans.cfg](#fans.cfg)
-- [mainsail_custom.cfg](#mainsail_custom.cfg)
-- [start_end_gcodes.cfg](#start_end_gcodes.cfg)
+- [macros.cfg](#macroscfg)
+- [lights_chamber.cfg](#lights_chambercfg)
+- [display.cfg](#displaycfg)
+- [fans.cfg](#fanscfg)
+- [mainsail_custom.cfg](#mainsail_customcfg)
+- [start_end_gcodes.cfg](#start_end_gcodescfg)
 
 ### macros.cfg:
   - **[delayed_gcode strartup_message]** <br> 

@@ -1,5 +1,5 @@
 
-### Navigation:
+### Jump Navigation:
 
 - [macros.cfg](#macroscfg)
 - [lights_chamber.cfg](#lights_chambercfg)

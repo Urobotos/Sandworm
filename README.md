@@ -1,5 +1,5 @@
 
-- [Contributing](#Contributing)
+- [-contributing](#-contributing)
 
 ## Sandworm 3D Printer - Klipper Macros
 

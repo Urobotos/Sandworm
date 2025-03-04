@@ -190,7 +190,7 @@ A great feature by `Kyleisah` to calibrate only the printed area:
 ### 🤝 Contributing
 Contributions are welcome! If you'd like to contribute, follow the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines. 🚀
 
-### 📜 A list (Tree) of all user macro names:
+### 📜 A List (Tree) of all Macro Names:
 With a short description can be found here: [Tree of Macros.md](./Tree_of_Macros.md)
 
 ---

@@ -175,7 +175,7 @@ The **Sandworm printer** includes an automatic **`Temp_Homing`** macro that:
    - **Nozzle Cleaning** (via brush, only when the axis is not homed)
    - **As a clickable macro (`Temp_Homing`) in the Mainsail console every time the printer starts**
 
-### Sandworm no print Movement
+### Sandworm (non-print) Movement
 Sandworm printer use for non-printing movements chess knight movement (no diagonal moves), whitch are optimal for Core XY printers.
 
 <hr>

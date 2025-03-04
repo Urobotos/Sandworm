@@ -176,7 +176,8 @@ The **Sandworm printer** includes an automatic **`Temp_Homing`** macro that:
    - **As a clickable macro (`Temp_Homing`) in the Mainsail console every time the printer starts**
 
 ### Sandworm (non-print) Movements
-Sandworm printer use for non-printing movements chess knight movement style (no diagonal moves), whitch are optimal for Core XY printers.
+The Sandworm printer uses a chess knight style of movement for non-printing movements (no diagonal movements), 
+which is optimal for Core XY printers and in which both core XY motors are engaged.
 
 <hr>
 

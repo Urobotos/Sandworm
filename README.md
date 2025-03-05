@@ -177,7 +177,7 @@ The **Sandworm printer** includes an automatic **`Temp_Homing`** macro that:
 
 ### Sandworm (non-print) Movements
 The Sandworm printer uses a chess knight style of movement for non-printing movements (no diagonal movements), 
-which is optimal for Core XY printers and in which both core XY motors are engaged.
+which is optimal for Core XY printers and in which both core XY motors are engaged and produces less noise.
 
 <hr>
 

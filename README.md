@@ -49,6 +49,7 @@ restart_klipper_when_powered: True
 restart_delay: 1
 bound_service: klipper              # Ensures Klipper service starts/restarts with power toggle
 ```
+<br>
 
 ### 🎞️ Filament Runout Sensor & `runout_distance` Macro:
 - **Description**: A configurable distance delay before `PAUSE` is triggered when the filament sensor is activated.

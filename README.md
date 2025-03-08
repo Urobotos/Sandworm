@@ -89,6 +89,7 @@ To change the language:
      ```
      SET_MENU_LANGUAGE LANGUAGE=3
      ```
+<br>
 
 ### 🖲️ Custom Macro Buttons in Mainsail:
 Find the macro names below and add them as buttons in **Mainsail**:

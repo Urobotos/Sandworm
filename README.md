@@ -53,21 +53,15 @@ bound_service: klipper              # Ensures Klipper service starts/restarts wi
 - **Description**: A configurable distance delay before `PAUSE` is triggered when the filament sensor is activated.
 - **Purpose**: Saves filament by allowing extra material to be used before pausing.
 - **Setup Instructions**:
-  - Measure your PTFE tube length (from filament sensor to extruder gear).
-  - In `macros.cfg`, find `runout_distance` and set `distance = your_value_in_mm`.
+  - Measure your PTFE tube length (from filament sensor to extruder gear, include a ~100mm buffer for manual filament removal).
+  - **On LCD display:** `Menu --> Setup --> Filament sens. -->` then:
+      - **Extension:** `ON/OFF` (Where ON = Pause extension, OFF = Pause will be performed immediately).
+      - **Distance:** `930`mm (Adjust `Distance` by knob = `your_value_in_mm`).
+   
+        
   - **Default value**: `930mm` (includes a ~100mm buffer for manual filament removal).
+<br>
 
-```ini
-[gcode_macro runout_distance]
-description: Filament Runout Distance
-variable_distance_end: 0
-gcode:
-   {% set distance = 930 %}  # <<<< ADJUSTABLE LENGTH (in mm)
-   {% set start_point = printer.print_stats.filament_used | int %}
-   {% set end_point = (start_point + distance) | int %}
-   SET_GCODE_VARIABLE MACRO=runout_distance VARIABLE=distance_end VALUE={end_point}
-   UPDATE_DELAYED_GCODE ID=runout_check DURATION=1
-```
 With **Countdown** in mm on the LCD display and **Progress Bar** every 20% in the Mainsail console:
 <p align="center" width="100%">
     <img width="47%" src="images/lcd_countdown.jpg">

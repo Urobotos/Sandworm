@@ -68,9 +68,10 @@ gcode:
    SET_GCODE_VARIABLE MACRO=runout_distance VARIABLE=distance_end VALUE={end_point}
    UPDATE_DELAYED_GCODE ID=runout_check DURATION=1
 ```
+With **Countdown** in mm on the LCD display and **Progress Bar** every 20% in the Mainsail console:
 <p align="center" width="100%">
-    <img width="45%" src="images/lcd_countdown.jpg">
-    <img width="45%" src="images/progress_bar.jpg">
+    <img width="47%" src="images/lcd_countdown.jpg">
+    <img width="47%" src="images/progress_bar.jpg">
 </p>
 <br>
 

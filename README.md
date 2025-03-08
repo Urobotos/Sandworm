@@ -58,7 +58,7 @@ bound_service: klipper              # Ensures Klipper service starts/restarts wi
     - **Extension:** `ON/OFF` (Where ON = Pause with extension, OFF = Pause will be performed immediately on Filament runout).
     - **Distance:** `930`mm (Adjust `Distance` by knob to: `your_measured_value_in_mm`, default: 930mm).
 
-- With **Countdown** in mm on the LCD display and **Progress Bar** every 20% in the Mainsail console:
+- The macro contains a **Countdown** in mm for the LCD display and a **Progress Bar** (every 20%) for the Mainsail console:
 <p align="center" width="100%">
     <img width="47%" src="images/lcd_countdown.jpg">
     <img width="47%" src="images/progress_bar.jpg">

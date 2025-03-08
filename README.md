@@ -8,8 +8,9 @@ Code Name: Sandworm Mach3 Y2025 GS556 (*game_save: "556") - (†game_over_date: 
 Project by: Urobotos Coding
 ```
 
-### 🔧 The Sandworm printer uses a modified ```mainsail.cfg``` file called `mainsail_custom.cfg`:
-(The redirected include is listed in `printer.cfg`, so no manual edits are needed. This is provided for information only.)<br>
+### ✂️ A `modified mainsail.cfg` file called `mainsail_custom.cfg` is used:
+The Sandworm printer uses a modified `mainsail.cfg` file called `mainsail_custom.cfg`, the redirected include is listed in `printer.cfg`, so no manual edits are needed. This is provided for information only.
+
 Modifications include:<br>
 
 1. **Fan Control**: The part cooling fan turns off during `PAUSE` and then resumes to its previous speed when `RESUME` is triggered.<br>
@@ -141,10 +142,9 @@ These two parameters are set via **PrusaSlicer**:
 - **For automatic Cooling/Filtration:** `Filament Profile → Temperature → Chamber → Nominal: YOUR_VALUE °C`
 - **To Preheat the Chamber Before Printing:** `Filament Profile → Temperature → Chamber → Minimum: YOUR_VALUE °C`
 
-💡 **Tip:** You can set different values for different filaments or completely disable temperature automation for a specific filament.<br>
+💡 **Tip:** You can set different values for different filaments or completely disable temperature automation for a specific filament.
 
-> [!NOTE]
-> Always set the **minimum chamber temperature** with respect to ambient conditions. The macro relies on ```TEMPERATURE_WAIT``` (similar to M109 for the hotend),
+> Note: Always set the **minimum chamber temperature** with respect to ambient conditions. The macro relies on ```TEMPERATURE_WAIT``` (similar to M109 for the hotend),
 > meaning the printer **pauses all commands** during this phase. If needed, you can cancel the wait loop early by using an **Emergency Stop** and restarting the print with a different chamber temperature setting.
 
 **Example Chamber Temperatures on Sandworm printer (after ~1 hour of printing):**

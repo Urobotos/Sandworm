@@ -38,7 +38,7 @@ To enable relay-based power control, add the following to your `moonraker.conf` 
 ```
 [power printer]
 type: gpio
-pin: gpiochip0/gpio72               # Can be reversed with "!", BTT-PI GPIO pin PC8
+pin: gpiochip0/gpio72               # Can be reversed with "!", (Bigtreetech PI V1.2 GPIO pin PC8)
 initial_state: off
 off_when_shutdown: True             # Turn off power on shutdown/error
 locked_while_printing: True         # Prevent power-off during a print

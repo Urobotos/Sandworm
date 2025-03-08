@@ -142,16 +142,18 @@ These two parameters are set via **PrusaSlicer**:
 - **For automatic Cooling/Filtration:** `Filament Profile → Temperature → Chamber → Nominal: YOUR_VALUE °C`
 - **To Preheat the Chamber Before Printing:** `Filament Profile → Temperature → Chamber → Minimum: YOUR_VALUE °C`
 
-💡 **Tip:** You can set different values for different filaments or completely disable temperature automation for a specific filament.
+💡 **Tip:** You can set different values for different filaments or completely disable temperature automation for a specific filament.<br><br>
 
-> Note: Always set the **minimum chamber temperature** with respect to ambient conditions. The macro relies on ```TEMPERATURE_WAIT``` (similar to M109 for the hotend),
+> [!NOTE]
+> Always set the **minimum chamber temperature** with respect to ambient conditions. The macro relies on ```TEMPERATURE_WAIT``` (similar to M109 for the hotend),
 > meaning the printer **pauses all commands** during this phase. If needed, you can cancel the wait loop early by using an **Emergency Stop** and restarting the print with a different chamber temperature setting.
+>
+> **Example Chamber Temperatures on Sandworm printer (after ~1 hour of printing):**
+> - Bed: 60°C | Ambient: 25°C | Chamber: 41°C
+> - Bed: 95°C | Ambient: 20°C | Chamber: 46°C
+> - Bed: 50°C | Ambient: 12°C | Chamber: 28°C
 
-**Example Chamber Temperatures on Sandworm printer (after ~1 hour of printing):**
-- Bed: 60°C | Ambient: 25°C | Chamber: 41°C
-- Bed: 95°C | Ambient: 20°C | Chamber: 46°C
-- Bed: 50°C | Ambient: 12°C | Chamber: 28°C<br><br>
-
+<br>
 
 ### 📡 Proximity Inductive Probe SN-04 PNP and Initial Z Homing:
 For accurate **Z homing**, it's recommended to **preheat the nozzle** to prevent residual filament from interfering with the probe. 

@@ -54,15 +54,11 @@ bound_service: klipper              # Ensures Klipper service starts/restarts wi
 - **Purpose**: Saves filament by allowing extra material to be used before pausing.
 - **Setup Instructions**:
   - Measure your PTFE tube length (from filament sensor to extruder gear, include a ~100mm buffer for manual filament removal).
-  - **On LCD display:** `Menu → Setup → Filament sens. →` then:
-      - **Extension:** `ON/OFF` (Where ON = Pause with extension, OFF = Pause will be performed immediately on Filament runout).
-      - **Distance:** `930`mm (Adjust `Distance` by knob to: `your_value_in_mm`, Default: 930mm).
-   
-        
-  - **Default value**: `930mm`
-<br>
+  - **To set the measured value:** `LCD Menu → Setup → Filament sens. →`
+    - **Extension:** `ON/OFF` (Where ON = Pause with extension, OFF = Pause will be performed immediately on Filament runout).
+    - **Distance:** `930`mm (Adjust `Distance` by knob to: `your_measured_value_in_mm`, default: 930mm).
 
-With **Countdown** in mm on the LCD display and **Progress Bar** every 20% in the Mainsail console:
+- With **Countdown** in mm on the LCD display and **Progress Bar** every 20% in the Mainsail console:
 <p align="center" width="100%">
     <img width="47%" src="images/lcd_countdown.jpg">
     <img width="47%" src="images/progress_bar.jpg">

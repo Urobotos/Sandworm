@@ -7,9 +7,10 @@ Launch Date: Q2 2025
 Code Name: Sandworm Mach3 Y2025 GS556 (*game_save: "556") - (†game_over_date: "unknown")
 Project by: Urobotos Coding
 ```
-*(This project is part of **Urobotos** – a DIY initiative for Klipper-based 3D printing.)*
+*(This project is part of **Urobotos** – a DIY initiative for Klipper-based 3D printing.)*<br><br>
 
-### 🔧 The Sandworm printer uses a modified `mainsail.cfg` file called `mainsail_custom.cfg`:
+
+### 🔧 The Sandworm printer uses a modified ```mainsail.cfg``` file called `mainsail_custom.cfg`:
 (The redirected include is listed in `printer.cfg`, so no manual edits are needed. This is provided for information only.)<br>
 Modifications include:<br>
 
@@ -18,7 +19,8 @@ Modifications include:<br>
 
 2. **Nozzle Priming After Pause**: The `point_unretract` macro is executed when printing resumes after a pause.<br>
    - **How it works**: The print head returns to the paused position and performs a small filament extrusion to refill the nozzle.<br>
-   - **Benefit**: Prevents gaps in the print caused by filament leakage during the pause.<br>
+   - **Benefit**: Prevents gaps in the print caused by filament leakage during the pause.<br><br>
+
 
 ### 📂 Copy & Paste Config Files:
 - Copy all contents from the Sandworm GitHub folder (including subdirectories) and paste them into your printer’s config directory.
@@ -29,7 +31,8 @@ Modifications include:<br>
   ```
   git clone https://github.com/Urobotos/Sandworm.git
   ```
-  - Restart your printer for the first **Sandworm** launch.<br>
+  - Restart your printer for the first **Sandworm** launch.
+<br>
 
 ### 🔌 Remote Power Control via Relay:
 The original setup guide (by `Tinntbg`) can be found at: [Auto Power Off Klipper](https://github.com/tinntbg/auto-power-off-klipper).<br>
@@ -66,6 +69,7 @@ gcode:
    SET_GCODE_VARIABLE MACRO=runout_distance VARIABLE=distance_end VALUE={end_point}
    UPDATE_DELAYED_GCODE ID=runout_check DURATION=1
 ```
+<br>
 
 ### 🌐 Language Selection:
 The LCD menu and user-defined macros support multiple languages (not included in Klipper macros).<br>
@@ -110,8 +114,9 @@ Find the macro names below and add them as buttons in **Mainsail**:
   - `PROBE_CALIBRATE_02`
   - `Z_TILT_ADJUST_03`
   - `BED_MESH_CALIBRATE_04`
+<br>
 
-### 🚀🪂🏁 PrusaSlicer - START and END Gcodes:
+### 🚀🏁 PrusaSlicer - START and END Gcodes:
 In **PrusaSlicer**, insert the following G-code snippets into the `Start G-codes` and `End G-codes` sections:
 
 #### 🟢 Start G-codes:
@@ -145,7 +150,7 @@ These two parameters are set via **PrusaSlicer**:
 **Example Chamber Temperatures on Sandworm printer (after ~1 hour of printing):**
 - Bed: 60°C | Ambient: 25°C | Chamber: 41°C
 - Bed: 95°C | Ambient: 20°C | Chamber: 46°C
-- Bed: 50°C | Ambient: 12°C | Chamber: 28°C
+- Bed: 50°C | Ambient: 12°C | Chamber: 28°C<br><br>
 
 
 ### 📡 Proximity Inductive Probe SN-04 PNP and Initial Z Homing:
@@ -173,14 +178,15 @@ The **Sandworm printer** includes an automatic **`Temp_Homing`** macro that:
 3. **Is integrated into multiple processes:**
    - **Start G-codes** (before every print)
    - **Nozzle Cleaning** (via brush, only when the axis is not homed)
-   - **As a clickable macro (`Temp_Homing`) in the Mainsail console every time the printer starts**
+   - **As a clickable macro (`Temp_Homing`) in the Mainsail console every time the printer starts**<br><br>
+
 
 ### ♘ Sandworm (non-print) Movements:
 The Sandworm printer in the macros uses a **Chess Knight Movement Style** for non-printing movements (no diagonal movements), 
-which is optimal for Core XY printers and in which both core XY motors are engaged and produces less noise.
+which is optimal for Core XY printers and in which both core XY motors are engaged and produces less noise.<br><br>
+
 
 ### Others:
-
 ### 🛠️ Klipper Adaptive Meshing Purging (KAMP):
 A great feature by `Kyleisah` to calibrate only the printed area:
 🔗 [Klipper Adaptive Meshing Purging](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)

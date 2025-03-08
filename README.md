@@ -54,7 +54,7 @@ bound_service: klipper              # Ensures Klipper service starts/restarts wi
 - **Purpose**: Saves filament by allowing extra material to be used before pausing.
 - **Setup Instructions**:
   - Measure your PTFE tube length (from filament sensor to extruder gear, include a ~100mm buffer for manual filament removal).
-  - **On LCD display:** `Menu --> Setup --> Filament sens. -->` then:
+  - **On LCD display:** `Menu → Setup → Filament sens. →` then:
       - **Extension:** `ON/OFF` (Where ON = Pause extension, OFF = Pause will be performed immediately).
       - **Distance:** `930`mm (Adjust `Distance` by knob = `your_value_in_mm`).
    
@@ -72,7 +72,7 @@ With **Countdown** in mm on the LCD display and **Progress Bar** every 20% in th
 ### 🌐 Language Selection:
 The LCD menu and user-defined macros support multiple languages (not included in Klipper macros).<br>
 To change the language:
-1. **LCD Menu**: `Menu -> Setup -> Language -> Choose: English, Cestina, Deutsch`
+1. **LCD Menu**: `Menu → Setup → Language → Choose: English, Cestina, Deutsch`
 2. **Or via G-code Macros**:
    - **English:**
      ```
@@ -172,13 +172,13 @@ Instead of requiring manual cleaning of the nozzle, the **Sandworm printer autom
 4. Subsequent homing operations can proceed normally, even with residual filament.
 
 #### Built-in Macros for Z Homing
-The **Sandworm printer** includes an automatic **`Temp_Homing`** macro that:
+The **Sandworm printer** includes an automatic `Temp_Homing` macro that:
 1. **Preheats the nozzle slightly** before performing XYZ homing.
 2. **Prevents filament from interfering with the probe.**
 3. **Is integrated into multiple processes:**
    - **Start G-codes** (before every print)
    - **Nozzle Cleaning** (via brush, only when the axis is not homed)
-   - **As a clickable macro (`Temp_Homing`) in the Mainsail console every time the printer starts**<br><br>
+   - **As a clickable** `Temp_Homing` **macro in the Mainsail console every time the printer starts**<br><br>
 
 
 ### ♘ Sandworm (Non-Print) Movements:

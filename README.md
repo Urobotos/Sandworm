@@ -68,6 +68,10 @@ gcode:
    SET_GCODE_VARIABLE MACRO=runout_distance VARIABLE=distance_end VALUE={end_point}
    UPDATE_DELAYED_GCODE ID=runout_check DURATION=1
 ```
+<p align="center" width="100%">
+    <img width="45%" src="images/lcd_countdown.jpg">
+    <img width="45%" src="images/progress_bar.jpg">
+</p>
 <br>
 
 ### 🌐 Language Selection:

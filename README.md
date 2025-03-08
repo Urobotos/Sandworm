@@ -11,14 +11,13 @@ Project by: Urobotos Coding
 ### ✂️ A `modified mainsail.cfg` file called `mainsail_custom.cfg` is used:
 The Sandworm printer uses a modified `mainsail.cfg` file called `mainsail_custom.cfg`, the redirected include is listed in `printer.cfg`, so no manual edits are needed. This is provided for information only.
 
-Modifications include:<br>
+**Modifications include:**
+- **Fan Control**: The part cooling fan turns off during `PAUSE` and then resumes to its previous speed when `RESUME` is triggered.<br>
+   - Benefit: The fan does not run unnecessarily during a pause, which can be extended when using a filament sensor for runout detection.<br>
 
-1. **Fan Control**: The part cooling fan turns off during `PAUSE` and then resumes to its previous speed when `RESUME` is triggered.<br>
-   - **Benefit**: The fan does not run unnecessarily during a pause, which can be extended when using a filament sensor for runout detection.<br>
-
-2. **Nozzle Priming After Pause**: The `point_unretract` macro is executed when printing resumes after a pause.<br>
-   - **How it works**: The print head returns to the paused position and performs a small filament extrusion to refill the nozzle.<br>
-   - **Benefit**: Prevents gaps in the print caused by filament leakage during the pause.<br><br>
+- **Nozzle Priming After Pause**: The `point_unretract` macro is executed when printing resumes after a pause.<br>
+   - How it works: The print head returns to the paused position and performs a small filament extrusion to refill the nozzle.<br>
+   - Benefit: Prevents gaps in the print caused by filament leakage during the pause.<br><br>
 
 
 ### 📂 Copy & Paste Config Files:

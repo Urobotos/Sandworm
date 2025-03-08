@@ -55,11 +55,11 @@ bound_service: klipper              # Ensures Klipper service starts/restarts wi
 - **Setup Instructions**:
   - Measure your PTFE tube length (from filament sensor to extruder gear, include a ~100mm buffer for manual filament removal).
   - **On LCD display:** `Menu → Setup → Filament sens. →` then:
-      - **Extension:** `ON/OFF` (Where ON = Pause extension, OFF = Pause will be performed immediately).
-      - **Distance:** `930`mm (Adjust `Distance` by knob = `your_value_in_mm`).
+      - **Extension:** `ON/OFF` (Where ON = Pause with extension, OFF = Pause will be performed immediately on Filament runout).
+      - **Distance:** `930`mm (Adjust `Distance` by knob to: `your_value_in_mm`, Default: 930mm).
    
         
-  - **Default value**: `930mm` (includes a ~100mm buffer for manual filament removal).
+  - **Default value**: `930mm`
 <br>
 
 With **Countdown** in mm on the LCD display and **Progress Bar** every 20% in the Mainsail console:

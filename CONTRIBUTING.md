@@ -1,4 +1,4 @@
-## 🛠️🚀 Contributing to Urobotos/Sandworm:
+## 🛠️⛽ Contributing to Urobotos/Sandworm:
 
 Thanks for your interest in contributing! Please follow these steps:
 

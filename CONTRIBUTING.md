@@ -1,6 +1,6 @@
-## 🛠️ Contributing to Urobotos/Sandworm:
+## 🛠️🚀 Contributing to Urobotos/Sandworm:
 
-Thanks for your interest in contributing! 🚀 Please follow these steps:
+Thanks for your interest in contributing! Please follow these steps:
 
 ### 1️⃣ Fork the repository:
 Click the "Fork" button at the top-right corner of this page to create a copy of this repository under your GitHub account.

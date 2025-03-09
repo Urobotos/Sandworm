@@ -10,7 +10,7 @@ Click the "Fork" button at the top-right corner of this page to create a copy of
 ### 2️⃣ Open your Fork (Your Sandworm repository):
 You can find it on GitHub under "Your Repositories" or directly on your GitHub page.<br><br>
 
->If you are using cmd, then:
+>**If you are using cmd, then:** <br>
 >For clone the repository run the following command in your terminal:
 >```
 >git clone https://github.com/Urobotos/Sandworm.git
@@ -23,7 +23,7 @@ Click on the `main` button (branches dropdown list).
 Type the your name of the new branch in the field: `my_new_branch_name` (for example: "new-feature").
 Click on: ```Create branch: new-feature from ‘main’```.<br><br>
 
->If you are using cmd, then:
+>**If you are using cmd, then:**
 >```
 >git checkout -b new-feature
 >```
@@ -36,7 +36,7 @@ Click on: ```Create branch: new-feature from ‘main’```.<br><br>
 - Once you are satisfied with the changes, create a Pull Request (PR)<br><br>
 
 
->If you are using cmd, then save the changes via:
+>**If you are using cmd, then save the changes via:**
 >```
 >git add .
 >git commit -m "Added feature XYZ"

@@ -56,7 +56,7 @@ bound_service: klipper              # Ensures Klipper service starts/restarts wi
   - Measure your PTFE tube length (from filament sensor to extruder gear, include a ~100mm buffer for manual filament removal).
   - **To set your measured value:** `LCD Menu → Setup → Filament sens. →`
     - **Extension:** `ON/OFF`:  
-      Where ON = Pause with extension, OFF = Pause will be performed immediately on Filament runout.
+      Where ON = Pause with extension, OFF = The pause will be performed immediately when the Filament Runout is triggered.
     - **Distance:** `930`mm :   
       Adjust `Distance` to: `Your_measured_value_in_mm` (Default: 930mm, 10mm per step, with auto-save).
 

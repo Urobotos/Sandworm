@@ -49,7 +49,7 @@ Click on: ```Create branch: new-feature from ‘main’```.<br><br>
 - Go to the this **Urobotos/Sandworm** repository.
 - Click on `Pull Requests`.
 - Click `New pull request`.
-- Select your edited fork and branch (Your new-feature branch in this example).
+- Select your edited Fork and branch (Your new-feature branch in this example).
 - Write a short description of your changes and submit the PR.
 
 <br>

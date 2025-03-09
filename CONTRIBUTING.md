@@ -19,9 +19,9 @@ You can find it on GitHub under "Your Repositories" or directly on your GitHub p
 <br>
 
 ### 3️⃣ Create a new branch for editing:
-Click on the "main" button (branches dropdown list).
-Type the name of the new branch "my_new_branch_name" in the field (for example: "sandworm-fix").
-Click on "Create branch: sandworm-fix from ‘main’".<br><br>
+Click on the `main` button (branches dropdown list).
+Type the your name of the new branch "my_new_branch_name" in the field (for example: "sandworm-fix").
+Click on: ```Create branch: sandworm-fix from ‘main’```.<br><br>
 
 >If you are using cmd, then:
 >```
@@ -31,7 +31,7 @@ Click on "Create branch: sandworm-fix from ‘main’".<br><br>
 <br>
 
 ### 4️⃣ Make your changes and save them as a commits:
-- Open the file (that you want to edit) and click on the pencil icon (edit file).
+- Open the file (that you want to edit) and click on the ✏️ pencil icon (edit file).
 - Save changes as commit (via commit button, or ctrl+s).
 - Once you are satisfied with the changes, create a Pull Request (PR)<br><br>
 
@@ -47,8 +47,8 @@ Click on "Create branch: sandworm-fix from ‘main’".<br><br>
 
 ### 5️⃣ Create a Pull Request (PR):
 - Go to the this **Urobotos/Sandworm** repository.
-- Click on "Pull Requests".
-- Click "New pull request".
+- Click on `Pull Requests`.
+- Click `New pull request`.
 - Select your edited fork and branch (sandworm-fix branch in this example).
 - Write a short description of your changes and submit the PR.
 

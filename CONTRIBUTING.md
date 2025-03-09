@@ -20,7 +20,7 @@ You can find it on GitHub under "Your Repositories" or directly on your GitHub p
 
 ### 3️⃣ Create a new branch for editing:
 Click on the `main` button (branches dropdown list).
-Type the your name of the new branch "my_new_branch_name" in the field (for example: "sandworm-fix").
+Type the your name of the new branch in the field: `my_new_branch_name` (for example: "sandworm-fix").
 Click on: ```Create branch: sandworm-fix from ‘main’```.<br><br>
 
 >If you are using cmd, then:
@@ -32,7 +32,7 @@ Click on: ```Create branch: sandworm-fix from ‘main’```.<br><br>
 
 ### 4️⃣ Make your changes and save them as a commits:
 - Open the file (that you want to edit) and click on the ✏️ pencil icon (edit file).
-- Save changes as commit (via commit button, or ctrl+s).
+- After editing save changes as commit (via commit button, or ctrl+s).
 - Once you are satisfied with the changes, create a Pull Request (PR)<br><br>
 
 

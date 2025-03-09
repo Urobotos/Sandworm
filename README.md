@@ -33,7 +33,8 @@ The Sandworm printer uses a modified `mainsail.cfg` file called `mainsail_custom
 <br>
 
 ### 🔌 Remote Power Control via Relay:
-The original setup guide (by `Tinntbg`) can be found at: [Auto Power Off Klipper](https://github.com/tinntbg/auto-power-off-klipper).<br>
+A complete setup guide (by @tinntbg ), with more options, can be found in his Github repository: [Auto Power Off Klipper](https://github.com/tinntbg/auto-power-off-klipper) <br>
+
 To enable relay-based power control, add the following to your `moonraker.conf` file:<br>
 
 ```
@@ -47,6 +48,9 @@ restart_klipper_when_powered: True
 restart_delay: 1
 bound_service: klipper              # Ensures Klipper service starts/restarts with power toggle
 ```
+**User management of printer ON-OFF:**
+The printer power ON-OFF itself is controlled via the Mainsail interface. The **Auto Power Off** macro serves as a safe shutdown of the printer at the end of printing, it is controlled using the macro buttons: `ACTIVATE_POWER_OFF` and `DEACTIVATE_POWER_OFF` during printing, or by direct writing in end_gcode.
+
 <br>
 
 ### 🎞️ Filament Runout Sensor & `runout_distance` Macro:

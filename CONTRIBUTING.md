@@ -56,7 +56,7 @@ Click on: ```Create branch: new-feature from ‘main’```.<br><br>
 
 > [!NOTE]
 >**The general condition for accepting a PR is as follows:** <br>
-> The new (or modified) code must be compatible with base code of: **Klipper**, **Mainsail** / **Fluid** interfaces and with  <br>
+> The new (or modified) code must be compatible with base code of: **Klipper,** **Mainsail**/**Fluid** interfaces and with  <br>
 > the main **slicers** (PrusaSlicer, Orca, Cura... ) and their common versions. Thank you for your understanding.
 
 <br>

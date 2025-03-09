@@ -20,8 +20,8 @@ You can find it on GitHub under "Your Repositories" or directly on your GitHub p
 
 ### 3️⃣ Create a new branch for editing:
 Click on the `main` button (branches dropdown list).
-Type the your name of the new branch in the field: `my_new_branch_name` (for example: "new-feature").
-Click on: ```Create branch: new-feature from ‘main’```.<br><br>
+Type the your name of the new branch in the field: `🔎 find or create new branch...` (for example: "new-feature").
+Click on: `Create branch: new-feature from ‘main’`.<br><br>
 
 >**If you are using cmd, then:**
 >```

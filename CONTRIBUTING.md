@@ -1,4 +1,4 @@
-## 🛠️⛽ Contributing to Urobotos/Sandworm:
+## ⛽🛠️ Contributing to Urobotos/Sandworm:
 
 Thanks for your interest in contributing! Please follow these steps:
 
@@ -60,7 +60,7 @@ Click on: ```Create branch: new-feature from ‘main’```.<br><br>
 > the main **slicers** (PrusaSlicer, Orca, Cura... ) and their common versions. Thank you for your understanding.
 
 <br>
-🎉 Your contribution will be reviewed! Thanks for making the Urobotos projects better! 🚀
+Your contribution will be reviewed! Thanks for making the Urobotos projects better! 🚀
 
 
 

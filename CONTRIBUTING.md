@@ -49,7 +49,7 @@ Click on "Create branch: sandworm-fix from ‘main’".<br><br>
 - Go to the this **Urobotos/Sandworm** repository.
 - Click on "Pull Requests".
 - Click "New pull request".
-- Select your fork and branch.
+- Select your edited fork and branch (sandworm-fix branch in this example).
 - Write a short description of your changes and submit the PR.
 
 <br>

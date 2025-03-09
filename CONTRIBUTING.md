@@ -33,7 +33,11 @@ git push origin feature-name
 - Write a short description of your changes and submit the PR.
 
 <br>
-🎉 Your contribution will be reviewed! Thanks for making the Urobotos project better! 🚀
+
+**The general condition for accepting a PR is as follows:** The new (or modified) code must be compatible with base code of: <br>
+**Klipper**, **Mainsail** / **Fluid** and with the main **slicers** (PrusaSlicer, Orca, Cura... ) and their common versions.<br>
+
+🎉 Your contribution will be reviewed! Thanks for making the Urobotos projects better! 🚀
 
 
 

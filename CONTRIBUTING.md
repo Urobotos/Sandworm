@@ -7,7 +7,7 @@ Click the "Fork" button at the top-right corner of this page to create a copy of
 
 <br>
 
-### 2️⃣ Open your Fork (your Sandworm repository):
+### 2️⃣ Open your Fork (Your Sandworm repository):
 You can find it on GitHub under "Your Repositories" or directly on your GitHub page.<br><br>
 
 >If you are using cmd, then:

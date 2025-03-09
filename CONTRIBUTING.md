@@ -20,12 +20,12 @@ You can find it on GitHub under "Your Repositories" or directly on your GitHub p
 
 ### 3️⃣ Create a new branch for editing:
 Click on the `main` button (branches dropdown list).
-Type the your name of the new branch in the field: `my_new_branch_name` (for example: "sandworm-fix").
-Click on: ```Create branch: sandworm-fix from ‘main’```.<br><br>
+Type the your name of the new branch in the field: `my_new_branch_name` (for example: "new-feature").
+Click on: ```Create branch: new-feature from ‘main’```.<br><br>
 
 >If you are using cmd, then:
 >```
->git checkout -b sandworm-fix
+>git checkout -b new-feature
 >```
 
 <br>
@@ -40,7 +40,7 @@ Click on: ```Create branch: sandworm-fix from ‘main’```.<br><br>
 >```
 >git add .
 >git commit -m "Added feature XYZ"
->git push origin sandworm-fix
+>git push origin new-feature
 >```
 
 <br>
@@ -49,7 +49,7 @@ Click on: ```Create branch: sandworm-fix from ‘main’```.<br><br>
 - Go to the this **Urobotos/Sandworm** repository.
 - Click on `Pull Requests`.
 - Click `New pull request`.
-- Select your edited fork and branch (Your sandworm-fix branch in this example).
+- Select your edited fork and branch (Your new-feature branch in this example).
 - Write a short description of your changes and submit the PR.
 
 <br>

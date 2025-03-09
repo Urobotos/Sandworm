@@ -54,11 +54,13 @@ Click on: ```Create branch: new-feature from ‘main’```.<br><br>
 
 <br>
 
-**The general condition for accepting a PR is as follows:** The new (or modified) code must be compatible with base code of: <br>
-**Klipper**, **Mainsail** / **Fluid** and with the main **slicers** (PrusaSlicer, Orca, Cura... ) and their common versions.<br>
+> [!NOTE]
+>**The general condition for accepting a PR is as follows:** The new (or modified) code must be compatible with base code of: <br>
+>**Klipper**, **Mainsail** / **Fluid** interfaces and with the main **slicers** (PrusaSlicer, Orca, Cura... ) and their common versions.
+> Thank you for your understanding. <br>
 
+<br>
 🎉 Your contribution will be reviewed! Thanks for making the Urobotos projects better! 🚀
-
 
 
 

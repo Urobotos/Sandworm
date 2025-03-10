@@ -59,7 +59,7 @@ The printer power ON-OFF itself is controlled via the Mainsail interface. The **
 - **Purpose**: Saves filament by allowing extra material to be used before pausing.
 - **Setup Instructions**:
   - Measure your PTFE tube length (from filament sensor to extruder gear, include a ~100mm buffer for manual filament removal).
-  - **To set your measured value:** `LCD Menu → Setup → Filament sens. →`
+  - **To set your measured value:** `LCD Menu → Setup → Filament sens. → Choose:`
     - **Extension:** `ON/OFF`:  
       Where ON = Pause with extension, OFF = Pause will be performed immediately when the Filament Runout is triggered.
     - **Distance:** `930`mm :   

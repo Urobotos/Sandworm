@@ -25,7 +25,7 @@ Click on: `Create branch: new-feature from ‘main’`.<br><br>
 
 > **If you are using cmd, then:**
 > ```
-> git checkout -b new-feature
+> git switch -c new-feature
 > ```
 
 <br>
@@ -35,14 +35,10 @@ Click on: `Create branch: new-feature from ‘main’`.<br><br>
 - After editing save changes as **Commit** (via Commit button, or ctrl+s).
 - Once you are satisfied with all changes, create a **Pull Request (PR)** <br><br>
 
-
 > **If you are using cmd, then save the changes via:**
 > ```
-> git checkout new-feature
+> git switch new-feature
 > git pull origin new-feature
-> ```
->
-> ```
 > git add .
 > git commit -m "Added new feature xyz"
 > git push origin new-feature
@@ -60,10 +56,10 @@ Click on: `Create branch: new-feature from ‘main’`.<br><br>
 <br>
 
 > [!NOTE]
-> **The general condition for accepting a PR is as follows:** <br>
-> The new (or modified) code must be compatible with base code of: **Klipper,** **Mainsail**/**Fluid** interfaces and with  <br>
-> the main **slicers** (PrusaSlicer, Orca, Cura... ) and their common versions. It keeps the Sandworm code versatile, <br>
-> thanks for your understanding.
+> **General conditions for accepting a PR:** <br>
+> The new (or modified) code must be compatible with the base code of **Klipper**, **Mainsail**/**Fluidd** interfaces, <br>
+> and the main **slicers** (PrusaSlicer, Orca, Cura...) in their common versions. <br>
+> This ensures that the Sandworm code remains versatile. Thanks for your understanding!
 
 <br>
 Your contribution will be reviewed! Thanks for making the Urobotos projects better! 🚀

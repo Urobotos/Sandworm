@@ -73,7 +73,7 @@ The printer power ON-OFF itself is controlled via the Mainsail interface. The **
 <br>
 
 ### 🌐 Language Selection:
-The LCD menu and user-defined macros support multiple languages (not included in Klipper macros).<br>
+The LCD menu and user-defined macros support multiple languages (not included in Klipper native macros).<br>
 To change the language:
 1. **LCD Menu**: `Menu → Setup → Language → Choose: English, Cestina, Deutsch`
 2. **Or via G-code Macros**:

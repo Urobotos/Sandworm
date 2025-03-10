@@ -3,18 +3,18 @@
 Thanks for your interest in contributing! Please follow these steps:
 
 ### 1️⃣ Fork the repository:
-Click the "Fork" button at the top-right corner of this page to create a copy of this repository under your GitHub account.
+Click the "Fork" button at the top-right corner of this page to create a copy of this repository under your GitHub account.<br><br>
+
+> **If you are using cmd, then:** <br>
+> For clone the repository run the following command in your terminal:
+> ```
+> git clone https://github.com/Urobotos/Sandworm.git
+> ```
 
 <br>
 
 ### 2️⃣ Open your Fork (Your Sandworm repository):
-You can find it on GitHub under "Your Repositories" or directly on your GitHub page.<br><br>
-
->**If you are using cmd, then:** <br>
->For clone the repository run the following command in your terminal:
->```
->git clone https://github.com/Urobotos/Sandworm.git
->```
+You can find it on GitHub under "Your Repositories" or directly on your GitHub page.
 
 <br>
 
@@ -23,10 +23,10 @@ Click on the `main` button (branches dropdown list).
 Type the your name of the new branch in the field: `🔎 find or create new branch...` (for example: "new-feature").
 Click on: `Create branch: new-feature from ‘main’`.<br><br>
 
->**If you are using cmd, then:**
->```
->git checkout -b new-feature
->```
+> **If you are using cmd, then:**
+> ```
+> git checkout -b new-feature
+> ```
 
 <br>
 
@@ -36,12 +36,17 @@ Click on: `Create branch: new-feature from ‘main’`.<br><br>
 - Once you are satisfied with the all changes, create a **Pull Request (PR)** <br><br>
 
 
->**If you are using cmd, then save the changes via:**
->```
->git add .
->git commit -m "Added feature XYZ"
->git push origin new-feature
->```
+> **If you are using cmd, then save the changes via:**
+> ```
+> git checkout new-feature
+> git pull origin new-feature
+> ```
+>
+> ```
+> git add .
+> git commit -m "Added new feature XYZ"
+> git push origin new-feature
+> ```
 
 <br>
 
@@ -55,7 +60,7 @@ Click on: `Create branch: new-feature from ‘main’`.<br><br>
 <br>
 
 > [!NOTE]
->**The general condition for accepting a PR is as follows:** <br>
+> **The general condition for accepting a PR is as follows:** <br>
 > The new (or modified) code must be compatible with base code of: **Klipper,** **Mainsail**/**Fluid** interfaces and with  <br>
 > the main **slicers** (PrusaSlicer, Orca, Cura... ) and their common versions. It keeps the Sandworm code versatile, <br>
 > thanks for your understanding.

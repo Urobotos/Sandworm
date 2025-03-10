@@ -201,8 +201,7 @@ which is optimal for Core XY printers and in which both core XY motors are engag
 
 ### Others:
 ### 🛠️ Klipper Adaptive Meshing Purging (KAMP):
-A great feature by `Kyleisah` to calibrate only the printed area:
-🔗 [Klipper Adaptive Meshing Purging](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)
+A great feature by `Kyleisah` to calibrate only the printed area: [Klipper Adaptive Meshing Purging](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)
 
 ### 🤝 Contributing
 Contributions are welcome! If you'd like to contribute, follow the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines. 🚀

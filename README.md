@@ -21,7 +21,7 @@ The Sandworm printer uses a modified `mainsail.cfg` file called `mainsail_custom
 
 
 ### 📂 Copy & Paste Config Files:
-- Copy all contents from the Sandworm GitHub folder (including subdirectories) and paste them into your printer’s config directory.
+- Copy all content from the Sandworm GitHub repository (including subdirectories) and paste them into your printer’s config directory.
   - Example path: `home/biqu/printer_data/config/`
   - Choose **Yes** if prompted to overwrite `printer.cfg`.
 

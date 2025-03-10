@@ -20,7 +20,7 @@ You can find it on GitHub under "Your Repositories" or directly on your GitHub p
 
 ### 3️⃣ Create a new branch for editing:
 Click on the `main` button (branches dropdown list).
-Type the your name of the new branch in the field: `🔎 find or create new branch...` (for example: "new-feature").
+Type the name of your new branch in the field: `🔎 find or create new branch...` (for example: "new-feature").
 Click on: `Create branch: new-feature from ‘main’`.<br><br>
 
 > **If you are using cmd, then:**
@@ -33,7 +33,7 @@ Click on: `Create branch: new-feature from ‘main’`.<br><br>
 ### 4️⃣ Make your changes (for as long as you want) and save them as Commits:
 - In the newly created (new-feature) branch, open the file that you want to edit and click on the ✏️ pencil icon (edit file).
 - After editing save changes as **Commit** (via Commit button, or ctrl+s).
-- Once you are satisfied with the all changes, create a **Pull Request (PR)** <br><br>
+- Once you are satisfied with all changes, create a **Pull Request (PR)** <br><br>
 
 
 > **If you are using cmd, then save the changes via:**

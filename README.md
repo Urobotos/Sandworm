@@ -8,6 +8,13 @@ Code Name: Sandworm Mach3 Y2025 GS556 (*game_save: "556") - (†game_over_date: 
 Project by: Urobotos Coding
 ```
 
+> [!NOTE]
+> These Klipper macros are part of (and a continuation of) the instructions for building the **Sandworm printer** on the **Printables** website:  
+> [Sandworm 3D printer - Main page](https://www.printables.com/model/976901-sandworm-3d-printer),
+> where (in addition to the instructions) you can also find the 3D printable models needed for this build.
+
+<br>
+
 ### ✂️ A `modified mainsail.cfg` file called `mainsail_custom.cfg` is used:
 The Sandworm printer uses a modified `mainsail.cfg` file called `mainsail_custom.cfg`, the redirected include is listed in `printer.cfg`, so no manual edits are needed. This is provided for information only.
 

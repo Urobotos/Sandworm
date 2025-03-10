@@ -66,10 +66,10 @@ The printer power ON-OFF itself is controlled via the Mainsail interface. The in
       - **Extension:** `ON/OFF`:  
           Where ON = Pause with extension, OFF = Pause will be performed immediately when the Filament Runout is triggered.
       - **Distance:** `930`mm :   
-          Adjust `Distance` to: `Your_measured_value_in_mm` (Default: 930mm, 10mm per step, with auto-save).
+          Adjust `Distance` to: `Your_measured_value_in_mm` (Default: 930mm, 10mm per step, with auto-save function).
          
   - **Or directly by editing the variables.cfg file:**  
-      - In `variablas.cfg (file) → runout_distance (variable) = 930` change `930` to Your measured value in mm.
+      - In `variablas.cfg → runout_distance = 930` change `930` to Your measured value in mm.
 
 <br>
 

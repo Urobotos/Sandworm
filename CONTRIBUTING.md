@@ -30,9 +30,9 @@ Click on: `Create branch: new-feature from ‘main’`.<br><br>
 
 <br>
 
-### 4️⃣ Make your changes (for as long as you want) and save them as commits:
+### 4️⃣ Make your changes (for as long as you want) and save them as Commits:
 - In the newly created (new-feature) branch, open the file that you want to edit and click on the ✏️ pencil icon (edit file).
-- After editing save changes as **commit** (via commit button, or ctrl+s).
+- After editing save changes as **Commit** (via Commit button, or ctrl+s).
 - Once you are satisfied with the all changes, create a **Pull Request (PR)** <br><br>
 
 

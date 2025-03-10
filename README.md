@@ -29,7 +29,8 @@ The Sandworm printer uses a modified `mainsail.cfg` file called `mainsail_custom
   ```
   git clone https://github.com/Urobotos/Sandworm.git
   ```
-  - Restart your printer for the first **Sandworm** launch.
+- Restart your printer for the first **Sandworm** launch.
+ 
 <br>
 
 ### 🔌 Remote Power Control via Relay:
@@ -57,13 +58,20 @@ The printer power ON-OFF itself is controlled via the Mainsail interface. The **
 ### 🎞️ Filament Runout Sensor & `runout_distance` Macro:
 - **Description**: A configurable distance delay before `PAUSE` is triggered when the filament sensor is activated.
 - **Purpose**: Saves filament by allowing extra material to be used before pausing.
-- **Setup Instructions**:
-  - Measure your PTFE tube length (from filament sensor to extruder gear, include a ~100mm buffer for manual filament removal).
-  - **To set your measured value:** `LCD Menu → Setup → Filament sens. → Choose:`
-    - **Extension:** `ON/OFF`:  
-      Where ON = Pause with extension, OFF = Pause will be performed immediately when the Filament Runout is triggered.
-    - **Distance:** `930`mm :   
-      Adjust `Distance` to: `Your_measured_value_in_mm` (Default: 930mm, 10mm per step, with auto-save).
+- **Setup Instructions**:<br>
+  Measure your PTFE tube length (from filament sensor to extruder gear, include a ~100mm buffer for manual filament removal).<br>
+  
+- **To set the measured value (Two option):**
+  - **In the LCD menu:** `Menu → Setup → Filament sens. → Choose:`
+      - **Extension:** `ON/OFF`:  
+          Where ON = Pause with extension, OFF = Pause will be performed immediately when the Filament Runout is triggered.
+      - **Distance:** `930`mm :   
+          Adjust `Distance` to: `Your_measured_value_in_mm` (Default: 930mm, 10mm per step, with auto-save).
+         
+  - **Or via editing variables.cfg file:**  
+      - In `variablas.cfg (file) → runout_distance (variable) = 930` change `930` to Your measured value in mm.
+
+<br>
 
 - The macro contains a **Countdown** in mm for the LCD display and a **Progress Bar** (every 20%) for the Mainsail console:
 <p align="center" width="100%">

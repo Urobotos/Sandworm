@@ -44,7 +44,7 @@ Click on: `Create branch: new-feature from ‘main’`.<br><br>
 >
 > ```
 > git add .
-> git commit -m "Added new feature XYZ"
+> git commit -m "Added new feature xyz"
 > git push origin new-feature
 > ```
 

@@ -1,5 +1,5 @@
 
-## Sandworm 3D Printer - Klipper Macros
+# Sandworm 3D Printer - Klipper Macros
 
 ```
 Author: Zachar Čuřík
@@ -7,6 +7,8 @@ Launch Date: Q2 2025
 Code Name: Sandworm Mach3 Y2025 GS556 (*game_save: "556") - (†game_over_date: "unknown")
 Project by: Urobotos Coding
 ```
+
+<br>
 
 > [!NOTE]
 > These Klipper macros are part of (and a continuation of) the instructions for building the **Sandworm printer** on the **Printables** website:  

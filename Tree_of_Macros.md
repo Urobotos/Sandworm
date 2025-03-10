@@ -1,14 +1,15 @@
 
 ### Jump Navigation:
 
-- [macros.cfg](#macroscfg)
-- [lights_chamber.cfg](#lights_chambercfg)
-- [display.cfg](#displaycfg)
-- [fans.cfg](#fanscfg)
-- [mainsail_custom.cfg](#mainsail_customcfg)
-- [start_end_gcodes.cfg](#start_end_gcodescfg)
+- 📜 [macros.cfg](#macroscfg)
+- 💡 [lights_chamber.cfg](#lights_chambercfg)
+- 🖥️ [display.cfg](#displaycfg)
+- 🌪️ [fans.cfg](#fanscfg)
+- ⚙️ [mainsail_custom.cfg](#mainsail_customcfg)
+- 🚦 [start_end_gcodes.cfg](#start_end_gcodescfg)
 
-### macros.cfg:
+	
+### 📜 macros.cfg:
   - **[delayed_gcode strartup_message]** <br> 
     *description: Mesasage (Temp_Homing) on Printer startup.*
 	
@@ -65,9 +66,9 @@
 
   - **[Bed_Lowrider]** <br>
     *Bed joint bearing test moves.*
+    
 
-
-### lights_chamber.cfg:
+### 💡 lights_chamber.cfg:
   - **[lights_var]** <br>
     *lights Variables.*
 
@@ -114,7 +115,7 @@
     *lights pink (example).*
 
 
-### display.cfg:
+### 🖥️ display.cfg:
   - **[M300]** <br>
     *LCD Beeper.*
 	
@@ -128,7 +129,7 @@
     *Knob LED feedback.*
 
 
-### fans.cfg:                                         
+### 🌪️ fans.cfg:                                         
   - **[M141]** <br>
     *Macro for set automatic chamber cooling / filtering temperature. ##(ZDE předělat popisy maker, dle readme.md!!!)*
 
@@ -136,7 +137,7 @@
     *Wait until the chamber has warmed up to the minimum temperature.*
 	
 
-### mainsail_custom.cfg:
+### ⚙️ mainsail_custom.cfg:
   - **[point_unretract]** <br>
     *The final mini fill nozzle when toolhead is back to the print pause point.*
 
@@ -174,7 +175,7 @@
       *Linear move with save and restore of the gcode state.*
 
 
-### start_end_gcodes.cfg:
+### 🚦 start_end_gcodes.cfg:
   - **[start_gcode]** <br>
   - **[end_gcode]** <br>
 

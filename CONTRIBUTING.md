@@ -57,7 +57,8 @@ Click on: `Create branch: new-feature from ‘main’`.<br><br>
 > [!NOTE]
 >**The general condition for accepting a PR is as follows:** <br>
 > The new (or modified) code must be compatible with base code of: **Klipper,** **Mainsail**/**Fluid** interfaces and with  <br>
-> the main **slicers** (PrusaSlicer, Orca, Cura... ) and their common versions. Thank you for your understanding.
+> the main **slicers** (PrusaSlicer, Orca, Cura... ) and their common versions. It keeps the Sandworm code versatile, <br>
+> thanks for your understanding.
 
 <br>
 Your contribution will be reviewed! Thanks for making the Urobotos projects better! 🚀

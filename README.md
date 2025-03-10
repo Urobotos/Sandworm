@@ -76,7 +76,7 @@ The printer power ON-OFF itself is controlled via the Mainsail interface. The **
 - The macro contains a **Countdown** in mm for the LCD display and a **Progress Bar** (every 20%) for the Mainsail console:
 <p align="center" width="100%">
     <img width="47%" src="images/lcd_countdown.jpg">
-    <img width="47%" src="images/progress_bar.jpg">
+    <img width="47%" src="images/progress_bar2.jpg">
 </p>
 <br>
 

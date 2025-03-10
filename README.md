@@ -59,7 +59,7 @@ The printer power ON-OFF itself is controlled via the Mainsail interface. The **
 - **Description**: A configurable distance delay before `PAUSE` is triggered when the filament sensor is activated.
 - **Purpose**: Saves filament by allowing extra material to be used before pausing.
 - **Setup Instructions**:<br>
-  Measure your PTFE tube length (from filament sensor to extruder gear, include a ~100mm buffer for manual filament removal).<br>
+  Measure your PTFE tube length (from filament sensor to extruder gear, include a ~100mm buffer for manual filament removal from extruder gear).<br>
   
 - **To set the measured value (Two option):**
   - **In the LCD menu:** `Menu → Setup → Filament sens. → Choose:`

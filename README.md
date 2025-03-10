@@ -68,7 +68,7 @@ The printer power ON-OFF itself is controlled via the Mainsail interface. The in
       - **Distance:** `930`mm :   
           Adjust `Distance` to: `Your_measured_value_in_mm` (Default: 930mm, 10mm per step, with auto-save).
          
-  - **Or via editing variables.cfg file:**  
+  - **Or directly by editing the variables.cfg file:**  
       - In `variablas.cfg (file) → runout_distance (variable) = 930` change `930` to Your measured value in mm.
 
 <br>

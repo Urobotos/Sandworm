@@ -50,7 +50,7 @@ restart_delay: 1
 bound_service: klipper              # Ensures Klipper service starts/restarts with power toggle
 ```
 **User management of printer ON-OFF:**
-The printer power ON-OFF itself is controlled via the Mainsail interface. The **Auto Power Off** macro serves as a safe shutdown of the printer at the end of printing, It is controlled using two macro buttons: `ACTIVATE_POWER_OFF` and `DEACTIVATE_POWER_OFF` during printing, or by direct writing in end_gcode.
+The printer power ON-OFF itself is controlled via the Mainsail interface. The **Auto Power Off** macro serves as a safe shutdown of the printer at the end of printing, It is controlled using two macro buttons: `ACTIVATE_POWER_OFF` and `DEACTIVATE_POWER_OFF` during printing, or by direct writing `ACTIVATE_POWER_OFF` in end_gcode.
 
 <br>
 

@@ -34,7 +34,7 @@ The Sandworm printer uses a modified `mainsail.cfg` file called `mainsail_custom
 <br>
 
 ### 🔌 Remote Power Control via Relay:
-A complete setup guide by `@tinntbg`, with more wiring options, can be found in his Github repository:  
+A complete setup guide by `tinntbg`, with more wiring options, can be found in his Github repository:  
 [Auto Power Off Klipper](https://github.com/tinntbg/auto-power-off-klipper) <br>
 
 To enable relay-based power control, add the following to your `moonraker.conf` file:<br>

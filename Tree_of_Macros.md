@@ -131,7 +131,7 @@
 
 ### 🌪️ fans.cfg:                                         
   - **[M141]** <br>
-    *Macro for set automatic chamber cooling / filtering temperature. ##(ZDE předělat popisy maker, dle readme.md!!!)*
+    *Macro for set automatic chamber cooling / filtering temperature.*
 
   - **[M191]** <br>
     *Wait until the chamber has warmed up to the minimum temperature.*

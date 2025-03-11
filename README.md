@@ -77,7 +77,7 @@ The printer power ON-OFF itself is controlled via the Mainsail interface. The in
       - **Distance:** `930`mm :   
           Adjust `Distance` to: `Your_measured_value_in_mm` (Default: 930mm, adjustment: 10 mm per step, with auto-save function on click).
          
-  - **Or directly by editing the variables.cfg file:**  
+  - **Directly by editing the variables.cfg file:**  
       - In `variablas.cfg → runout_distance = 930`, change `930` to: Your measured value in mm.
 
 <br>
@@ -94,7 +94,7 @@ The LCD menu and user-defined macros support multiple languages (not included in
 To change the language (Two option):
 - **LCD Menu**: `Menu → Setup → Language → Choose: English, Cestina, Deutsch`
    
-- **Or in the Mainsail console using a g-code macro:**
+- **In the Mainsail console using a g-code macro:**
    - **English:**
      ```
      SET_MENU_LANGUAGE LANGUAGE=1

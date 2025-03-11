@@ -76,7 +76,7 @@
     *Restores saved lights settings on printer start / restart.*
 
   - **[restore_lights]** <br>
-    *As a LOW value between LED flashes. ###### Je zde v popisu čeština ODSTRANIT!!!!*
+    *As a LOW value between LED flashes.*
 
   - **[set_onoff_lights]**                                      
     *ON/OF toogle lights for LCD menu.*

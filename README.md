@@ -17,7 +17,7 @@ Project by: Urobotos Coding
 
 <br>
 
-### ✂️ A `modified mainsail.cfg` file called `mainsail_custom.cfg` is used:
+### ✂️ A modified `mainsail.cfg` file called `mainsail_custom.cfg` is used:
 The Sandworm printer uses a modified `mainsail.cfg` file called `mainsail_custom.cfg`, the redirected include is listed in `printer.cfg`, so no manual edits are needed. This is provided for information only.
 
 **Modifications include:**

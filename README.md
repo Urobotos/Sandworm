@@ -215,7 +215,7 @@ A great feature by `Kyleisah` to calibrate only the printed area: [Klipper Adapt
 ### 🤝 Contributing
 Contributions are welcome! If you'd like to contribute, follow the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines. 🚀
 
-### 📜 A List (Tree) of all Macro Names:
+### 📜 A List (Tree) of All Macro Names:
 With a short description can be found here: [Tree of Macros.md](./Tree_of_Macros.md)<br><br>
 
 

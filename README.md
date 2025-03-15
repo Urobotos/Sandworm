@@ -161,7 +161,7 @@ These two parameters are set via **PrusaSlicer**:
 - **For automatic Cooling/Filtration:** `Filament Profile → Temperature → Chamber → Nominal: YOUR_VALUE °C`
 - **To Preheat the Chamber Before Printing:** `Filament Profile → Temperature → Chamber → Minimum: YOUR_VALUE °C`
 
->💡 **Tip:** You can set different values for different filaments or completely disable temperature automation for a specific filament by `0`.
+>💡 **Tip:** You can set different values for different filaments or completely disable temperature automation for a specific filament by `0`
 <br>
 
 > [!NOTE]

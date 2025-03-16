@@ -60,7 +60,8 @@ restart_delay: 1
 bound_service: klipper              # Ensures Klipper service starts/restarts with power toggle
 ```
 **For Sandworm, user ON-OFF printer management:**
-The printer power ON-OFF itself is controlled via the Mainsail interface. The included **Auto Power Off** macro serves as a safe temperature shutdown of the printer at the end of printing, It is controlled using two macro buttons: `ACTIVATE_POWER_OFF` and `DEACTIVATE_POWER_OFF` during printing, or by direct writing `ACTIVATE_POWER_OFF` in end_gcode.
+The printer power ON-OFF itself is controlled via the Mainsail interface. The included **Auto Power Off** macro serves as a safe temperature shutdown of the printer at the end of printing, It is controlled using two macro buttons: `ACTIVATE_POWER_OFF` and `DEACTIVATE_POWER_OFF` during printing, or by direct writing `ACTIVATE_POWER_OFF` in end_gcode <br>
+(The power off buttons will be set up later in this guide, along with the other macro buttons).
 
 <br>
 
@@ -134,6 +135,13 @@ Find the macro names below and add them as buttons in **Mainsail**:
   - `PROBE_CALIBRATE_02`
   - `Z_TILT_ADJUST_03`
   - `BED_MESH_CALIBRATE_04`
+
+- **Print adjustment (Hidden during ready & idle)**:
+  - `ACTIVATE_POWER_OFF`
+  - `DEACTIVATE_POWER_OFF`
+  - `SET_PAUSE_AT_LAYER`
+  - `SET_PAUSE_NEXT_LAYER`
+
 <br>
 
 ### 🚀🏁 PrusaSlicer - START and END Gcodes:

@@ -136,7 +136,7 @@ Find the macro names below and add them as buttons in **Mainsail**:
   - `Z_TILT_ADJUST_03`
   - `BED_MESH_CALIBRATE_04`
 
-- **Print adjustment (Hidden during ready)**:
+- **Print adjustment (Hidden during standby/ready)**:
   - `ACTIVATE_POWER_OFF`
   - `DEACTIVATE_POWER_OFF`
   - `SET_PAUSE_AT_LAYER`

@@ -11,19 +11,22 @@
 	
 ### 📜 macros.cfg:
   - **[delayed_gcode strartup_message]** <br> 
-    *description: Mesasage (Temp_Homing) on Printer startup.*
+    *description: Mainsail console message (Temp_Homing) on Printer startup.*
+
+  - **[delayed_gcode lcd_message]** <br> 
+    *description: LCD message on printer startup.*
 	
   - **[Z_ENDSTOP_CALIBRATE_01]** <br>
-    *Z Endstop Calibrate macro button.*
+    *Z Endstop Calibrate for Mainsail macro button.*
 	
   - **[PROBE_CALIBRATE_02]** <br>
-    *Probe Calibrate macro button.*
+    *Probe Calibrate for Mainsail macro button.*
 
   - **[Z_TILT_ADJUST_03]** <br>
-    *Z Tilt Adjust macro button.*
+    *Z Tilt Adjust for Mainsail macro button.*
 
   - **[BED_MESH_CALIBRATE_04]** <br>
-    *Bed Mesh Calibrate macro button.*
+    *Bed Mesh Calibrate for Mainsail macro button.*
 
   - **[Temp_Homing]** <br>
     *Homing with pre-heated nozzle.*

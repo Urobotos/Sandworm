@@ -79,10 +79,10 @@
     *Restores saved lights settings on printer start / restart.*
 
   - **[restore_lights]** <br>
-    *As a LOW value between LED flashes.*
+    *For setting a LOW value between LED flashes.*
 
   - **[set_onoff_lights]**                                      
-    *ON/OF toogle lights for LCD menu.*
+    *ON/OF toggle lights for LCD menu.*
 	
   - **[set_bright_lights]**                     
     *LCD Menu brightness Lights skript.*
@@ -97,7 +97,7 @@
     *Lights ON.*
 	
   - **[lights_ON_OFF]**                                    
-    *Lights ON/OFF for Mainsail toogle button.
+    *Lights ON/OFF for toggle button.
 	
   - **[lights_max]** <br>
     *lights on Maximum.*
@@ -114,8 +114,8 @@
   - **[blue]** <br>
     *lights blue (example).*
 
-  - **[pink]** <br>
-    *lights pink (example).*
+  - **[gcode_macro lights_on_50_percent]** <br>
+    *Lights on 50% (example).*
 
 
 ### 🖥️ display.cfg:

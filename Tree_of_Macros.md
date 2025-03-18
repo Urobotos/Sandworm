@@ -67,10 +67,7 @@
   - **[ACTIVATE_POWER_OFF]**, **[DEACTIVATE_POWER_OFF]**, **[POWER_OFF_PRINTER_CHECK_ACT]** and **[_POWER_OFF_PRINTER]** <br>
     *To turn off the printer at the end of printing.*
 
-  - **[Bed_Lowrider]** <br>
-    *Bed joint bearing test moves.*
     
-
 ### 💡 lights_chamber.cfg:
   - **[lights_var]** <br>
     *lights Variables.*

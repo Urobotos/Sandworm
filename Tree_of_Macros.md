@@ -11,10 +11,10 @@
 	
 ### 📜 macros.cfg:
   - **[delayed_gcode strartup_message]** <br> 
-    *description: Mainsail console message (Temp_Homing) on Printer startup.*
+    *For Mainsail console message (Temp_Homing) on Printer startup.*
 
   - **[delayed_gcode lcd_message]** <br> 
-    *description: LCD message on printer startup.*
+    *LCD message on printer startup.*
 	
   - **[Z_ENDSTOP_CALIBRATE_01]** <br>
     *Z Endstop Calibrate for Mainsail macro button.*
@@ -35,7 +35,7 @@
     *Filament Runout Distance.* 
   
   - **[M600]** <br> 
-    *description: Filament Change.*
+    *Filament Change.*
   
   - **[FILAMENT_LOAD]** <br>
     *Filament Load 100mm.*
@@ -59,13 +59,13 @@
     *Park Toolhead.*
 
   - **[idle_timeout]** <br>
-    *Turns off steppers etc. after 8 minutes of inactivity.*
+    *Turns off steppers, heaters etc. after 8 minutes of inactivity.*
 
   - **[clear_display]** <br> 
     *Empty M117 message for auto-clear LCD display, with 25sec delay.*
 	
   - **[ACTIVATE_POWER_OFF]**, **[DEACTIVATE_POWER_OFF]**, **[POWER_OFF_PRINTER_CHECK_ACT]** and **[_POWER_OFF_PRINTER]** <br>
-    *For Printer remote control power ON/OFF by Relay.*
+    *To turn off the printer at the end of printing.*
 
   - **[Bed_Lowrider]** <br>
     *Bed joint bearing test moves.*

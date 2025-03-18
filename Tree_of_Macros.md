@@ -65,7 +65,7 @@
     *Empty M117 message for auto-clear LCD display, with 25sec delay.*
 	
   - **[ACTIVATE_POWER_OFF]**, **[DEACTIVATE_POWER_OFF]**, **[POWER_OFF_PRINTER_CHECK_ACT]** and **[_POWER_OFF_PRINTER]** <br>
-    *To turn off the printer at the end of printing.*
+    *To turn OFF the printer at the end of printing.*
 
     
 ### 💡 lights_chamber.cfg:
@@ -123,15 +123,15 @@
     *Macro tone for alert beep.*
 
   - **[SET_MENU_LANGUAGE]** <br>
-    *Changing the language on the LCD*.
+    *To change the language using the LCD menu*.
 
   - **[knob_feedback]** and **[delayed_gcode knob_return]** <br>
-    *Knob LED feedback.*
+    *Knob LED feedback: ON-OFF.*
 
 
 ### 🌪️ fans.cfg:                                         
   - **[M141]** <br>
-    *Macro for set automatic chamber cooling / filtering temperature.*
+    *Target chamber temperature for automatic cooling/filtering.*
 
   - **[M191]** <br>
     *Wait until the chamber has warmed up to the minimum temperature.*

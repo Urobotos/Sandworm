@@ -120,15 +120,15 @@
 
 ### 🖥️ display.cfg:
   - **[M300]** <br>
-    *LCD Beeper.*
+    *M300 gcode for LCD Beeper.*
 	
-  - **[play_tone]** <br>
-    *LCD Beeper.*
+  - **[gcode_macro alert_beep]** <br>
+    *Macro tone for alert beep.*
 
   - **[SET_MENU_LANGUAGE]** <br>
-    *LCD menu language*.
+    *Changing the language on the LCD*.
 
-  - **[knob_feedback]**, **[delayed_gcode knob_feedback_return]** and **[delayed_gcode knob_on_reboot]** <br>
+  - **[knob_feedback]** and **[delayed_gcode knob_return]** <br>
     *Knob LED feedback.*
 
 

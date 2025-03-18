@@ -131,7 +131,7 @@
 
 ### 🌪️ fans.cfg:                                         
   - **[M141]** <br>
-    *Target chamber temperature for automatic cooling/filtering.*
+    *Target chamber temperature for automatic Cooling/Filtering.*
 
   - **[M191]** <br>
     *Wait until the chamber has warmed up to the minimum temperature.*

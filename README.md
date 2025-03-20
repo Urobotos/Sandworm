@@ -110,7 +110,7 @@ To change the language (Two option):
      ```
 <br>
 
-### 🖲️ Custom Macro Buttons in Mainsail:
+### 🖱️ Custom Macro Buttons in Mainsail:
 Find the macro names below and add them as buttons in **Mainsail**:
 
 - **Movement (Hidden during prints)**:

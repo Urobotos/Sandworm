@@ -5,7 +5,7 @@
 - 💡 [lights_chamber.cfg](#-lights_chambercfg)
 - 🖥️ [display.cfg](#-displaycfg)
 - 🌪️ [fans.cfg](#-fanscfg)
-- ⚙️ [mainsail_custom.cfg](#-mainsail_customcfg)
+- ⚙️ [mainsail_custom.cfg](#%EF%B8%8F-mainsail_customcfg)
 - 🚦 [start_end_gcodes.cfg](#-start_end_gcodescfg)
 
 	

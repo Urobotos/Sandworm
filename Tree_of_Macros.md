@@ -2,7 +2,7 @@
 ### Jump Navigation:
 
 - 📜 [macros.cfg](#macroscfg)
-- 💡 [lights_chamber.cfg](#lights_chambercfg)
+- 💡 [lights_chamber.cfg](#-lights_chambercfg)
 - 🖥️ [display.cfg](#displaycfg)
 - 🌪️ [fans.cfg](#fanscfg)
 - ⚙️ [mainsail_custom.cfg](#mainsail_customcfg)

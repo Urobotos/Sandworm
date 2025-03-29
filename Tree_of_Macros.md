@@ -1,12 +1,12 @@
 
 ### Jump Navigation:
 
-- 📜 [macros.cfg](#macroscfg)
-- 💡 [lights_chamber.cfg](#lights_chambercfg)
-- 🖥️ [display.cfg](#displaycfg)
-- 🌪️ [fans.cfg](#fanscfg)
-- ⚙️ [mainsail_custom.cfg](#mainsail_customcfg)
-- 🚦 [start_end_gcodes.cfg](#start_end_gcodescfg)
+- 📜 [macros.cfg](#macros.cfg)
+- 💡 [lights_chamber.cfg](#lights_chamber.cfg)
+- 🖥️ [display.cfg](#display.cfg)
+- 🌪️ [fans.cfg](#fans.cfg)
+- ⚙️ [mainsail_custom.cfg](#mainsail_custom.cfg)
+- 🚦 [start_end_gcodes.cfg](#start_end_gcodes.cfg)
 
 	
 ### 📜 macros.cfg:
@@ -72,31 +72,27 @@
 ### 💡 lights_chamber.cfg:
 
   - **[delayed_gcode set_lights_onstartup]** <br>
-    *Restores saved lights settings on printer start / restart.*
+    (Display, Chymber lights, Extruder LEDs) *Restores saved lights settings on printer start / restart.*
 
-  - **[restore_lights]** <br>
-    *For setting a LOW value between LED flashes.*
+  - **[gcode_macro SET_LED]** <br>
+    *SET_LED rename - For real-time synchronization of RGB(W) lighting state across multiple control interfaces.*
 
-  - **[set_onoff_lights]**                                      
-    *ON/OF toggle lights for LCD menu.*
-	
-  - **[set_bright_lights]**                     
-    *LCD Menu brightness Lights skript.*
+  - **[gcode_macro SET_LED_BLINK]** <br>
+    *Makro helper for Led blinks.*   
 
-  - **[set_rgb_lights]** <br>
-    *Set R, G and B values to <lights_var> variable.*
+  - **[lights_on]** <br>
+    *Chamber Lights ON*
 
   - **[lights_off]**  <br>
-    *Lights OFF.*
-	
-  - **[lights_on]** <br>
-    *Lights ON.*
-	
-  - **[lights_ON_OFF]**                                    
-    *Lights ON/OFF for toggle button.
+    *Chamber Lights OFF*
 	
   - **[lights_max]** <br>
-    *lights on Maximum.*
+    *Chamber lights on Maximum.*
+	
+  - **[lights_ON_OFF]**                                    
+    *Chamber Lights ON/OFF (Toggle macro button).*
+	
+
 	
   - **[Green_Blink]** <br>
     *Green Blink.*
@@ -109,9 +105,6 @@
 
   - **[blue]** <br>
     *lights blue (example).*
-
-  - **[gcode_macro lights_on_50_percent]** <br>
-    *Lights on 50% (example).*
 
 
 ### 🖥️ display.cfg:

@@ -127,8 +127,10 @@ Find the macro names below and add them as buttons in **Mainsail**:
   - `e_stepper_off`
 
 - **Chamber Lights (Always visible)**:
-  - `lights_ON_OFF` *(Toggle ON/OFF based on previous state)*
+  - `lights_ON_OFF` *(Toggle ON/OFF button based on previous state)*
   - `lights_max` *(Set lights to max brightness)*
+  - `Extruder_LED_ON_OFF` *(Toggle ON/OFF button based on previous state)*
+  - `Display_LED_ON_OFF` *(Toggle ON/OFF button based on previous state)*
 
 - **Calibration (Hidden during prints & pauses)**:
   - `Z_ENDSTOP_CALIBRATE_01`

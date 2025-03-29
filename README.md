@@ -231,7 +231,7 @@ With a short description can be found here: [Tree of Macros.md](./Tree_of_Macros
 ✌️ That's it, your journey has come to an end! Thank you for your patience and for following the guide up to this point. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy printing, the game has begun!<br><br>
 
 <p align="center" width="100%">
-    <img width="38%" src="images/Urobotos_BPixelArt.png">
+    <img width="35%" src="images/Urobotos_BPixelArt.png">
 </p>
 
 

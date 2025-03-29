@@ -126,7 +126,8 @@
     *Knob LED feedback: ON-OFF.*
 
 
-### 🌪️ fans.cfg:                                         
+### 🌪️ fans.cfg:
+
   - **[M141]** <br>
     *Target chamber temperature for automatic Cooling/Filtering.*
 

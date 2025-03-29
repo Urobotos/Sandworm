@@ -128,7 +128,7 @@ Find the macro names below and add them as buttons in **Mainsail**:
 
 - **Chamber Lights (Always visible)**:
   - `lights_ON_OFF` *(Toggle ON/OFF button based on previous state)*
-  - `lights_max` *(Set chamber lights to max brightness)*
+  - `lights_max` *(Sets the chamber lighting to maximum brightness)*
   - `Extruder_LED_ON_OFF` *(Toggle ON/OFF button based on previous state)*
   - `Display_LED_ON_OFF` *(Toggle ON/OFF button based on previous state)*
 

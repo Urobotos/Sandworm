@@ -69,7 +69,7 @@
     *To turn OFF the printer at the end of printing.*
 
     
-### 💡 lights_chamber.cfg:
+### lights_chamber.cfg:
 
   - **[delayed_gcode set_lights_onstartup]** <br>
     (Display, Chymber lights, Extruder LEDs) *Restores saved lights settings on printer start / restart.*

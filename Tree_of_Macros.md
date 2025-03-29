@@ -72,7 +72,8 @@
 ### 💡 lights_chamber.cfg:
 
   - **[delayed_gcode set_lights_onstartup]** <br>
-    (Display, Chymber lights, Extruder LEDs) *Restores saved lights settings on printer start / restart.*
+    (Chamber lights, Extruder LEDs and LCD Display)<br>
+    *Restores saved lights settings on printer start / restart.*
 
   - **[gcode_macro SET_LED]** <br>
     *SET_LED rename - For real-time synchronization of RGB(W) lighting state across multiple control interfaces.*

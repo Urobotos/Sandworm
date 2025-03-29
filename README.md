@@ -218,7 +218,7 @@ The Sandworm printer in the macros uses a **Chess Knight Movement Style** for no
 which is optimal for Core XY printers and in which both core XY motors are engaged and produces less noise.<br><br>
 
 
-### 💡 Sandworm RGB Lights Adjustment and SET_LED rename:
+### 💡 Sandworm RGB Lights Adjustment and SET_LED rename Macro:
 The Sandworm printer brings a custom-made `SET_LED rename` macro, its main advantage is two functions:<br>
 1. Real-time synchronization of RGB(W) lighting state across multiple control interfaces:<br>
    `LCD display`, `Klipper macros`, and `Mainsail color wheel` — including ON/OFF, brightness, and color UPDATES.<br>

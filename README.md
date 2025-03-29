@@ -171,7 +171,7 @@ These two parameters are set via **PrusaSlicer**:
 - **For automatic Cooling/Filtration:** `Filament Profile → Temperature → Chamber → Nominal: YOUR_VALUE °C`
 - **To Preheat the Chamber Before Printing:** `Filament Profile → Temperature → Chamber → Minimum: YOUR_VALUE °C`
 
->💡 **Tip:** You can set different values for different filaments or completely disable temperature automation for a specific filament by `0`
+>📌 **Tip:** You can set different values for different filaments or completely disable temperature automation for a specific filament by `0`
 <br>
 
 > [!NOTE]
@@ -218,9 +218,9 @@ The Sandworm printer in the macros uses a **Chess Knight Movement Style** for no
 which is optimal for Core XY printers and in which both core XY motors are engaged and produces less noise.<br><br>
 
 
-### 💡 Sandworm Lights Adjustment and SET_LED rename:
+### 💡 Sandworm RGB Lights Adjustment and SET_LED rename:
 The Sandworm printer brings a custom-made `SET_LED rename` macro, its main advantage is two functions:
- (1) Real-time synchronization of RGB(W) lighting state across multiple control interfaces: `LCD display, 
+ (1) Real-time synchronization of RGB(W) lighting state across multiple control interfaces: `LCD display`, 
      `Klipper macros`, and `Mainsail color wheel` — including ON/OFF, brightness, and color UPDATES. 
  (2) Persistent SAVING of all configured lights, ensuring that their states are restored after a printer restart.
 

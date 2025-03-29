@@ -1,12 +1,12 @@
 
 ### Jump Navigation:
 
-- 📜 [macros.cfg](#macroscfg)
+- 📜 [macros.cfg](#-macroscfg)
 - 💡 [lights_chamber.cfg](#-lights_chambercfg)
-- 🖥️ [display.cfg](#displaycfg)
-- 🌪️ [fans.cfg](#fanscfg)
-- ⚙️ [mainsail_custom.cfg](#mainsail_customcfg)
-- 🚦 [start_end_gcodes.cfg](#start_end_gcodescfg)
+- 🖥️ [display.cfg](#-displaycfg)
+- 🌪️ [fans.cfg](#-fanscfg)
+- ⚙️ [mainsail_custom.cfg](#-mainsail_customcfg)
+- 🚦 [start_end_gcodes.cfg](#-start_end_gcodescfg)
 
 	
 ### 📜 macros.cfg:

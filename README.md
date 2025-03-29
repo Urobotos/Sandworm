@@ -218,6 +218,16 @@ The Sandworm printer in the macros uses a **Chess Knight Movement Style** for no
 which is optimal for Core XY printers and in which both core XY motors are engaged and produces less noise.<br><br>
 
 
+### 💡 Sandworm Lights Adjustment and SET_LED rename:
+The Sandworm printer brings a custom-made `SET_LED rename` macro, its main advantage is two functions:
+ (1) Real-time synchronization of RGB(W) lighting state across multiple control interfaces: `LCD display, 
+     `Klipper macros`, and `Mainsail color wheel` — including ON/OFF, brightness, and color UPDATES. 
+ (2) Persistent SAVING of all configured lights, ensuring that their states are restored after a printer restart.
+
+The `SET_LED rename` macro introduces also a new RGB(W) memory feature:
+You can adjust the R, G, B (W) values for a specific neopixel light individually, without resetting the other colors.
+
+
 ### Others:
 ### 🛠️ Klipper Adaptive Meshing Purging (KAMP):
 A great feature by `Kyleisah` to calibrate only the printed area: [Klipper Adaptive Meshing Purging](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)

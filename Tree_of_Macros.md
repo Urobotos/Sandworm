@@ -89,22 +89,26 @@
   - **[lights_max]** <br>
     *Chamber lights on Maximum.*
 	
-  - **[lights_ON_OFF]**                                    
+  - **[lights_ON_OFF]** <br>                                   
     *Chamber Lights ON/OFF (Toggle macro button).*
+		
+  - **[gcode_macro nozzle_led_on]** <br>
+    *Extruder LED ON.*
 	
+  - **[gcode_macro nozzle_led_off]** <br> 
+    *Extruder LED OFF.*
+	
+  - **[gcode_macro Extruder_LED_ON_OFF]** <br>
+    *Extruder LED ON/OFF (Toggle macro button).*	
 
-	
-  - **[Green_Blink]** <br>
-    *Green Blink.*
-	
-  - **[Red_Blink]** <br> 
-    *Red Blink.*
-	
-  - **[Blue_Blink]** <br>
-    *Blue Blink.*	
+  - **[gcode_macro display_on]** <br>
+    *Display LED ON.*
 
-  - **[blue]** <br>
-    *lights blue (example).*
+  - **[gcode_macro display_off]** <br>
+    *Display LED OFF.*
+
+  - **[gcode_macro Display_LED_ON_OFF] ** <br>
+    *isplay LED ON/OFF (Toggle macro button).*
 
 
 ### 🖥️ display.cfg:

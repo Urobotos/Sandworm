@@ -89,7 +89,7 @@
   - **[lights_max]** <br>
     *Chamber lights on Maximum.*
 	
-  - **[lights_ON_OFF]** <br>                                   
+  - **[lights_ON_OFF]** <br>
     *Chamber Lights ON/OFF (Toggle macro button).*
 		
   - **[gcode_macro nozzle_led_on]** <br>

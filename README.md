@@ -225,7 +225,7 @@ The Sandworm printer brings a custom-made `SET_LED rename` macro, its main advan
 2. Persistent SAVING of all configured lights, ensuring that their states are restored after a printer restart.<br>
 
 The `SET_LED rename` macro introduces also a new RGB(W) memory feature:<br>
-You can adjust the R, G, B (W) values for a specific neopixel light individually, without resetting the other colors.<br><br>
+You can adjust the R, G, B, (W) values for a specific neopixel light individually, without resetting the other colors.<br><br>
 
 
 ### Others:

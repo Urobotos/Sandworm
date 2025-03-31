@@ -146,7 +146,7 @@ Find the macro names below and add them as buttons in **Mainsail**:
 
 <br>
 
-### 🚀🏁 PrusaSlicer - START and END Gcodes:
+### 🚀🏁 PrusaSlicer - START & END Gcodes:
 In **PrusaSlicer**, insert the following G-code snippets into the `Start G-codes` and `End G-codes` sections:
 
 #### 🟢 Start G-codes:

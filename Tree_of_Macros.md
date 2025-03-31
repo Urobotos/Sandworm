@@ -12,7 +12,7 @@
 ### 📜 macros.cfg:
 
   - **[delayed_gcode strartup_message]** <br> 
-    *For Mainsail console message (clickable ´Temp_Homing´) on Printer startup.*
+    *For Mainsail console message on Printer startup: Clickable* `Temp_Homing`
 
   - **[delayed_gcode lcd_message]** <br> 
     *LCD message on printer startup.*

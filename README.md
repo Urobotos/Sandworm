@@ -36,7 +36,7 @@ The Sandworm printer uses a modified `mainsail.cfg` file called `mainsail_custom
 
 - Alternatively, clone this repository directly from your `printer_data/config` directory using:
   ```
-  git clone https://github.com/Urobotos/Sandworm/config.git
+  git clone https://github.com/Urobotos/Sandworm.git
   ```
 - Restart your printer for the first **Sandworm** launch. Then continue with the next steps in this README.md to complete all necessary settings.
  

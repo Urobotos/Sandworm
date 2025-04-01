@@ -34,12 +34,28 @@ The Sandworm printer uses a modified `mainsail.cfg` file called `mainsail_custom
   - Example path: `home/biqu/printer_data/config/`
   - Choose Yes if prompted to overwrite default `printer.cfg`.
 
-- Alternatively, clone this repository directly from your `printer_data/config` directory using:
+- Alternatively, you can clone only the necessary configuration files using: *(This method ensures that only the `config/` folder is downloaded, preventing unnecessary files from being copied into `printer_data/config/`):*<br>
   ```
-  git clone https://github.com/Urobotos/Sandworm.git
+  git clone --depth 1 --filter=blob:none --sparse https://github.com/Urobotos/Sandworm.git cd Sandworm git sparse-checkout set config cp -r config/* ~/printer_data/config/
   ```
+  
 - Restart your printer for the first **Sandworm** launch. Then continue with the next steps in this README.md to complete all necessary settings.
  
+<br>
+
+### ♻️ Automatic Updates for Sandworm Configuration:
+To enable easy updates for the Sandworm configuration and macros, you can set up automatic updates via the Moonraker Update Manager. Simply add the following block to your `moonraker.conf` file:
+```
+[update_manager Sandworm]
+type: git_repo
+origin: https://github.com/Urobotos/Sandworm.git
+path: ~/Sandworm
+primary_branch: main
+managed_services: klipper
+install_script: install.sh
+```
+With each update, the new version will be downloaded to `~/Sandworm`, and then the `install.sh` script will automatically move the necessary files to `~/printer_data/config/`
+
 <br>
 
 ### 🔌 Remote Power Control via Relay:

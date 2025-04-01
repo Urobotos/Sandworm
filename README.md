@@ -34,10 +34,12 @@ The Sandworm printer uses a modified `mainsail.cfg` file called `mainsail_custom
   - Example path: `home/biqu/printer_data/config/`
   - Choose Yes if prompted to overwrite default `printer.cfg`.
 
-- Alternatively, you can clone only the necessary configuration files using: *(This `git clone` method ensures that only the `config/` folder is downloaded, preventing unnecessary files from being copied into `printer_data/config/`):*<br>
+- Alternatively, you can clone only the necessary configuration files using: <br>
   ```
   git clone --depth 1 --filter=blob:none --sparse https://github.com/Urobotos/Sandworm.git cd Sandworm git sparse-checkout set config cp -r config/* ~/printer_data/config/
   ```
+  - *This `git clone` method ensures that only the `config/` folder is downloaded, preventing unnecessary files from being copied into `printer_data/config/`*<br>
+
   
 - Restart your printer for the first **Sandworm** launch. Then continue with the next steps in this README.md to complete all necessary settings.
  

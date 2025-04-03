@@ -237,10 +237,8 @@ which is optimal for Core XY printers and in which both core XY motors are engag
 
 
 ### 💡 RGB Lights Adjustment and SET_LED rename Macro:
-The Sandworm printer brings a custom-made `SET_LED rename` macro, its main advantage is two functions:<br>
-1. Real-time synchronization of RGB(W) lighting state across multiple control interfaces:<br>
-   RGB settings on `LCD display`, `Klipper macros`, and `Mainsail color wheel` — including ON/OFF, brightness, and color UPDATES.<br>
-2. Persistent SAVING of all configured lights, ensuring that their states are restored after a printer restart.<br>
+The Sandworm printer brings a custom-made `SET_LED rename` macro, its main advantage is:<br>
+Persistent SAVING of all configured lights, ensuring that their states are restored after a printer restart.<br>
 
 The `SET_LED rename` macro introduces also a new RGB(W) memory feature:<br>
 You can adjust the R, G, B, (W) values for a specific neopixel light individually, without resetting the other colors.<br><br>

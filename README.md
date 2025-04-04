@@ -57,7 +57,7 @@ managed_services: klipper
 install_script: install.sh
 version: ~/Sandworm/version.txt
 ```
-With each update, the entire Sandworm repository will be downloaded to `~/Sandworm`, and the install.sh script will automatically copy updated configuration files from the config/ directory to your printer's configuration folder `~/printer_data/config/`.
+With each update, the entire Sandworm repository will be downloaded to `~/Sandworm`, and the `install.sh` script will automatically copy updated configuration files from the `~/Sandworm/config/` directory to your printer's configuration folder `~/printer_data/config/`.
 > 📦 Before each update, a backup of your current configuration is automatically saved in `~/Sandworm/Backup/`, <br>
 > so you can restore your custom macros or settings if needed.
 

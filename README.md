@@ -4,7 +4,8 @@
 ```
 Author: Zachar Čuřík
 Launch Date: Q2 2025
-Code Name: Sandworm Mach3 Y2025 GS556 (*game_save: "556") - (†game_over_date: "unknown")
+Code Name: Sandworm Mach3 Y2025 GS556
+Version: game_save=556, level=03, game_over= "unknown"
 Project by: Urobotos Coding
 ```
 
@@ -16,18 +17,6 @@ Project by: Urobotos Coding
 > where (in addition to the instructions) you can also find the **3D printable models** needed to build this printer.
 
 <br>
-
-### ✂️ A modified `mainsail.cfg` file called `mainsail_custom.cfg` is used:
-The Sandworm printer uses a modified `mainsail.cfg` file called `mainsail_custom.cfg`, the redirected include is listed in `printer.cfg`, so no manual edits are needed. This is provided for information only.
-
-**Modifications include:**
-- **Fan Control**: The part cooling fan turns off during `PAUSE` and then resumes to its previous speed when `RESUME` is triggered.<br>
-   - Benefit: The fan does not run unnecessarily during a pause, which can be extended when using a filament sensor for runout detection.<br>
-
-- **Nozzle Priming After Pause**: The `point_unretract` macro is executed when printing resumes after a pause.<br>
-   - How it works: The print head returns to the paused position and performs a small filament extrusion to refill the nozzle.<br>
-   - Benefit: Prevents gaps in the print caused by filament leakage during the pause.<br><br>
-
 
 ### 📂 Copy & Paste Config Files:
 - Copy all content from the `Sandworm/config` folder and paste them into your printer’s config directory.
@@ -247,20 +236,33 @@ Persistent SAVING of all configured lights, ensuring that their states are resto
 The `SET_LED rename` macro introduces also a new RGB(W) memory feature:<br>
 You can adjust the R, G, B, (W) values for a specific neopixel light individually, without resetting the other colors.<br><br>
 
+### ✂️ A modified `mainsail.cfg` file called `mainsail_custom.cfg` is used:
+The Sandworm printer uses a modified `mainsail.cfg` file called `mainsail_custom.cfg`, the redirected include is listed in `printer.cfg`, so no manual edits are needed. This is provided for information only.
+
+**Modifications include:**
+- **Fan Control**: The part cooling fan turns off during `PAUSE` and then resumes to its previous speed when `RESUME` is triggered.<br>
+   - Benefit: The fan does not run unnecessarily during a pause, which can be extended when using a filament sensor for runout detection.<br>
+
+- **Nozzle Priming After Pause**: The `point_unretract` macro is executed when printing resumes after a pause.<br>
+   - How it works: The print head returns to the paused position and performs a small filament extrusion to refill the nozzle.<br>
+   - Benefit: Prevents gaps in the print caused by filament leakage during the pause.<br><br>
+
+
+### 📜 A List (Tree) of All Macro Names:
+With a short description can be found here: [Tree of Macros.md](./Tree_of_Macros.md)<br><br>
+
 
 ### Others:
 ### 🛠️ Klipper Adaptive Meshing Purging (KAMP):
 A great feature by `Kyleisah` to calibrate only the printed area: [Klipper Adaptive Meshing Purging](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)
 
 ### 🤝 Contributing
-Contributions are welcome! If you'd like to contribute, follow the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.
-
-### 📜 A List (Tree) of All Macro Names:
-With a short description can be found here: [Tree of Macros.md](./Tree_of_Macros.md)<br><br>
+Contributions are welcome! If you'd like to contribute, follow the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.<br><br><br>
 
 
 <hr>
-✌️ That's it, your journey has come to an end! Thank you for your patience and for following the guide up to this point. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy printing, the game has begun!<br><br>
+
+✌️ **That's it, your journey has come to an end!** Thank you for your patience and for following the guide up to this point. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy printing, the game has begun!<br><br>
 
 <p align="center" width="100%">
     <img width="35%" src="images/Urobotos_BPixelArt.png">

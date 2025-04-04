@@ -55,7 +55,7 @@ path: ~/Sandworm
 primary_branch: main
 managed_services: klipper
 install_script: install.sh
-version: ~/Sandworm/config/version.txt
+version: ~/Sandworm/version.txt
 ```
 With each update, the new version will be downloaded to `~/Sandworm`, and then the `install.sh` script will automatically move the necessary files to `~/printer_data/config/`
 

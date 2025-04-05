@@ -76,7 +76,7 @@
     *Restores saved lights settings on printer start / restart.*
 
   - **[gcode_macro SET_LED]** <br>
-    *SET_LED rename - For real-time synchronization of RGB(W) lighting state across multiple control interfaces.*
+    *SET_LED rename - Persistent saving of all configured lights, ensuring that their states are restored after a printer restart.*
 
   - **[gcode_macro SET_LED_BLINK]** <br>
     *Makro helper for Led blinks.*   

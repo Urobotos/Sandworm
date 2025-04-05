@@ -166,7 +166,8 @@
 <br>
 
 ### 📱 LCD menu - Offer structure (English version):
- **Content:**
+
+ + **Content:**
    + **Adjust print:**
        + Ex0:000 (0000)
        + Bed:000 (0000)

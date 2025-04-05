@@ -65,7 +65,7 @@
   - **[clear_display]** <br> 
     *Empty M117 message for auto-clear LCD display, with 25sec delay.*
 	
-  - **[ACTIVATE_POWER_OFF]**, **[DEACTIVATE_POWER_OFF]**, **[POWER_OFF_PRINTER_CHECK_ACT]** and **[_POWER_OFF_PRINTER]** <br>
+  - **[ACTIVATE_POWER_OFF], [DEACTIVATE_POWER_OFF], [POWER_OFF_PRINTER_CHECK_ACT] and [_POWER_OFF_PRINTER]** <br>
     *To turn OFF the printer at the end of printing.*
 
     
@@ -75,29 +75,23 @@
     (Chamber lights, Extruder LEDs and LCD Display)<br>
     *Restores saved lights settings on printer start / restart.*
 
-  - **[gcode_macro SET_LED]** <br>
+  - **[SET_LED]** <br>
     *SET_LED rename - Persistent saving of all configured lights, ensuring that their states are restored after a printer restart.*
 
-  - **[gcode_macro SET_LED_BLINK]** <br>
+  - **[SET_LED_BLINK]** <br>
     *Makro helper for Led blinks.*   
 	
   - **[lights_max]** <br>
     *Chamber lights on Maximum.*
 	
-  - **[lights_ON_OFF]**, **[lights_on]**, **[lights_off]**  <br>
+  - **[lights_ON_OFF], [lights_on], [lights_off]**  <br>
     *Chamber Lights ON/OFF (Toggle macro button).*
 		
-  - **[gcode_macro Extruder_LED_ON_OFF]**, **[gcode_macro nozzle_led_on]**, **[gcode_macro nozzle_led_off]** <br>
+  - **[Extruder_LED_ON_OFF], [nozzle_led_on], [nozzle_led_off]** <br>
     *Extruder nozzle LEDs ON/OFF (Toggle macro button).*	
 
-  - **[gcode_macro display_on]** <br>
-    *Display LED ON.*
-
-  - **[gcode_macro display_off]** <br>
-    *Display LED OFF.*
-
-  - **[gcode_macro Display_LED_ON_OFF]** <br>
-    *isplay LED ON/OFF (Toggle macro button).*
+  - **[Display_LED_ON_OFF], [display_on], [display_off]** <br>
+    *Display backlight ON/OFF (Toggle macro button).*
 
 
 ### 🖥️ display.cfg:
@@ -105,7 +99,7 @@
   - **[M300]** <br>
     *M300 gcode for LCD Beeper.*
 	
-  - **[gcode_macro alert_beep]** <br>
+  - **[alert_beep]** <br>
     *Macro tone for alert beep.*
 
   - **[SET_MENU_LANGUAGE]** <br>

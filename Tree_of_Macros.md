@@ -165,23 +165,22 @@
 
 <br>
 
-
 ### 📱 LCD menu - Offer structure (English version):
- Content:
-   + Adjust print
+ **Content:**
+   + **Adjust print:**
        + Ex0:000 (0000)
        + Bed:000 (0000)
        + Speed: 000%
        + Flow: 000%
        + Offset Z:00.00
        + Fan speed
-   + SD print
+   + **SD print:**
        + Start printing
        + Resume printing            
        + Pause printing             
        + Cancel printing            
        + ... (files)
-   + Control
+   + **Control:**
        + Move XYZ,E
          + Move 10mm
              + Move X:000.0
@@ -206,7 +205,7 @@
        + E Stepper off
        + Fan: OFF
        + Fan speed: 000%
-   + Temperature
+   + **Temperature:**
        + Ex0:000 (0000)
        + Bed:000 (0000)
        + Preheat PLA
@@ -229,7 +228,7 @@
            + Cooldown all
            + HotEnd off
            + HotBed off
-   + Filament
+   + **Filament:**
        + Ex0:000 (0000)
        + Load Fil.
            + Load PLA
@@ -245,7 +244,7 @@
            + Change ABS
        + Move E: 000.0 mm
        + E Stepper off
-   + Lights
+   + **Lights:**
        + lights: ON/OFF
        + Bright: 0.3
        + lights on max.
@@ -253,10 +252,10 @@
        + Red: 0.30
        + Green: 0.30
        + Blue: 0.30
-   + Chamber
+   + **Chamber:**
        + Current: <temperature>
        + Cool at: 35°C
-   + Setup
+   + **Setup:**
        + Power Management
            + Restart
            + Restart FW

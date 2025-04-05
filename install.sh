@@ -74,13 +74,13 @@ cleanup() {
 #
 # For example:
 # sudo apt-get install -y git python3-pip
-
-install_dependencies() {
-    echo "🛠 Installing dependencies..."
-    # sudo apt-get update
-    # sudo apt-get install -y your-package-name
-    echo -e "$SKIPPED No dependencies needed."
-    }
+# 
+# install_dependencies() {
+#     echo "🛠 Installing dependencies..."
+#     sudo apt-get update
+#     sudo apt-get install -y your-package-name
+#     echo -e "$SKIPPED No dependencies needed."
+#     }
 
 ## Launching functions:
 # install_dependencies

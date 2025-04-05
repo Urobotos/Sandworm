@@ -80,27 +80,15 @@
 
   - **[gcode_macro SET_LED_BLINK]** <br>
     *Makro helper for Led blinks.*   
-
-  - **[lights_on]** <br>
-    *Chamber Lights ON*
-
-  - **[lights_off]**  <br>
-    *Chamber Lights OFF*
 	
   - **[lights_max]** <br>
     *Chamber lights on Maximum.*
 	
-  - **[lights_ON_OFF]** <br>
+  - **[lights_ON_OFF]**, **[lights_on]**, **[lights_off]**  <br>
     *Chamber Lights ON/OFF (Toggle macro button).*
 		
-  - **[gcode_macro nozzle_led_on]** <br>
-    *Extruder LED ON.*
-	
-  - **[gcode_macro nozzle_led_off]** <br> 
-    *Extruder LED OFF.*
-	
-  - **[gcode_macro Extruder_LED_ON_OFF]** <br>
-    *Extruder LED ON/OFF (Toggle macro button).*	
+  - **[gcode_macro Extruder_LED_ON_OFF]**, **[gcode_macro nozzle_led_on]**, **[gcode_macro nozzle_led_off]** <br>
+    *Extruder nozzle LEDs ON/OFF (Toggle macro button).*	
 
   - **[gcode_macro display_on]** <br>
     *Display LED ON.*
@@ -108,7 +96,7 @@
   - **[gcode_macro display_off]** <br>
     *Display LED OFF.*
 
-  - **[gcode_macro Display_LED_ON_OFF] ** <br>
+  - **[gcode_macro Display_LED_ON_OFF]** <br>
     *isplay LED ON/OFF (Toggle macro button).*
 
 

@@ -23,7 +23,7 @@ trap 'echo -e "\e[31mERROR:\e[0m Script failed at line $LINENO"' ERR
 #
 # Currently, all operations are done within the user's home
 # directory, so this block is not required.
-# You can re-enable it if root access becomes necessary.
+# You can re-enable it if root access becomes necessary:
 #
 # if [[ $EUID -ne 0 ]]; then
 #     echo -e "$ERROR This script must be run as root! I'm trying to run it with sudo..."

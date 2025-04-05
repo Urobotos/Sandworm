@@ -3,13 +3,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Browsser Detection</title>
-
-
-
-
+<style>
+body {
+background-color: red;
+font-family: "Calibri";
+}  
+</style>
 </head>
-<body bgcolor="black">
+<body bgcolor="black" text="white">
 
 AHOJ
 

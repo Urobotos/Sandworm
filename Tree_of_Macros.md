@@ -72,7 +72,7 @@
 ### 💡 lights_chamber.cfg:
 
   - **[delayed_gcode set_lights_onstartup]** <br>
-    (Chamber lights, Extruder LEDs and LCD Display)<br>
+    *Chamber lights, Extruder LEDs and LCD Display:*<br>
     *Restores saved lights settings on printer start / restart.*
 
   - **[SET_LED]** <br>
@@ -106,7 +106,7 @@
     *To change the language using the LCD menu*.
 
   - **[knob_feedback]** and **[delayed_gcode knob_return]** <br>
-    *Knob LED feedback: ON-OFF.*
+    *Knob LED feedback when gcode macro is triggered via LCD menu.*
 
 
 ### 🌪️ fans.cfg:

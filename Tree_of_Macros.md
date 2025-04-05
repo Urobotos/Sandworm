@@ -7,6 +7,7 @@
 - 🌪️ [fans.cfg](#%EF%B8%8F-fanscfg)
 - ⚙️ [mainsail_custom.cfg](#%EF%B8%8F-mainsail_customcfg)
 - 🚦 [start_end_gcodes.cfg](#-start_end_gcodescfg)
+- [LCD menu - Offer structure](#LCD_menu_-_Offer_structure_(English_version):)
 
 	
 ### 📜 macros.cfg:

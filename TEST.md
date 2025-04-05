@@ -31,25 +31,9 @@ echo '<link rel="stylesheet" href="safari.css" type="text/css">';
 ?>
 
 </head>
-<body bgcolor="#111111">
+<body bgcolor="black">
 
-    <br>
-    <?php
-    if ($firefox) { //Firefox?
-    echo 'you are using Firefox!';
-    }
-
-    if ($safari || $chrome) { // Safari?
-    echo 'you are using a webkit powered browser';
-    }
-
-    if (!$msie) { // Not IE?
-    echo '<br>you are not using Internet Explorer<br>';
-    }
-    if ($msie) { // IE?
-    echo '<br>you are using Internet Explorer<br>';
-    }
-    ?>
+AHOJ
 
     <br>
 

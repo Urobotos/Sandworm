@@ -1,4 +1,12 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Browsser Detection</title>
+
+<link rel="stylesheet" href="Main.css" type="text/css">
+
 <?php 
 
 $msie        = strpos($_SERVER["HTTP_USER_AGENT"], 'MSIE') ? true : false; 
@@ -21,3 +29,29 @@ echo '<link rel="stylesheet" href="safari.css" type="text/css">';
 }
 
 ?>
+
+</head>
+<body>
+
+    <br>
+    <?php
+    if ($firefox) { //Firefox?
+    echo 'you are using Firefox!';
+    }
+
+    if ($safari || $chrome) { // Safari?
+    echo 'you are using a webkit powered browser';
+    }
+
+    if (!$msie) { // Not IE?
+    echo '<br>you are not using Internet Explorer<br>';
+    }
+    if ($msie) { // IE?
+    echo '<br>you are using Internet Explorer<br>';
+    }
+    ?>
+
+    <br>
+
+</body>
+</html>

@@ -162,3 +162,126 @@
   - **[start_gcode]** <br>
   - **[end_gcode]** <br>
 
+<br>
+
+
+### LCD menu - Offer structure (English version):
+ Content:
+   + Adjust print
+       + Ex0:000 (0000)
+       + Bed:000 (0000)
+       + Speed: 000%
+       + Flow: 000%
+       + Offset Z:00.00
+       + Fan speed
+   + SD print
+       + Start printing
+       + Resume printing            
+       + Pause printing             
+       + Cancel printing            
+       + ... (files)
+   + Control
+       + Move XYZ,E
+         + Move 10mm
+             + Move X:000.0
+             + Move Y:000.0
+             + Move Z:000.0
+             + Move E:+000.0
+         + Move 1mm
+             + Move X:000.0
+             + Move Y:000.0
+             + Move Z:000.0
+             + Move E:+000.0
+         + Move 0.1mm
+             + Move X:000.0
+             + Move Y:000.0
+             + Move Z:000.0
+             + Move E:+000.0
+       + Home All
+       + Home X/Y
+       + Home Z
+       + Park toolhead
+       + Steppers off
+       + E Stepper off
+       + Fan: OFF
+       + Fan speed: 000%
+   + Temperature
+       + Ex0:000 (0000)
+       + Bed:000 (0000)
+       + Preheat PLA
+           + Preheat all
+           + Preheat hotend
+           + Preheat hotbed
+       + Preheat PETG
+           + Preheat all
+           + Preheat hotend
+           + Preheat hotbed
+       + Preheat ABS
+           + Preheat all
+           + Preheat hotend
+           + Preheat hotbed
+       + Preheat PROBE
+           + Preheat all
+           + Preheat hotend
+           + Preheat hotbed
+       + Cooldown
+           + Cooldown all
+           + HotEnd off
+           + HotBed off
+   + Filament
+       + Ex0:000 (0000)
+       + Load Fil.
+           + Load PLA
+           + Load PETG
+           + Load ABS
+       + Unload Fil.
+           + Unload PLA
+           + Unload PETG
+           + Unload ABS   
+       + Change Fil.
+           + Change PLA
+           + Change PETG
+           + Change ABS
+       + Move E: 000.0 mm
+       + E Stepper off
+   + Lights
+       + lights: ON/OFF
+       + Bright: 0.3
+       + lights on max.
+       + Nozzle: ON/OFF
+       + Red: 0.30
+       + Green: 0.30
+       + Blue: 0.30
+   + Chamber
+       + Current: <temperature>
+       + Cool at: 35°C
+   + Setup
+       + Power Management
+           + Restart
+           + Restart FW
+           + Power Off
+       + Calibration
+           + Preheat: 
+              + Preheat all      
+              + Preheat hotend   
+              + Preheat hotbed   
+           + Home All
+           + Bed Mesh            
+           + Z Tilt 
+           + PID tuning
+              + Tune Hotend PID
+              + Tune Hotbed PID
+           + Z ENDSTOP CALIBRATE
+           + PROBE CALIBRATE
+           + Save config
+       + Language
+           + English
+           + Cestina
+           + Deutsch
+       + Filament sensor
+           + Extension: ON/OFF
+           + Distance: 930mm
+       + Display knob
+           + Feedback: ON/OFF
+        
+       

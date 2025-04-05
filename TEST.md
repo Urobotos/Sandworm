@@ -31,7 +31,7 @@ echo '<link rel="stylesheet" href="safari.css" type="text/css">';
 ?>
 
 </head>
-<body bgcolor="#000050">
+<body bgcolor="#111111">
 
     <br>
     <?php

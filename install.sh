@@ -1,4 +1,4 @@
-##!/bin/bash
+#!/bin/bash
 
 SANDWORM_REPO="$HOME/Sandworm/config"
 CONFIG_DIR="$HOME/printer_data/config"
@@ -21,7 +21,7 @@ backup_files() {
     cp -r "$CONFIG_DIR/"* "$BACKUP_DIR/" || echo -e "$ERROR Backup copy error!" 
     }
 
-## Functions for copying files with control:-
+## Functions for copying files with control:
 copy_files() {
     echo "🚀 Updating Sandworm config..."
     mkdir -p "$CONFIG_DIR"

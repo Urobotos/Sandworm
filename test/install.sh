@@ -1,4 +1,3 @@
-
 ##!/bin/bash
 
 SANDWORM_REPO="$HOME/Sandworm/config"
@@ -24,7 +23,7 @@ trap 'echo -e "\e[31mERROR:\e[0m Script failed at line $LINENO"' ERR
 #
 # Currently, all operations are done within the user's home
 # directory, so this block is not required.
-# You can re-enable it if root access becomes necessary:
+# You can re-enable it if root access becomes necessary.
 #
 # if [[ $EUID -ne 0 ]]; then
 #     echo -e "$ERROR This script must be run as root! I'm trying to run it with sudo..."
@@ -35,13 +34,15 @@ trap 'echo -e "\e[31mERROR:\e[0m Script failed at line $LINENO"' ERR
 backup_files() {
     echo "📂 Creating backup of your current config in $BACKUP_DIR..."
     mkdir -p "$BACKUP_DIR"
-    cp -r "$CONFIG_DIR/"* "$BACKUP_DIR/" || echo -e "$ERROR Backup copy error!" }
+    cp -r "$CONFIG_DIR/"* "$BACKUP_DIR/" || echo -e "$ERROR Backup copy error!" 
+	}
 
 ## Functions for copying files with control:-
 copy_files() {
     echo "🚀 Updating Sandworm config..."
     mkdir -p "$CONFIG_DIR"
-    rsync -av "$SANDWORM_REPO/" "$CONFIG_DIR/" || echo -e "$ERROR Update copy error!" }
+    rsync -av "$SANDWORM_REPO/" "$CONFIG_DIR/" || echo -e "$ERROR Update copy error!" 
+	}
 
 ## Version check function:
 version() {
@@ -56,7 +57,8 @@ version() {
 cleanup() {
     echo "🧹 Cleaning up outdated files..."
     find "$CONFIG_DIR" -name '*.bak' -type f -delete
-    echo -e "$OK Cleaning completed." }
+    echo -e "$OK Cleaning completed." 
+	}
 
 ## Dependency installation (optional - currently disabled)
 # -------------------------------------------------------------
@@ -75,13 +77,13 @@ cleanup() {
 #
 # For example:
 # sudo apt-get install -y git python3-pip
-# 
-# install_dependencies() {
-#     echo "🛠 Installing dependencies..."
-#     sudo apt-get update
-#     sudo apt-get install -y your-package-name
-#     echo -e "$SKIPPED No dependencies needed."
-#     }
+
+install_dependencies() {
+    echo "🛠 Installing dependencies..."
+    # sudo apt-get update
+    # sudo apt-get install -y your-package-name
+    echo -e "$SKIPPED No dependencies needed."
+    }
 
 ## Launching functions:
 # install_dependencies
@@ -92,4 +94,3 @@ cleanup
 
 echo -e "✅ $OK Update complete! Your old config is backed up at $BACKUP_DIR"
 echo -e "⚠️ $SKIPPED If you had custom modifications, check the backup folder!"
-

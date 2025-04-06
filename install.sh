@@ -45,7 +45,6 @@ cleanup() {
     }
 
 ## Launching functions:
-# install_dependencies
 backup_files
 copy_files
 version

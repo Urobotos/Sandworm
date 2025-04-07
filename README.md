@@ -23,24 +23,24 @@ Project by: Urobotos Coding
   - Example path: `home/biqu/printer_data/config/`
   - Choose Yes if prompted to overwrite default `printer.cfg`.
 
-- Restart your printer for the first **Sandworm** launch. Then continue with the next steps in this README.md to complete all necessary settings.
+- Restart your printer to launch **Sandworm** for the first time. Then follow the rest of this README to complete the setup.
  
 <br>
 
-### ♻️ Automatic Install and Updates for Sandworm Configuration (Automatic alternative):
-To enable easy updates of Sandworm configuration and macros, you can set up automatic updates by running the command in ssh cmd:
+### ♻️ Automatic Install & Updates for Sandworm Configuration (Automatic alternative):
+To enable automatic updates of the Sandworm configuration and macros, run the following command via SSH:
 ```
 git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm/install.sh
 ```
-**The cmd command above will do the following:** <br>
-- 📥 Downloads the entire Sandworm repository to the `~/Sandworm` folder. <br>
-- 🚀 Runs the installation script install.sh which: <br>
-   - 📦 It will create a backup of your current configuration, which will be saved to: <br>
-         `~/Sandworm/Backup/backup_config_date+time/`
-   - 🔄 Copy updated config files from the `~/Sandworm/config/` directory to your printer's config folder `~/printer_data/config/`
-   - ⛔ Restart Moonraker.
+**This command will:** <br>
+- 📥 Clone the Sandworm repository into the `~/Sandworm` folder. <br>
+- 🚀 Run the installation script `install.sh`, which: <br>
+   - 📦 Creates a backup of your current configuration at: `~/Sandworm/Backup/backup_config_date+time/`
+   - 🔄 Copies updated config files from `~/Sandworm/config/` to your printer’s config directory `~/printer_data/config/`
+   - ⛔ Restarts Moonraker to apply changes.
      
-After this initial installation, you can manage further updates via the Mainsail/Fluidd **Update Manager**, which, like the installation, always first backs up your entire `~/printer_data/config/` before the update is performed. <br>
+After this initial setup, future updates can be managed via the **Update Manager** in Mainsail/Fluidd. <br>
+Just like the initial installation, each update automatically backs up your entire `~/printer_data/config/` before applying any changes.
 
 <br>
 

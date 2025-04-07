@@ -18,37 +18,29 @@ Project by: Urobotos Coding
 
 <br>
 
-### 📂 Copy & Paste Config Files:
-- Copy all content from the `Sandworm/config` folder and paste them into your printer’s config directory.
+### 📂 Copy & Paste Config Files (Manual alternative):
+- If you prefer a manual install, copy all contents from the Sandworm/config folder into your printer’s configuration directory:
   - Example path: `home/biqu/printer_data/config/`
   - Choose Yes if prompted to overwrite default `printer.cfg`.
-
-- Alternatively, you can clone only the necessary configuration files using: <br>
-  ```
-  git clone --depth 1 --filter=blob:none --sparse https://github.com/Urobotos/Sandworm.git cd Sandworm git sparse-checkout set config cp -r config/* ~/printer_data/config/
-  ```
-  - *This `git clone` method ensures that only the `config/` folder is downloaded, preventing unnecessary files from being copied into `printer_data/config/`*<br>
 
 - Restart your printer for the first **Sandworm** launch. Then continue with the next steps in this README.md to complete all necessary settings.
  
 <br>
 
-### ♻️ Automatic Updates for Sandworm Configuration:
-To enable easy updates for the Sandworm configuration and macros, you can set up automatic updates via the Moonraker Update Manager. Simply add the following block to your `moonraker.conf` file:
+### ♻️ Automatic Install and Updates for Sandworm Configuration (Automatic alternative):
+To enable easy updates of Sandworm configuration and macros, you can set up automatic updates by running the command in ssh cmd:
 ```
-[update_manager Sandworm]
-type: git_repo
-origin: https://github.com/Urobotos/Sandworm.git
-path: ~/Sandworm
-primary_branch: main
-managed_services: klipper
-install_script: install.sh
-version: ~/Sandworm/version.txt
+git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm/install.sh
 ```
-With each update, the entire Sandworm repository will be downloaded to `~/Sandworm`, and the `install.sh` script will automatically copy updated configuration files from the `~/Sandworm/config/` directory to your printer's configuration folder `~/printer_data/config/`.
-> 📦 Before each update, a backup of your current configuration is automatically saved in `~/Sandworm/Backup/backup_config_date+time/`, <br>
-> so you can restore your custom macros or settings if needed.
-
+**The cmd command above will do the following:** <br>
+- 📥 Downloads the entire Sandworm repository to the `~/Sandworm` folder. <br>
+- 🚀 Runs the installation script install.sh which: <br>
+   - 📦 It will create a backup of your current configuration, which will be saved to: <br>
+         `~/Sandworm/Backup/backup_config_date+time/`
+   - 🔄 Copy updated config files from the `~/Sandworm/config/` directory to your printer's config folder `~/printer_data/config/`
+   - ⛔ Restart Moonraker.
+     
+After this initial installation, you can manage further updates via the Mainsail/Fluidd **Update Manager**, which, like the installation, always first backs up your entire `~/printer_data/config/` before the update is performed. <br>
 
 <br>
 

@@ -2,12 +2,12 @@
 ### Jump Navigation:
 
 - 📜 [macros.cfg](#-macroscfg)
-- 💡 [lights_chamber.cfg](#-lights_chambercfg)
+- 💡 &nbsp; [lights_chamber.cfg](#-lights_chambercfg)
 - 🖥️ [display.cfg](#%EF%B8%8F-displaycfg)
 - 🌪️ [fans.cfg](#%EF%B8%8F-fanscfg)
 - ⚙️ [mainsail_custom.cfg](#%EF%B8%8F-mainsail_customcfg)
-- 🚦 [start_end_gcodes.cfg](#-start_end_gcodescfg)
-- 📱 [LCD menu - Offer structure](#-lcd-menu---offer-structure-english-version)
+- 🚦 &nbsp; [start_end_gcodes.cfg](#-start_end_gcodescfg)
+- 📱 &nbsp; [LCD menu - Offer structure](#-lcd-menu---offer-structure-english-version)
 
 	
 ### 📜 macros.cfg:

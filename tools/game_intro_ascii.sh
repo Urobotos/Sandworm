@@ -1,7 +1,6 @@
 print_game_intro_ascii() {
 cat <<EOF
 
-
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░                                                                                               ░
 ░   ▓ Game Save: ${game_save}               ▓ ARMOR: Chamber           ▓ STAMINA: 40% (Of max flow)     ░

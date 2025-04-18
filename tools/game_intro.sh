@@ -1,5 +1,7 @@
 #!/bin/bash
 
+draw_game_intro() {
+
 ## --- Colors ---
 C0="\033[0m"
 ## Green:
@@ -170,3 +172,4 @@ sleep $SPEED_SLOW
 simulate_loading_bar_with_ascii
 
 sleep $SPEED_SLOW
+}

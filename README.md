@@ -260,7 +260,6 @@ A great feature by `Kyleisah` to calibrate only the printed area: [Klipper Adapt
 ### 🤝 Contributing
 Contributions are welcome! If you'd like to contribute, follow the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.<br><br><br>
 
-
 <hr>
 
 ### That's it, your journey has come to an end!

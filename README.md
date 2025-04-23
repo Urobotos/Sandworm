@@ -266,10 +266,11 @@ Contributions are welcome! If you'd like to contribute, follow the [CONTRIBUTING
 ✌️ **That's it, your journey has come to an end!** Thank you for your patience and for following the guide up to this point. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy printing, the game has begun!<br><br>
 
 <p align="left" width="100%">
-<img align="left" width="165px" src="images/git_clone_cmd.png">
-📲 Optional: Command in QR code for reference or sharing.<br><br><br><br><br><br><br>
+<img align="left" width="165px" src="images/victory.png">
+**That's it, your journey has come to an end!** Thank you for your patience and for following the guide up to this point. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy printing, the game has begun!<br><br><br><br><br><br><br>
 </p>
 
+<br><br>
 <p align="center" width="100%">
     <img width="35%" src="images/Urobotos_BPixelArt.png">
 </p>

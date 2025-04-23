@@ -28,7 +28,7 @@ Project by: Urobotos Coding
 <br>
 
 ### ♻️ Automatic Install & Updates for Sandworm Configuration (Automatic alternative):
-To enable automatic updates of the Sandworm configuration and macros, run the following command via SSH:
+To enable automatic updates of Sandworm configuration and macros, run the following at the command line via SSH:
 ```
 git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm/install.sh
 ```

@@ -31,7 +31,7 @@ Project by: Urobotos Coding
 To install and enable automatic updates of Sandworm configuration macros, run the following via SSH at the command line:
 
 <p align="left" width="100%">
-    <img width="15%" src="images/git_clone_cmd.png">
+    <img width="14%" src="images/git_clone_cmd.png">
 </p>
 
 ```

@@ -36,6 +36,7 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
 - 📥 Clone the Sandworm repository into the `~/Sandworm` folder. <br>
 - 🚀 Run the installation script `install.sh`, which: <br>
    - 📦 Creates a backup of your current configuration at: `~/Sandworm/Backup/backup_config_date+time/`
+   - ✏️ Adds `[update_manager Sandworm]` config block to: `moonraker.conf`  
    - 🔄 Copies updated config files from `~/Sandworm/config/` to your printer’s config directory `~/printer_data/config/`
    - ⛔ Restarts Moonraker to apply changes.
      

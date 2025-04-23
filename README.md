@@ -37,7 +37,7 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
 📲 Optional: Command in QR code for reference or sharing.<br><br><br><br><br><br>
 </p>
 
-#### This command will:
+**This command will:**
 - 📥 Clone the Sandworm repository into the `~/Sandworm` folder. <br>
 - 🚀 Run the installation script `install.sh`, which: <br>
    - 📦 Creates a backup of your current configuration at: `~/Sandworm/backup/backup_config_date+time/`

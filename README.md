@@ -33,7 +33,7 @@ To install and enable automatic updates of Sandworm configuration macros, run th
 git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm/install.sh
 ```
 <p align="left" width="100%">
-<img align="left" width="170px" src="images/git_clone_cmd.png">
+<img align="left" width="165px" src="images/git_clone_cmd.png">
 📲 Optional: Command in QR code for reference or sharing.<br><br><br><br><br><br><br>
 </p>
 

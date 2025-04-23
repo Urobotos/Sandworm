@@ -79,16 +79,16 @@ mkdir -p "$TMP_LOG_DIR"
 if [ "$IS_COLD_INSTALL" = true ]; then
     set_game_variables
 
-    # ASCII intro do logu
+    # ASCII intro to log
     exec 4>"$LOGFILE"
     print_game_intro_ascii >&4
     exec 4>&-
 
-    # stdout/stderr do logu a tee (append místo přepisu)
+    # stdout/stderr to log and tee (append instead of rewrite)
     exec > >(tee -a "$LOGFILE") 2>&1
     exec 3>/dev/tty
 
-    # barevné intro do konzole
+    # colors intro to console output
     draw_game_intro >&3
 else
     exec > >(tee "$TMP_UPDATE_LOG") 2>&1

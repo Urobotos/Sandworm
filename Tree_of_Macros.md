@@ -165,7 +165,7 @@
 
 <br>
 
-### 📱 LCD menu - Offer structure (English version):
+### 📱 LCD menu - Offer structure (English version only):
 
  + **Content:**
    + **Adjust print:**

@@ -176,6 +176,20 @@ install_script: install.sh" >> "$MOONRAKER_CONF"
     sleep $MESS_sDELAY
 }
 
+add_power_printer_block() {
+    echo -e "\n[power printer]
+type: gpio
+pin: gpiochip0/gpio72               # Can be reversed with "!", (Bigtreetech PI V1.2 GPIO pin PC8)
+initial_state: off
+off_when_shutdown: True             # Turn off power on shutdown/error
+locked_while_printing: True         # Prevent power-off during a print
+restart_klipper_when_powered: True
+restart_delay: 1
+bound_service: klipper              # Ensures Klipper service starts/restarts with power toggle" >> "$MOONRAKER_CONF"
+    echo -e "║ $OK Added [power printer] config block to: moonraker.conf                      ║"
+    sleep $MESS_sDELAY
+}
+
 backup_files() {
     echo -e "╟─────────────────────────────────────────────────────────────────────────────────╢"
     echo -e "║ Creating backup of the printer config directory:                                ║"
@@ -303,11 +317,12 @@ if [ "$IS_COLD_INSTALL" = true ]; then
 
     backup_files
     copy_files 
+    add_update_manager_block
 
-    if ! grep -q "^\[update_manager Sandworm\]" "$MOONRAKER_CONF" 2>/dev/null; then
-        add_update_manager_block
+    if ! grep -q "^\[power printer\]" "$MOONRAKER_CONF" 2>/dev/null; then
+        add_power_printer_block
     else
-        echo -e "║ $SKIPPED update_manager already exists in moonraker.conf"                      ║
+        echo -e "║ $SKIPPED [power printer] already exists in moonraker.conf                      ║"
     fi
 
     create_post_merge_hook  

@@ -32,21 +32,10 @@ To install and enable automatic updates of Sandworm configuration macros, run th
 ```
 git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm/install.sh
 ```
-<p align="left" width="100%"><img width="15%" src="images/git_clone_cmd.png"></p>
-
-**This command will:**
 <p align="left" width="100%">
-<img align="left" width="15%" src="images/git_clone_cmd.png">
-**This command will:** <br>
-- 📥 Clone the Sandworm repository into the `~/Sandworm` folder. <br>
-- 🚀 Run the installation script `install.sh`, which: <br>
-   - 📦 Creates a backup of your current configuration at: `~/Sandworm/backup/backup_config_date+time/`
-   - 🔄 Copies updated config files from `~/Sandworm/config/` to your printer’s config directory `~/printer_data/config/`
-   - ✏️ Adds `[update_manager Sandworm]` config block to: `moonraker.conf`
-   - ✏️ Adds `[power printer]` config block to: `moonraker.conf`
-   - ⛔ Restarts Moonraker to apply changes.
+<img align="left" width="14%" src="images/git_clone_cmd2.png">
+📲 Optional QR code for reference or sharing<br><br><br><br><br><br>
 </p>
-<br><br>
 
 **This command will:** <br>
 - 📥 Clone the Sandworm repository into the `~/Sandworm` folder. <br>

@@ -37,7 +37,8 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
 - 🚀 Run the installation script `install.sh`, which: <br>
    - 📦 Creates a backup of your current configuration at: `~/Sandworm/backup/backup_config_date+time/`
    - 🔄 Copies updated config files from `~/Sandworm/config/` to your printer’s config directory `~/printer_data/config/`
-   - ✏️ Adds `[update_manager Sandworm]` config block to: `moonraker.conf`  
+   - ✏️ Adds `[update_manager Sandworm]` config block to: `moonraker.conf`
+   - ✏️ Adds `[power printer]` config block to: `moonraker.conf`
    - ⛔ Restarts Moonraker to apply changes.
      
 After this initial setup, future updates can be managed via the **Update Manager** in Mainsail/Fluidd. <br>

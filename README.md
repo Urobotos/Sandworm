@@ -55,8 +55,8 @@ Just like the initial installation, each update automatically backs up your enti
 > **Note:** If you have used the **automatic installer** via command line, you **do not need** to manually add the `[power printer]` block below - <br>
 > it has already been added automatically to your `moonraker.conf`. You can skip this section and continue with the rest of the setup.
 
-A complete setup guide by `tinntbg`, with more wiring options about **Auto Power Off** macros, can be found in his Github repository:  
-[Auto Power Off Klipper](https://github.com/tinntbg/auto-power-off-klipper) <br>
+> **Note:** A complete setup guide by `tinntbg`, with more wiring options about **Auto Power Off** macros, <br>
+> can be found in his Github repository: [Auto Power Off Klipper](https://github.com/tinntbg/auto-power-off-klipper) <br>
 
 To enable relay-based power control, add the following to your `moonraker.conf` file:<br>
 

@@ -34,10 +34,10 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
 ```
 <p align="left" width="100%">
 <img align="left" width="14%" src="images/git_clone_cmd.png">
-📲 Optional QR code for reference or sharing<br><br><br><br><br><br>
+📲 Optional QR code for reference or sharing.<br><br><br><br><br><br>
 </p>
 
-**This command will:** <br>
+#### This command will:
 - 📥 Clone the Sandworm repository into the `~/Sandworm` folder. <br>
 - 🚀 Run the installation script `install.sh`, which: <br>
    - 📦 Creates a backup of your current configuration at: `~/Sandworm/backup/backup_config_date+time/`
@@ -46,11 +46,6 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
    - ✏️ Adds `[power printer]` config block to: `moonraker.conf`
    - ⛔ Restarts Moonraker to apply changes.
 
-|  |  |
-|--|--|
-| <img src="images/git_clone_cmd.png" width="120"> | 📲 Optional QR code for reference or sharing |
-
-     
 After this initial setup, future updates can be managed via the **Update Manager** in Mainsail/Fluidd. <br>
 Just like the initial installation, each update automatically backs up your entire `~/printer_data/config/` before applying any changes.
 

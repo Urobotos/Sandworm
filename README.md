@@ -33,7 +33,7 @@ To install and enable automatic updates of Sandworm configuration macros, run th
 git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm/install.sh
 ```
 <p align="left" width="100%">
-<img align="left" width="14%" src="images/git_clone_cmd2.png">
+<img align="left" width="14%" src="images/git_clone_cmd.png">
 📲 Optional QR code for reference or sharing<br><br><br><br><br><br>
 </p>
 
@@ -48,7 +48,7 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
 
 |  |  |
 |--|--|
-| <img src="images/git_clone_cmd2.png" width="120"> | 📲 Optional QR code for reference or sharing |
+| <img src="images/git_clone_cmd.png" width="120"> | 📲 Optional QR code for reference or sharing |
 
      
 After this initial setup, future updates can be managed via the **Update Manager** in Mainsail/Fluidd. <br>

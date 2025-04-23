@@ -265,11 +265,10 @@ Contributions are welcome! If you'd like to contribute, follow the [CONTRIBUTING
 
 ✌️ **That's it, your journey has come to an end!** Thank you for your patience and for following the guide up to this point. And remember, in the Urobotos lair, every ending is the beginning of a whole new journey... enjoy printing, the game has begun!<br><br>
 
-That's it, your journey has come to an end!
-<p align="left" width="100%"><img align="left" width="20px" src="images/victory.png">Thank you for your patience and for following the guide up to this point. And remember, in the Urobotos lair,<br>
-every ending is the beginning of a whole new journey... enjoy printing, the game has begun!<br><br>
-</p>
-
+#### That's it, your journey has come to an end!
+<p align="left" width="100%"><img align="left" width="20px" src="images/victory.png">
+Thank you for your patience and for following the guide up to this point. And remember, in the Urobotos lair,<br>
+every ending is the beginning of a whole new journey... enjoy printing, the game has begun!<br><br></p>
 
 <p align="center" width="100%">
     <img width="35%" src="images/Urobotos_BPixelArt.png">

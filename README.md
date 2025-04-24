@@ -80,15 +80,16 @@ The printer power ON/OFF itself is controlled via the Mainsail interface. The in
 ### 🎞️ Filament Runout Sensor & `runout_distance` Macro:
 - **Description**: A configurable distance delay before `PAUSE` is triggered when the filament sensor is activated.
 - **Purpose**: Saves filament by allowing extra material to be used before pausing.
-- **Setup Instructions**:<br>
-  Measure your PTFE tube length (from filament sensor to extruder gear, include a ~100mm buffer for manual filament removal from extruder gear).<br>
+- **Setup Instructions**: Measure your PTFE tube length (from filament sensor to extruder gear, <br>
+    include a ~100mm buffer for manual filament removal from extruder gear).<br>
   
 - **To set the measured value (Two option):**
   - **In the LCD menu:** `Menu → Setup → Filament sens. → Where you can choose:`
-      - **Extension:** `ON/OFF`:  
+      - **Extension:** `ON/OFF`  
           Where ON = Pause with extension, OFF = Pause will be performed immediately when the Filament Runout is triggered.
-      - **Distance:** `930`mm :   
-          Adjust `Distance` to: `Your_measured_value_in_mm` (Default: 930mm, adjustment: 10 mm per step, with auto-save function on select).
+      - **Distance:** `930`mm <br>
+          Adjust `Distance` to: `Your_measured_value_in_mm` <br>
+          (Default 930mm, adjustment 10 mm per step, with auto-save function on select).
          
   - **Or directly by editing the variables.cfg file:**  
       - In `variablas.cfg → runout_distance = 930`, change `930` to: Your measured value in mm.

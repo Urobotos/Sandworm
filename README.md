@@ -52,7 +52,7 @@ Just like the initial installation, each update automatically backs up your enti
 <br>
 
 ### 🔌 Remote Power Control via Relay:
-> **Note:** If you have used the ♻️ **automatic installer** via command line, you **do not need** to manually add the `[power printer]` block below - <br>
+> **Note:** If you have used the ♻️ **automatic installer** via command line, you **do not need** to manually add the `[power printer]` block below<br>
 > it has already been added automatically to your `moonraker.conf`. You can skip this section and continue with the rest of the setup.
 
 > **Note:** A complete setup guide by `tinntbg`, with more wiring options about **Auto Power Off** macros, <br>

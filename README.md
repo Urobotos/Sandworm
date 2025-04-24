@@ -84,7 +84,7 @@ The printer power ON/OFF itself is controlled via the Mainsail interface. The in
   Measure your PTFE tube length (from filament sensor to extruder gear, include a ~100mm buffer for manual filament removal from extruder gear).<br>
   
 - **To set the measured value (Two option):**
-  - **In the LCD menu:** `Menu → Setup → Filament sens. → Choose:`
+  - **In the LCD menu:** `Menu → Setup → Filament sens. → Where you can choose:`
       - **Extension:** `ON/OFF`:  
           Where ON = Pause with extension, OFF = Pause will be performed immediately when the Filament Runout is triggered.
       - **Distance:** `930`mm :   

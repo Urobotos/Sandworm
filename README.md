@@ -1,6 +1,6 @@
 <p align="center" width="100%">
 <img align="center" width="400px" alt="Sandworm in Galach" src="images/sandworm_galach.png"><br>
-<i>(<i></i>* In Galach language of the Imperium, read: Sandworm)</i>
+<i>(<i></i>* In Galach language of the Imperium, read: Sændʉwo:ɹm, Sandworm))</i>
 </p>
 
 # Sandworm 3D Printer - Klipper Macros

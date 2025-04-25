@@ -18,6 +18,11 @@ Prepare yourself. The Sandworm hears... and answers.<br>
 
  ----
 
+<p align="center" width="100%">
+<img align="center" width="100%" alt="Sandworm in Galach" src="images/uvod_chatgpt.png"><br>
+<i><strong>(* Sandworm in Galach language of the Imperium, read: [Sændʉwo:ɹm])</strong></i>
+</p>
+
 # Sandworm 3D Printer - Klipper Macros
 
 ```

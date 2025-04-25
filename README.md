@@ -1,5 +1,6 @@
 <p align="center" width="100%">
-<img align="center" width="400px" src="images/sandworm_galach.png">
+<img align="center" width="400px" src="images/sandworm_galach.png"><br>
+(Read: Sandworm)
 </p>
 
 # Sandworm 3D Printer - Klipper Macros

@@ -6,15 +6,15 @@
   ----
 
 > *"He who controls the Sandworms, controls the rhythm of Arrakis."*  
-> — Ancient Fremen Proverb
+> — Ancient Fremen Proverb<br>
 
-The **Sandworms** — the great **Shai-Hulud** — are not merely creatures of Arrakis. They are revered, honored, and feared by the Fremen.  
-Drawn by the subtlest tremors, the deepest beats hidden in the sands, they awaken and come.
+The **Sandworms** — the great **Shai-Hulud** — are not merely creatures of Arrakis. They are revered, honored, and feared by the Fremen.
+Drawn by the subtlest tremors, the deepest beats hidden in the sands, they awaken and come.<br>
 
-In your journey to tame and install the perfect **vibrations** that attract the true spirit of **Shai-Hulud**, follow this guide carefully.  
-Each step of this README.md will lead you closer to aligning your machine’s heart with the timeless rhythms of the desert.
+In your journey to tame and install the perfect **vibrations** that attract the true spirit of **Shai-Hulud**, follow this guide carefully.
+Each step of this README.md will lead you closer to aligning your machine’s heart with the timeless rhythms of the desert.<br>
 
-Prepare yourself. The Sandworm hears... and answers.
+Prepare yourself. The Sandworm hears... and answers.<br>
 
  ----
 

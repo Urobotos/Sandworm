@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-<img align="center" width="400px" src="images/sandworm_galach.png"><br>
+<img align="center" width="400px" alt="Sandworm in Galach" src="images/sandworm_galach.png"><br>
 <i>(<i></i>* In Galach, read: Sandworm)</i>
 </p>
 

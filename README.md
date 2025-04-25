@@ -1,3 +1,6 @@
+<p align="center" width="100%">
+<img align="center" width="400px" src="images/Sandworm_Galch_orez.png">
+</p>
 
 # Sandworm 3D Printer - Klipper Macros
 

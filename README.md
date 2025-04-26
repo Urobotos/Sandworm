@@ -4,26 +4,6 @@
 
 <br>
 
-<p align="center" width="100%">
-<img align="center" width="400px" alt="Sandworm in Galach" src="images/sandworm_galach.png"><br>
-<i><strong>(* Sandworm in Galach language of the Imperium, read: [Sændʉwo:ɹm])</strong></i>
-</p>
-
-  ----
-
-> *"He who controls the Sandworms, controls the rhythm of Arrakis."*  
-> — Ancient Fremen Proverb<br>
-
-The **Sandworms** — the great **Shai-Hulud** — are not merely creatures of Arrakis. They are revered, honored, and feared by the Fremen.
-Drawn by the subtlest tremors, the deepest beats hidden in the sands, they awaken and come.<br>
-
-In your journey to tame and install the perfect **vibrations** that attract the true spirit of **Shai-Hulud**, follow this guide carefully.
-Each step of this README.md will lead you closer to aligning your machine’s heart with the timeless rhythms of the desert.<br>
-
-Prepare yourself. The Sandworm hears... and answers.<br>
-
- ----
-
 # Sandworm 3D Printer - Klipper Macros
 
 ```

@@ -2,7 +2,7 @@
 <img align="center" width="1024px" alt="Sandworm in Galach" title="POW... POW... A voice whispers: Hide yourselves... the Sandworm is coming..." src="images/The_Fremen_said.png"><br>
 </p>
 
-<details> <summary>About the Sandworm (plain text)</summary>
+<details> <summary>About the Sandworm (plain text) ↓ </summary>
 <br>
 <p align="center" width="100%"><i><strong>(*Sandworm in Galach language of the Imperium, read: [Sændʉwo:ɹm])</strong></i><br></p>
  

@@ -1,4 +1,11 @@
 <p align="center" width="100%">
+<img align="center" width="1024px" alt="Sandworm in Galach" src="images/BOARD.png"><br>
+<i><strong>(* Sandworm in Galach language of the Imperium, read: [Sændʉwo:ɹm])</strong></i>
+</p>
+
+<br>
+
+<p align="center" width="100%">
 <img align="center" width="400px" alt="Sandworm in Galach" src="images/sandworm_galach.png"><br>
 <i><strong>(* Sandworm in Galach language of the Imperium, read: [Sændʉwo:ɹm])</strong></i>
 </p>
@@ -17,11 +24,6 @@ Each step of this README.md will lead you closer to aligning your machine’s he
 Prepare yourself. The Sandworm hears... and answers.<br>
 
  ----
-
-<p align="center" width="100%">
-<img align="center" width="1024px" alt="Sandworm in Galach" src="images/BOARD.png"><br>
-<i><strong>(* Sandworm in Galach language of the Imperium, read: [Sændʉwo:ɹm])</strong></i>
-</p>
 
 # Sandworm 3D Printer - Klipper Macros
 

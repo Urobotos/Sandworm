@@ -3,7 +3,8 @@
 </p>
 
 <details> <summary>About the Sandworm (plain text)</summary>
-<i><strong>(*Sandworm in Galach language of the Imperium, read: [Sændʉwo:ɹm])</strong></i><br><br>
+<br>
+<p align="center" width="100%"><i><strong>(*Sandworm in Galach language of the Imperium, read: [Sændʉwo:ɹm])</strong></i><br></p>
  
 <i>"He who controls the Sandworms, controls the rhythm of Arrakis."<br>
 — Ancient Fremen Proverb</i><br>

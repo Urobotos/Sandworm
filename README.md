@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-<img align="center" width="1024px" alt="Sandworm in Galach" title="The Fremen worship the Sandworm as the embodiment of the desert. Drawn by rhythm and resonance, the great Shai-Hulud answers only those who walk the true path..." src="images/The_Fremen_said.png"><br>
+<img align="center" width="1024px" alt="Sandworm in Galach" title="POW... POW... A voice whispers: Hide yourselves... the Sandworm is coming..." src="images/The_Fremen_said.png"><br>
 </p>
 
 <details> <summary>About the Sandworm (plain text)</summary>

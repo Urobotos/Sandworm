@@ -1,8 +1,8 @@
 <p align="center" width="100%">
-<img align="center" width="1024px" alt="The desert whispers. Step as the Fremen step... Flow like the dunes, silent and unseen. Only then will the Sandworm ignore your call." src="images/The_Fremen_said.png"><br>
+<img align="center" width="1024px" alt="About the Sandworm and Fremen" title="The desert whispers. Step as the Fremen step... Flow like the dunes, silent and unseen. Only then will the Sandworm ignore your call." src="images/The_Fremen_said.png"><br>
 </p>
 
-<details> <summary>About the Sandworm (plain text) ↓ </summary>
+<details> <summary>About the Sandworm (click to view plain text ☰)</summary>
 <br>
 <p align="center" width="100%"><i><strong>(*Sandworm in Galach language of the Imperium, read: [Sændʉwo:ɹm])</strong></i><br></p>
  

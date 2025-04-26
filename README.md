@@ -1,6 +1,22 @@
 <p align="center" width="100%">
-<img align="center" width="1024px" alt="Sandworm in Galach" src="images/The_Fremen_said.png"><br>
+<img align="center" width="1024px" alt="Sandworm in Galach" title="The Fremen worship the Sandworm as the embodiment of the desert. Drawn by rhythm and resonance, the great Shai-Hulud answers only those who walk the true path..." src="images/The_Fremen_said.png"><br>
 </p>
+
+<details> <summary>About the Sandworm (plain text)</summary>
+<i><strong>(*Sandworm in Galach language of the Imperium, read: [Sændʉwo:ɹm])</strong></i><br><br>
+ 
+<i>"He who controls the Sandworms, controls the rhythm of Arrakis."<br>
+— Ancient Fremen Proverb</i><br>
+
+◊ The **Sandworms** — the great **Shai-Hulud** — are not merely creatures of Arrakis. They are revered, honored, and feared by the Fremen.<br>
+&nbsp; &nbsp; Drawn by the subtlest tremors, the deepest beats hidden in the sands, they awaken and come.<br>
+
+◊ In your journey to tame and install the perfect **vibrations** that attract the true spirit of **Shai-Hulud**, follow this guide carefully.<br> 
+&nbsp; &nbsp; Each step of this README.md will lead you closer to aligning your machine’s heart with the timeless rhythms of the desert.<br>
+
+◊ Prepare yourself. The Sandworm hears... and answers.
+
+</details>
 
 <br>
 

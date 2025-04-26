@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-<img align="center" width="1024px" alt="Sandworm in Galach" title="POW... POW... A voice whispers: Hide yourselves... the Sandworm is coming..." src="images/The_Fremen_said.png"><br>
+<img align="center" width="1024px" alt="Sandworm in Galach" title="Echoes betray you. Walk as the Fremen do... Watch them dance the sand waltz... Move like the sand — unseen, unfelt. Master the silent steps of the desert." src="images/The_Fremen_said.png"><br>
 </p>
 
 <details> <summary>About the Sandworm (plain text) ↓ </summary>

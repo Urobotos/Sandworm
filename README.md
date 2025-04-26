@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-<img align="center" width="1024px" alt="Sandworm in Galach" src="images/fremen_intro.png"><br>
+<img align="center" width="1024px" alt="Sandworm in Galach" src="images/The_Fremen_said.png"><br>
 </p>
 
 <br>

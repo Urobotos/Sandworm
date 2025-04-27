@@ -245,7 +245,7 @@ This softens any residual filament, allowing it to deform harmlessly when making
 3. The nozzle **immediately cools** after homing, keeping the filament in its deformed shape for future homing cycles.
 4. Subsequent homing operations can proceed normally, even with residual filament.
 
-#### Built-in Macros for Z Homing
+#### It is built-in macros:
 The **Sandworm printer** includes an automatic `Temp_Homing` macro that:
 1. **Preheats the nozzle slightly** before performing XYZ homing.
 2. **Prevents filament from interfering with the probe.**

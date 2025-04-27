@@ -226,7 +226,7 @@ These two parameters are set via **PrusaSlicer**:
 
 ### 📡 Proximity Inductive Probe SN-04 PNP and Initial Z Homing:
 For accurate **Z homing**, it's recommended to **preheat the nozzle** to prevent residual filament from interfering with the probe. <br>
-<i>(Subsequent guidance operations can proceed normally, even with the residual filament left bent after the initial one).</i>
+<i>(Subsequent homing operations can proceed normally, after the initial homing, the residual filament remains bent).</i>
 
 #### Why Preheat the Nozzle?
 - Especially after printing is complete, during nozzle cooling, **some filament may leak out** and solidify at the tip of the nozzle. If this filament remains after cooling, it can interfere with homing.
@@ -235,16 +235,10 @@ For accurate **Z homing**, it's recommended to **preheat the nozzle** to prevent
   The nozzle itself remains **≈1mm away from the probe sensor**, which has a recessed detection point.
 - **Different nozzle materials** (e.g., **carbide nozzles**) may cause the probe to trigger at slightly different heights **due to variations in electromagnetic properties**, meaning detection may occur **earlier, at a greater distance from the PEI sheet**.
 
-#### Solution: Automatic Nozzle Preheating
+#### Automatic Nozzle Preheating
 Instead of requiring manual cleaning of the nozzle, the **Sandworm printer automates this process**. <br>
 The recommended solution is to **preheat the nozzle remotely before initiating Z homing**. <br>
 This softens any residual filament, allowing it to deform harmlessly when making contact with the probe, ensuring accurate homing.
-
-#### How Does It Work?
-1. The **nozzle is gently preheated** to a low temperature (e.g., **100°C**) before homing.
-2. Any residual filament **bends** rather than obstructing the probe.
-3. The nozzle **immediately cools** after homing, keeping the filament in its deformed shape for future homing cycles.
-4. Subsequent homing operations can proceed normally, even with residual filament.
 
 #### Preheating is built-in macros:
 The **Sandworm printer** includes an automatic `Temp_Homing` macro that:

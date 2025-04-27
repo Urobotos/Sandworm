@@ -217,6 +217,7 @@ These two parameters are set via **PrusaSlicer**:
 > [!NOTE]
 > Always set the **minimum chamber temperature** with respect to ambient conditions. <br>
 > The macro relies on ```TEMPERATURE_WAIT``` (similar to M109 for the hotend), meaning the printer **pauses all commands** during this phase. <br>
+>
 > If needed, you can cancel the wait loop early by using an **Emergency Stop** and restarting the print with a different chamber temperature setting.
 >
 > Example chamber temperatures on Sandworm printer (after ~1 hour of printing):

@@ -243,7 +243,7 @@ This softens any residual filament, allowing it to deform harmlessly when making
 **Automatic preheating is built into the macro:** <br>
 The Sandworm printer includes an automatic `Temp_Homing` macro that is integrated into several processes:
    - **Start G-codes** (before every print)
-   - **Nozzle Cleaning** (via brush, only when the axis is not homed)
+   - **Nozzle Cleaning** (with more preheat temp)
    - **As a clickable** `Temp_Homing` **macro in the Mainsail console every time the printer starts**<br><br>
 
 

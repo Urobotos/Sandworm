@@ -225,7 +225,8 @@ These two parameters are set via **PrusaSlicer**:
 <br>
 
 ### 📡 Proximity Inductive Probe SN-04 PNP and Initial Z Homing:
-For accurate **Z homing**, it's recommended to **preheat the nozzle** to prevent residual filament from interfering with the probe. 
+For accurate **Z homing**, it's recommended to **preheat the nozzle** to prevent residual filament from interfering with the probe. <br>
+<i>(Subsequent homing operations can proceed normally, even with residual filament).</i>
 
 #### Why Preheat the Nozzle?
 - Especially after printing is complete, during nozzle cooling, **some filament may leak out** and solidify at the tip of the nozzle. If this filament remains after cooling, it can interfere with homing.
@@ -245,7 +246,7 @@ This softens any residual filament, allowing it to deform harmlessly when making
 3. The nozzle **immediately cools** after homing, keeping the filament in its deformed shape for future homing cycles.
 4. Subsequent homing operations can proceed normally, even with residual filament.
 
-#### It is built-in macros:
+#### Preheating is built-in macros:
 The **Sandworm printer** includes an automatic `Temp_Homing` macro that:
 1. **Preheats the nozzle slightly** before performing XYZ homing.
 2. **Prevents filament from interfering with the probe.**

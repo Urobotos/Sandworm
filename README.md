@@ -235,16 +235,13 @@ For accurate **Z homing**, it's recommended to **preheat the nozzle** to prevent
   The nozzle itself remains **≈1mm away from the probe sensor**, which has a recessed detection point.
 - **Different nozzle materials** (e.g., **carbide nozzles**) may cause the probe to trigger at slightly different heights **due to variations in electromagnetic properties**, meaning detection may occur **earlier, at a greater distance from the PEI sheet**.
 
-#### Automatic Nozzle Preheating
+**Automatic Nozzle Preheating:** <br>
 Instead of requiring manual cleaning of the nozzle, the **Sandworm printer automates this process**. <br>
 The recommended solution is to **preheat the nozzle remotely before initiating Z homing**. <br>
 This softens any residual filament, allowing it to deform harmlessly when making contact with the probe, ensuring accurate homing.
 
-#### Preheating is built-in macros:
-The **Sandworm printer** includes an automatic `Temp_Homing` macro that:
-1. **Preheats the nozzle slightly** before performing XYZ homing.
-2. **Prevents filament from interfering with the probe.**
-3. **Is integrated into multiple processes:**
+**Automatic preheating is built into the macro:** <br>
+The Sandworm printer includes an automatic `Temp_Homing` macro that is integrated into several processes:
    - **Start G-codes** (before every print)
    - **Nozzle Cleaning** (via brush, only when the axis is not homed)
    - **As a clickable** `Temp_Homing` **macro in the Mainsail console every time the printer starts**<br><br>

@@ -58,7 +58,7 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
 ```
 <p align="left" width="100%">
 <img align="left" width="165px" src="images/git_clone_cmd.png">
-<br>📲 Optional: SSH command in QR code for reference or sharing.<br><br><br><br><br><br>
+<br><b>Optional:</b> SSH command in QR code for reference or sharing.<br><br><br><br><br><br>
 </p>
 
 **This command will:**

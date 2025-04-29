@@ -226,7 +226,7 @@ These two parameters are set via **PrusaSlicer**:
 <br>
 
 ### 📡 Proximity Inductive Probe SN-04 PNP and Initial Z Homing:
-For accurate **Z homing**, it's recommended to **preheat the nozzle** to prevent residual filament from interfering with the probe. <br>
+For manual **Z homing**, it's recommended to **preheat the nozzle** to prevent residual filament from interfering with the probe. <br>
 <i>(Subsequent homing operations can proceed normally, after the initial homing, the residual filament remains bent).</i>
 
 #### Why Preheat the Nozzle?

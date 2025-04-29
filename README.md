@@ -56,6 +56,8 @@ To install and enable automatic updates of Sandworm configuration macros, run th
 ```
 git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm/install.sh
 ```
+[![Validate install.sh](https://github.com/Urobotos/Sandworm/actions/workflows/validate-install.yml/badge.svg)](https://github.com/Urobotos/Sandworm/actions/workflows/validate-install.yml)
+
 <p align="left" width="100%">
 <img align="left" width="165px" src="images/git_clone_cmd.png">
 <br><b>Optional:</b> SSH command in QR code for reference or sharing.<br><br><br><br><br><br>
@@ -73,7 +75,6 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
 After this initial setup, future updates can be managed via the **Update Manager** in Mainsail/Fluidd. <br>
 Just like the initial installation, each update automatically backs up your entire `~/printer_data/config/` before applying any changes.
 
-[![Validate install.sh](https://github.com/Urobotos/Sandworm/actions/workflows/validate-install.yml/badge.svg)](https://github.com/Urobotos/Sandworm/actions/workflows/validate-install.yml)
 <br>
 
 ### 🔌 Remote Power Control via Relay:

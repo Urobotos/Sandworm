@@ -63,6 +63,12 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
 <br><b>Optional:</b> SSH command in QR code for reference or sharing.<br><br><br><br><br><br>
 </p>
 
+<p align="left" width="100%">
+<img align="left" width="165px" src="images/git_clone_cmd.png">
+<img align="left" width="120px" src="https://github.com/Urobotos/Sandworm/actions/workflows/validate-install.yml/badge.svg">
+<br><b>Optional:</b> SSH command in QR code for reference or sharing.<br><br><br><br><br><br>
+</p>
+
 **This command will:** 
 - 📥 Clone the Sandworm repository into the `~/Sandworm` folder. <br>
 - 🚀 Run the installation script `install.sh`, which: <br>

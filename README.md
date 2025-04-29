@@ -56,17 +56,10 @@ To install and enable automatic updates of Sandworm configuration macros, run th
 ```
 git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm/install.sh
 ```
-[![Validate install.sh](https://github.com/Urobotos/Sandworm/actions/workflows/validate-install.yml/badge.svg)](https://github.com/Urobotos/Sandworm/actions/workflows/validate-install.yml)
-
 <p align="left" width="100%">
 <img align="left" width="165px" src="images/git_clone_cmd.png">
-<br><b>Optional:</b> SSH command in QR code for reference or sharing.<br><br><br><br><br><br>
-</p>
-
-<p align="left" width="100%">
-<img align="left" width="165px" src="images/git_clone_cmd.png">
-<img align="left" width="120px" src="https://github.com/Urobotos/Sandworm/actions/workflows/validate-install.yml/badge.svg">
-<br><b>Optional:</b> SSH command in QR code for reference or sharing.<br><br><br><br><br><br>
+<img align="left" width="175px" src="https://github.com/Urobotos/Sandworm/actions/workflows/validate-install.yml/badge.svg"><br>
+<b>Optional:</b> SSH command in QR code for reference or sharing.<br><br><br><br><br><br><br>
 </p>
 
 **This command will:** 

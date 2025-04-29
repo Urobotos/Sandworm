@@ -1,5 +1,3 @@
-[![Validate install.sh](https://github.com/Urobotos/Sandworm/actions/workflows/validate-install.yml/badge.svg)](https://github.com/Urobotos/Sandworm/actions/workflows/validate-install.yml)
-
 <p align="center" width="100%">
 <img align="center" width="1024px" alt="About the Sandworm and Fremen" title="👁 The desert whispers. Step as the Fremen step . . . Flow like the dunes, silent and unseen. Only then will the Sandworm ignore your call." src="images/The_Fremen_said.png"><br>
 </p>
@@ -63,7 +61,7 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
 <br><b>Optional:</b> SSH command in QR code for reference or sharing.<br><br><br><br><br><br>
 </p>
 
-**This command will:**
+**This command will:** 
 - 📥 Clone the Sandworm repository into the `~/Sandworm` folder. <br>
 - 🚀 Run the installation script `install.sh`, which: <br>
    - 📦 Creates a backup of your current configuration at: `~/Sandworm/backup/backup_config_date+time/`
@@ -75,6 +73,7 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
 After this initial setup, future updates can be managed via the **Update Manager** in Mainsail/Fluidd. <br>
 Just like the initial installation, each update automatically backs up your entire `~/printer_data/config/` before applying any changes.
 
+[![Validate install.sh](https://github.com/Urobotos/Sandworm/actions/workflows/validate-install.yml/badge.svg)](https://github.com/Urobotos/Sandworm/actions/workflows/validate-install.yml)
 <br>
 
 ### 🔌 Remote Power Control via Relay:

@@ -1,38 +1,45 @@
-name: Validate install.sh
+name: Validate Bash Scripts
 
 on:
   push:
     paths:
-      - 'install.sh'
+      - '*.sh'
   pull_request:
     paths:
-      - 'install.sh'
-  workflow_dispatch:   # For manual check run
+      - '*.sh'
+  workflow_dispatch:   # Manual run option
 
 jobs:
-  validate-install:
+  validate-scripts:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check if install.sh exists
+      - name: Find and Validate Bash Scripts
         run: |
-          if [ ! -f install.sh ]; then
-            echo "❌ install.sh not found!"
-            exit 1
-          fi
-          echo "✅ install.sh found."
+          echo "🔎 Searching for .sh files..."
+          shopt -s nullglob
+          for script in *.sh; do
+            echo "🔍 Checking $script"
 
-      - name: Check if install.sh is executable
-        run: |
-          if [ ! -x install.sh ]; then
-            echo "❌ install.sh is not executable! (missing chmod +x)"
-            exit 1
-          fi
-          echo "✅ install.sh is executable."
+            # Check if file exists
+            if [ ! -f "$script" ]; then
+              echo "❌ $script not found!"
+              exit 1
+            fi
 
-      - name: Check install.sh for syntax errors
-        run: |
-          bash -n install.sh
-          echo "✅ Syntax check passed."
+            # Check if file is executable
+            if [ ! -x "$script" ]; then
+              echo "❌ $script is not executable! (missing chmod +x)"
+              exit 1
+            fi
+
+            # Check for syntax errors
+            if ! bash -n "$script"; then
+              echo "❌ Syntax error in $script!"
+              exit 1
+            fi
+
+            echo "✅ $script passed all checks."
+          done

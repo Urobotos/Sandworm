@@ -1,3 +1,27 @@
+<p align="center" width="100%">
+<img align="center" width="1024px" alt="About the Sandworm and Fremen" title="👁 The desert whispers. Step as the Fremen step . . . Flow like the dunes, silent and unseen. Only then will the Sandworm ignore your call." src="images/The_Fremen_said.png"><br>
+</p>
+
+<details> <summary>About the Sandworm (Click to view Fremen plain text ☰)</summary>
+<br>
+<p align="center" width="100%"><i><strong>(*Sandworm in Galach language of the Imperium, read: [Sændʉwo:ɹm])</strong></i><br></p>
+ 
+<i>"He who controls the Sandworms, controls the rhythm of Arrakis."<br>
+— Ancient Fremen Proverb</i><br>
+
+◊ The **Sandworms** — the great **Shai-Hulud** — are not merely creatures of Arrakis.<br> 
+&nbsp;&nbsp; They are revered, honored, and feared by the Fremen. Drawn by the subtlest tremors,<br> 
+&nbsp;&nbsp; the deepest beats hidden in the sands, they awaken and come.<br>
+
+◊ In your journey to tame and install the perfect **vibrations** that attract the true spirit of **Shai-Hulud**,<br> 
+&nbsp;&nbsp; follow this guide carefully. Each step of this README.md will lead you closer <br> 
+&nbsp;&nbsp; to aligning your machine’s heart with the timeless rhythms of the desert.<br>
+
+◊ Prepare yourself. The Sandworm hears... and answers.
+
+</details>
+
+<br>
 
 # Sandworm 3D Printer - Klipper Macros
 
@@ -28,16 +52,17 @@ Project by: Urobotos Coding
 <br>
 
 ### ♻️ Automatic Install & Updates for Sandworm Configuration (Automatic alternative):
-To install and enable automatic updates of Sandworm configuration macros, run the following via SSH at the command line:
+To install and enable automatic updates of Sandworm configuration macros, run the following command in an SSH command line:
 ```
 git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm/install.sh
 ```
 <p align="left" width="100%">
 <img align="left" width="165px" src="images/git_clone_cmd.png">
-📲 Optional: Command in QR code for reference or sharing.<br><br><br><br><br><br><br>
+<img align="left" width="175px" src="https://github.com/Urobotos/Sandworm/actions/workflows/validate-install.yml/badge.svg"><br><br><br>
+← <b>Optional:</b> SSH command in QR code for reference or sharing.<br><br><br><br>
 </p>
 
-**This command will:**
+**This command will:** 
 - 📥 Clone the Sandworm repository into the `~/Sandworm` folder. <br>
 - 🚀 Run the installation script `install.sh`, which: <br>
    - 📦 Creates a backup of your current configuration at: `~/Sandworm/backup/backup_config_date+time/`
@@ -52,8 +77,8 @@ Just like the initial installation, each update automatically backs up your enti
 <br>
 
 ### 🔌 Remote Power Control via Relay:
-> **Note:** If you have used the **automatic installer** via command line, you **do not need** to manually add the `[power printer]` block below - <br>
-> it has already been added automatically to your `moonraker.conf`. You can skip this section and continue with the rest of the setup.
+> **Note:** If you have used the `♻️ automatic installer` via command line, you **do not need** to manually add the `[power printer]` block below (It has already been added automatically to your `moonraker.conf`).<br>
+> You can skip this section and continue with the rest of the setup.
 
 > **Note:** A complete setup guide by `tinntbg`, with more wiring options about **Auto Power Off** macros, <br>
 > can be found in his Github repository: [Auto Power Off Klipper](https://github.com/tinntbg/auto-power-off-klipper) <br>
@@ -72,7 +97,10 @@ restart_delay: 1
 bound_service: klipper              # Ensures Klipper service starts/restarts with power toggle
 ```
 **User management of printer ON-OFF:**
-The printer power ON/OFF itself is controlled via the Mainsail interface. The included **Auto Power Off** macro serves as a safe temperature shutdown of the printer at the end of printing, It is controlled using two macro buttons: `ACTIVATE_POWER_OFF` and `DEACTIVATE_POWER_OFF` during printing, or by direct writing `ACTIVATE_POWER_OFF` to `end_gcode`. <br>
+The printer power ON/OFF itself is controlled via the Mainsail interface. <br>
+The included **Auto Power Off** macro serves as a safe temperature shutdown of the printer at the end of printing, <br>
+It is controlled using two macro buttons: `ACTIVATE_POWER_OFF` and `DEACTIVATE_POWER_OFF` during printing, <br> 
+or by direct writing `ACTIVATE_POWER_OFF` to `end_gcode`. <br>
 (The power off buttons will be set up later in this guide, along with the other macro buttons).
 
 <br>
@@ -80,15 +108,16 @@ The printer power ON/OFF itself is controlled via the Mainsail interface. The in
 ### 🎞️ Filament Runout Sensor & `runout_distance` Macro:
 - **Description**: A configurable distance delay before `PAUSE` is triggered when the filament sensor is activated.
 - **Purpose**: Saves filament by allowing extra material to be used before pausing.
-- **Setup Instructions**:<br>
-  Measure your PTFE tube length (from filament sensor to extruder gear, include a ~100mm buffer for manual filament removal from extruder gear).<br>
+- **Setup Instructions**: Measure your PTFE tube length (from filament sensor to extruder gear, <br>
+    include a ~100mm buffer for manual filament removal from extruder gear).<br>
   
 - **To set the measured value (Two option):**
-  - **In the LCD menu:** `Menu → Setup → Filament sens. → Choose:`
-      - **Extension:** `ON/OFF`:  
+  - **In the LCD menu:** `Menu → Setup → Filament sens. → Where you can choose:`
+      - **Extension:** `ON/OFF`  
           Where ON = Pause with extension, OFF = Pause will be performed immediately when the Filament Runout is triggered.
-      - **Distance:** `930`mm :   
-          Adjust `Distance` to: `Your_measured_value_in_mm` (Default: 930mm, adjustment: 10 mm per step, with auto-save function on click).
+      - **Distance:** `930`mm <br>
+          Adjust `Distance` to: `Your_measured_value_in_mm` <br>
+          (Default 930mm, adjustment 10 mm per step, with auto-save function on select).
          
   - **Or directly by editing the variables.cfg file:**  
       - In `variablas.cfg → runout_distance = 930`, change `930` to: Your measured value in mm.
@@ -187,8 +216,7 @@ These two parameters are set via **PrusaSlicer**:
 <br>
 
 > [!NOTE]
-> Always set the **minimum chamber temperature** with respect to ambient conditions. The macro relies on ```TEMPERATURE_WAIT``` (similar to M109 for the hotend),
-> meaning the printer **pauses all commands** during this phase. If needed, you can cancel the wait loop early by using an **Emergency Stop** and restarting the print with a different chamber temperature setting.
+> Always set the **minimum chamber temperature** with respect to ambient conditions. The macro relies on ```TEMPERATURE_WAIT``` (similar to M190, wait loop for the bed temp), meaning the printer **pauses all commands** during this phase. If needed, you can cancel the wait loop, during the print preparation phase, by performing an `Emergency Stop` and restarting the print with a different chamber temperature setting.
 >
 > Example chamber temperatures on Sandworm printer (after ~1 hour of printing):
 > - Bed: 60°C | Ambient: 25°C | Chamber: 41°C
@@ -198,30 +226,25 @@ These two parameters are set via **PrusaSlicer**:
 <br>
 
 ### 📡 Proximity Inductive Probe SN-04 PNP and Initial Z Homing:
-For accurate **Z homing**, it's recommended to **preheat the nozzle** to prevent residual filament from interfering with the probe. 
+For accurate **Z homing**, it's recommended to **preheat the nozzle** to prevent residual filament from interfering with the probe. <br>
+<i>(Subsequent homing operations can proceed normally, after the initial homing, the residual filament remains bent).</i>
 
 #### Why Preheat the Nozzle?
 - Especially after printing is complete, during nozzle cooling, **some filament may leak out** and solidify at the tip of the nozzle. If this filament remains after cooling, it can interfere with homing.
 - **Longer filament strands** may bend harmlessly when contacting the **SN-04 probe**, but **short and hardened pieces** could lead to inaccurate measurements or even slight displacement of the probe itself.
-- The **SN-04 inductive probe detects the brass nozzle** at **Z ≈ 0.6 - 0.7mm from the bed**, provided the probe is **aligned with the PEI sheet**. The nozzle itself remains **≈1mm away from the probe sensor**, which has a recessed detection point.
+- The **SN-04 inductive probe detects the brass nozzle** at **Z ≈ 0.6 - 0.7mm from the bed**, provided the probe is **aligned with the PEI sheet**. <br>
+  The nozzle itself remains **≈1mm away from the probe sensor**, which has a recessed detection point.
 - **Different nozzle materials** (e.g., **carbide nozzles**) may cause the probe to trigger at slightly different heights **due to variations in electromagnetic properties**, meaning detection may occur **earlier, at a greater distance from the PEI sheet**.
 
-#### Solution: Automatic Nozzle Preheating
-Instead of requiring manual cleaning of the nozzle, the **Sandworm printer automates this process**. The recommended solution is to **preheat the nozzle remotely before initiating Z homing**. This softens any residual filament, allowing it to deform harmlessly when making contact with the probe, ensuring accurate homing.
+**Automatic Nozzle Preheating:** <br>
+Instead of requiring manual cleaning of the nozzle, the **Sandworm printer automates this process**. <br>
+The recommended solution is to **preheat the nozzle remotely before initiating Z homing**. <br>
+This softens any residual filament, allowing it to deform harmlessly when making contact with the probe, ensuring accurate homing.
 
-#### How Does It Work?
-1. The **nozzle is gently preheated** to a low temperature (e.g., **100°C**) before homing.
-2. Any residual filament **bends** rather than obstructing the probe.
-3. The nozzle **immediately cools** after homing, keeping the filament in its deformed shape for future homing cycles.
-4. Subsequent homing operations can proceed normally, even with residual filament.
-
-#### Built-in Macros for Z Homing
-The **Sandworm printer** includes an automatic `Temp_Homing` macro that:
-1. **Preheats the nozzle slightly** before performing XYZ homing.
-2. **Prevents filament from interfering with the probe.**
-3. **Is integrated into multiple processes:**
+**Automatic preheating is built into the macro:** <br>
+The Sandworm printer includes an automatic `Temp_Homing` macro that is integrated into several processes:
    - **Start G-codes** (before every print)
-   - **Nozzle Cleaning** (via brush, only when the axis is not homed)
+   - **Nozzle Cleaning** (with more preheat temp)
    - **As a clickable** `Temp_Homing` **macro in the Mainsail console every time the printer starts**<br><br>
 
 
@@ -259,7 +282,6 @@ A great feature by `Kyleisah` to calibrate only the printed area: [Klipper Adapt
 
 ### 🤝 Contributing
 Contributions are welcome! If you'd like to contribute, follow the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.<br><br><br>
-
 
 <hr>
 

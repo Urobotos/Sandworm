@@ -1,3 +1,5 @@
+[![Validate install.sh](https://github.com/Urobotos/Sandworm/actions/workflows/validate-install.yml/badge.svg)](https://github.com/Urobotos/Sandworm/actions/workflows/validate-install.yml)
+
 <p align="center" width="100%">
 <img align="center" width="1024px" alt="About the Sandworm and Fremen" title="👁 The desert whispers. Step as the Fremen step . . . Flow like the dunes, silent and unseen. Only then will the Sandworm ignore your call." src="images/The_Fremen_said.png"><br>
 </p>

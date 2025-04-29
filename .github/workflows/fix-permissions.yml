@@ -1,0 +1,40 @@
+name: Fix SH File Permissions
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to push changes to'
+        required: true
+        default: 'develop'
+        type: choice
+        options:
+          - main
+          - test
+          - develop
+
+jobs:
+  fix-permissions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch }}
+
+      - name: Make all *.sh files executable
+        run: |
+          echo "🔧 Making all *.sh files executable..."
+          find . -name '*.sh' -exec chmod +x {} \;
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add '*.sh'
+          if git diff --cached --quiet; then
+            echo "✅ No permission changes to commit."
+          else
+            git commit -m "fix: Set executable permissions for .sh files"
+            git push origin ${{ github.event.inputs.branch }}
+          fi

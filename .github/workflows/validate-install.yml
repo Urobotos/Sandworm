@@ -3,11 +3,11 @@ name: Validate Bash Scripts
 on:
   push:
     paths:
-      - '*.sh'
+      - '**/*.sh'
   pull_request:
     paths:
-      - '*.sh'
-  workflow_dispatch:   # Manual run option
+      - '**/*.sh'
+  workflow_dispatch:
 
 jobs:
   validate-scripts:
@@ -18,28 +18,35 @@ jobs:
 
       - name: Find and Validate Bash Scripts
         run: |
-          echo "🔎 Searching for .sh files..."
-          shopt -s nullglob
-          for script in *.sh; do
+          echo "🔎 Searching for .sh files (recursively)..."
+          find . -name "*.sh" | while read -r script; do
+            echo ""
             echo "🔍 Checking $script"
 
             # Check if file exists
             if [ ! -f "$script" ]; then
-              echo "❌ $script not found!"
+              echo "❌ ERROR: $script not found!"
               exit 1
+            else
+              echo "✅ OK: $script exists."
             fi
 
             # Check if file is executable
             if [ ! -x "$script" ]; then
-              echo "❌ $script is not executable! (missing chmod +x)"
+              echo "❌ ERROR: $script is not executable! (missing chmod +x)"
               exit 1
+            else
+              echo "✅ OK: $script is executable."
             fi
 
             # Check for syntax errors
             if ! bash -n "$script"; then
-              echo "❌ Syntax error in $script!"
+              echo "❌ ERROR: Syntax error in $script!"
               exit 1
+            else
+              echo "✅ OK: Syntax check passed for $script."
             fi
 
-            echo "✅ $script passed all checks."
+            echo "🎯 $script passed all checks."
+            echo ""
           done

@@ -75,7 +75,7 @@ After this initial setup, future updates can be managed via the **Update Manager
 Just like the initial installation, each update automatically backs up your entire `~/printer_data/config/` before applying any changes. <br><br>
 
 **❌ To uninstall Sandworm macros:** <br>
-To completely uninstall Sandworm from your printer and restore previous settings:
+To completely uninstall Sandworm from your printer and restore previous settings, run the following command in an SSH command line:
 ```
 bash ~/Sandworm/uninstall.sh
 ```

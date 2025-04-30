@@ -226,26 +226,35 @@ These two parameters are set via **PrusaSlicer**:
 <br>
 
 ### 📡 Proximity Inductive Probe SN-04 PNP and Initial Z Homing:
-For manual **Z homing**, it's recommended to **preheat the nozzle** to prevent residual filament from interfering with the probe. <br>
-<i>(Subsequent homing operations can proceed normally, after the initial homing, the residual filament remains bent).</i>
+This section briefly explains how Z homing works on the Sandworm printer, as it slightly differs from typical setups due to the use of a proximity sensor that directly detects the nozzle.
 
-#### Why Preheat the Nozzle?
-- Especially after printing is complete, during nozzle cooling, **some filament may leak out** and solidify at the tip of the nozzle. If this filament remains after cooling, it can interfere with homing.
-- **Longer filament strands** may bend harmlessly when contacting the **SN-04 probe**, but **short and hardened pieces** could lead to inaccurate measurements or even slight displacement of the probe itself.
-- The **SN-04 inductive probe detects the brass nozzle** at **Z ≈ 0.6 - 0.7mm from the bed**, provided the probe is **aligned with the PEI sheet**. <br>
-  The nozzle itself remains **≈1mm away from the probe sensor**, which has a recessed detection point.
-- **Different nozzle materials** (e.g., **carbide nozzles**) may cause the probe to trigger at slightly different heights **due to variations in electromagnetic properties**, meaning detection may occur **earlier, at a greater distance from the PEI sheet**.
+**This means:**
+- Z homing is automated on the Sandworm printer by `Temp_Homing` macro.
+- You don’t need to manually clean the nozzle or worry about filament residue.
+- Just slice and print — the printer handles everything behind the scenes.
 
-**Automatic Nozzle Preheating:** <br>
-Instead of requiring manual cleaning of the nozzle, the **Sandworm printer automates this process**. <br>
-The recommended solution is to **preheat the nozzle remotely before initiating Z homing**. <br>
-This softens any residual filament, allowing it to deform harmlessly when making contact with the probe, ensuring accurate homing.
+**Differences from standard printer setups:** <br>
+If you're performing initial manual Z homing, it's a good idea to preheat the nozzle first.
+Preheating softens any filament residue, allowing it to deform harmlessly when it contacts the probe — resulting in clean and accurate homing.
+<i>(Subsequent homing operations can proceed normally. After the initial homing, the residual filament usually remains bent and won't interfere again.)</i>
 
-**Automatic preheating is built into the macro:** <br>
-The Sandworm printer includes an automatic `Temp_Homing` macro that is integrated into several processes:
-   - **Start G-codes** (before every print)
-   - **Nozzle Cleaning** (with more preheat temp)
-   - **As a clickable** `Temp_Homing` **macro in the Mainsail console every time the printer starts**<br><br>
+**Why preheat?** <br>
+After a print, filament may ooze from the nozzle and cool into a hardened bump.
+If Z homing is performed with a cold nozzle, this residue can slightly tilt or shift the probe, especially if the filament is short and stiff.
+
+To prevent this, the Sandworm printer automatically preheats the nozzle using the `Temp_Homing` macro.
+
+**When is `Temp_Homing` used?** <br>
+This macro runs automatically in several situations:
+   - **Before every print** (in the Start G-code).
+   - **Before nozzle cleaning by brush** (at higher temperature when Z homing is needed).
+   - **As a clickable** `Temp_Homing` **macro in the Mainsail console after startup.**
+
+**Technical Details: SN-04 Probe Behavior:** <br>
+The SN-04 inductive probe detects the brass nozzle at approximately Z ≈ 0.6 – 0.7 mm above the PEI bed surface.
+- The nozzle tip sits about 1 mm away from the probe’s recessed sensing face.
+- Using non-brass nozzles (e.g., carbide or hardened steel) may cause the probe to trigger slightly earlier,
+due to differing electromagnetic properties — this may affect the trigger height and require a Z offset recalibration. <br><br>
 
 
 ### ♘ Sandworm (Non-Print) Movements:

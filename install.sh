@@ -99,16 +99,13 @@ start_message() {
     if [[ "$IS_COLD_INSTALL" = true ]]; then
         echo -e "╔════════════════════════════════════════════╗"
         echo -e "║             ** Cold Install **             ║"
-        echo -e "╠════════════════════════════════════════════╩════════════════════════════════════╗"
-        sleep $MESS_sDELAY
-        print_row "Started: $(date)"
-        sleep $MESS_sDELAY
-        print_row "Git version: $VERSION"
-        sleep $MESS_sDELAY
-        print_row "Install version: $CUSTOM_VERSION"
-        sleep $MESS_sDELAY
+        echo -e "╠════════════════════════════════════════════╩════════════════════════════════════╗"     
+        print_row "Started: $(date)"    
+        print_row "Git version: $VERSION"     
+        print_row "Install version: $CUSTOM_VERSION"     
         print_row ""
         print_row "Starting installation of automatic Sandworm updates..."
+		sleep $MESS_sDELAY
         print_row ""
     else
         echo -e "╔════════════════════════════════════════════╗"
@@ -155,8 +152,7 @@ create_post_merge_hook() {
 EOF
         chmod +x "$HOOK_PATH"
 
-        print_row "$OK Git post-merge hook created at: $HOOK_PATH"
-        sleep $MESS_sDELAY
+        print_row "$OK Git post-merge hook created at: $HOOK_PATH"       
     else
         print_row "$SKIPPED Git post-merge hook already exists."
     fi
@@ -172,8 +168,7 @@ managed_services: klipper
 install_script: install.sh" >> "$MOONRAKER_CONF"
     echo "║                                                                                 ║"
     echo -e "╟─────────────────────────────────────────────────────────────────────────────────╢"
-    echo -e "║ $OK Added [update_manager Sandworm] config block to: moonraker.conf            ║"
-    sleep $MESS_sDELAY
+    echo -e "║ $OK Added [update_manager Sandworm] config block to: moonraker.conf            ║"  
 }
 
 add_power_printer_block() {
@@ -186,14 +181,12 @@ locked_while_printing: True         # Prevent power-off during a print
 restart_klipper_when_powered: True
 restart_delay: 1
 bound_service: klipper              # Ensures Klipper service starts/restarts with power toggle" >> "$MOONRAKER_CONF"
-    echo -e "║ $OK Added [power printer] config block to: moonraker.conf                      ║"
-    sleep $MESS_sDELAY
+    echo -e "║ $OK Added [power printer] config block to: moonraker.conf                      ║"   
 }
 
 backup_files() {
     echo -e "╟─────────────────────────────────────────────────────────────────────────────────╢"
-    echo -e "║ Creating backup of the printer config directory:                                ║"
-    sleep $MESS_sDELAY
+    echo -e "║ Creating backup of the printer config directory:                                ║"   
 
     from_path="  ● from: $CONFIG_DIR"
     to_path="  ●   to: $BACKUP_DIR"
@@ -201,10 +194,8 @@ backup_files() {
     formatted_from=$(printf "%-82s" "$from_path")
     formatted_to=$(printf "%-82s" "$to_path")
     
-    echo -e "║ $formatted_from║"
-    sleep $MESS_sDELAY
-    echo -e "║ $formatted_to║"
-    sleep $MESS_sDELAY
+    echo -e "║ $formatted_from║"  
+    echo -e "║ $formatted_to║"  
 
     mkdir -p "$BACKUP_DIR"
     cp -r "$CONFIG_DIR/"* "$BACKUP_DIR/" || echo -e "$ERROR Backup failed!"
@@ -217,12 +208,9 @@ backup_files() {
 backup_files_update() {
     echo ""
     echo "──────────────────────────────────────────────"
-    echo "Creating backup of the printer config directory:"
-    sleep $MESS_sDELAY
-    echo "  ● from: $CONFIG_DIR"
-    sleep $MESS_sDELAY
-    echo "  ●   to: $BACKUP_DIR"
-    sleep $MESS_sDELAY
+    echo "Creating backup of the printer config directory:"  
+    echo "  ● from: $CONFIG_DIR" 
+    echo "  ●   to: $BACKUP_DIR"  
 
     mkdir -p "$BACKUP_DIR"
     cp -r "$CONFIG_DIR/"* "$BACKUP_DIR/" || echo -e "$ERROR Backup failed!"
@@ -234,8 +222,7 @@ backup_files_update() {
 copy_files() {
     echo "║                                                                                 ║"
     echo -e "╟─────────────────────────────────────────────────────────────────────────────────╢"
-    echo -e "║ Copying new files:                                                              ║"
-    sleep $MESS_sDELAY
+    echo -e "║ Copying new files:                                                              ║"  
 
     from_path="  ● from: $SANDWORM_REPO"
     to_path="  ●   to: $CONFIG_DIR"
@@ -243,10 +230,8 @@ copy_files() {
     formatted_from=$(printf "%-82s" "$from_path")
     formatted_to=$(printf "%-82s" "$to_path")
 
-    echo -e "║ $formatted_from║"
-    sleep $MESS_sDELAY
-    echo -e "║ $formatted_to║"
-    sleep $MESS_sDELAY
+    echo -e "║ $formatted_from║"   
+    echo -e "║ $formatted_to║"  
 
     echo "║                                                                                 ║"
 
@@ -267,12 +252,9 @@ copy_files() {
 copy_files_update() {
     echo ""
     echo "──────────────────────────────────────────────"
-    echo "Copying new files:"
-    sleep $MESS_sDELAY
+    echo "Copying new files:"  
     echo "  ● from: $SANDWORM_REPO"
-    sleep $MESS_sDELAY
     echo "  ●   to: $CONFIG_DIR"
-    sleep $MESS_sDELAY
 
     echo ""
     mkdir -p "$CONFIG_DIR"
@@ -327,8 +309,7 @@ if [ "$IS_COLD_INSTALL" = true ]; then
 
     create_post_merge_hook  
 
-    echo -e "║ $OK The Sandworm installation was completed successfully!                      ║"
-    sleep $MESS_sDELAY
+    echo -e "║ $OK The Sandworm installation was completed successfully!                      ║"   
     echo "║                                                                                 ║"
     echo -e "║ $INFO ⚠️ After restarting, please refresh the Klipper web interface (press F5) ║"
     echo -e "║ to clear the memory and avoid UI cache issues (duplicate folders, etc).         ║"

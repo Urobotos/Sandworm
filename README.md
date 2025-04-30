@@ -228,8 +228,8 @@ These two parameters are set via **PrusaSlicer**:
 ### 📡 Proximity Inductive Probe SN-04 PNP and Initial Z Homing:
 This section briefly explains how Z homing works on the Sandworm printer, as it slightly differs from typical setups due to the use of a proximity sensor that directly detects the nozzle.
 
-**This means:**
-- Z homing is automated on the Sandworm printer by `Temp_Homing` macro.
+**In default on Sandworm:**
+- Z homing is automated on the printer by `Temp_Homing` macro.
 - You don’t need to manually clean the nozzle or worry about filament residue.
 - Just slice and print — the printer handles everything behind the scenes.
 

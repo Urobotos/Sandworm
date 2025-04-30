@@ -72,7 +72,17 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
    - Restarts Moonraker to apply changes.
 
 After this initial setup, future updates can be managed via the **Update Manager** in Mainsail/Fluidd. <br>
-Just like the initial installation, each update automatically backs up your entire `~/printer_data/config/` before applying any changes.
+Just like the initial installation, each update automatically backs up your entire `~/printer_data/config/` before applying any changes. <br><br>
+
+**❌ To uninstall Sandworm macros:** <br>
+To completely uninstall Sandworm and restore previous settings:
+```
+bash ~/Sandworm/uninstall.sh
+```
+**This uninstall command will:** 
+- Restores backed up configuration files.
+- Removes Sandworm from `moonraker.conf`
+- Deletes the `~/Sandworm` folder.
 
 <br>
 

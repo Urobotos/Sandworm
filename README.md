@@ -214,7 +214,7 @@ end_gcode
 ```
 
 #### About `CHAMBER_TMP` and `CHAMBER_MIN_TMP` Parameters:
-These two parameters are set via **PrusaSlicer**:
+These two parameters are also set using **PrusaSlicer**:
 - **`CHAMBER_TMP:`** Sets the automatic chamber temperature at which the **Cooling/Filtration Exhaust fans** activate (useful for heat-sensitive filaments like PLA).
 - **`CHAMBER_MIN_TMP:`** Ensures the chamber temperature is above a minimum threshold before starting the print. If the temperature is too low, the printer **pauses** and uses the **heated bed at 100°C** to warm the chamber until it reaches the required value (especially useful for filaments prone to warping, such as ABS, PETG, etc.).
 

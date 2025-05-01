@@ -52,7 +52,7 @@ Project by: Urobotos Coding
 <br>
 
 ### ♻️ Automatic Install & Updates for Sandworm Configuration (Automatic alternative):
-To install and enable automatic updates of Sandworm configuration macros, run the following command in an SSH command line:
+To install and enable automatic updates of Sandworm configuration macros, run the following command in an SSH terminal:
 ```
 git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm/install.sh
 ```
@@ -75,7 +75,7 @@ After this initial setup, future updates can be managed via the **Update Manager
 Just like the initial installation, each update automatically backs up your entire `~/printer_data/config/` before applying any changes. <br><br>
 
 **❌ To uninstall Sandworm macros:** <br>
-To completely uninstall Sandworm from your printer and restore previous settings, run the following command in an SSH command line:
+To completely uninstall Sandworm from your printer and restore previous settings, run the following command in an SSH terminal:
 ```
 bash ~/Sandworm/uninstall.sh
 ```

@@ -83,6 +83,7 @@ bash ~/Sandworm/uninstall.sh
 - Restores backed up configuration files.
 - Removes Sandworm from `moonraker.conf`
 - Deletes the `~/Sandworm` folder.
+- Create persistent folder: ~Sandworm_backup and moves existing backups into it.
 
 <br>
 

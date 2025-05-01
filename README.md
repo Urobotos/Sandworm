@@ -244,13 +244,9 @@ This section briefly explains how Z homing works on the Sandworm printer, as it 
 - Just slice and print — the printer handles everything behind the scenes.
 
 **Differences from standard printer setups:** <br>
-If you're performing initial manual Z homing, it's a good idea to preheat the nozzle first.
-Preheating softens any filament residue, allowing it to deform harmlessly when it contacts the probe — resulting in clean and accurate homing.
-<i>(Subsequent homing operations can proceed normally. After the initial homing, the residual filament usually remains bent and won't interfere again.)</i>
-
-**Why preheat?** <br>
-After a print, filament may ooze from the nozzle and cool into a hardened bump.
-If Z homing is performed with a cold nozzle, this residue can slightly tilt or shift the probe, especially if the filament is short and stiff.
+If you're performing manual Z homing, it's a good idea to preheat the nozzle first.
+Preheating softens any filament residue (after a print, for example), allowing it to deform harmlessly when it contacts the probe — resulting in clean and accurate homing. <br>
+Especially for the first Z homing after the printer starts, subsequent homing operations can proceed normally — after the initial Z homing, the residual filament usually remains bent and will not interfere again.
 
 To prevent this, the Sandworm printer automatically preheats the nozzle using the `Temp_Homing` macro.
 

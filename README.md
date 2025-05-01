@@ -87,7 +87,7 @@ bash ~/Sandworm/uninstall.sh
 <br>
 
 ### 🔌 Remote Power Control via Relay:
-> **Note:** If you have used the `♻️ automatic installer` via command line, you **do not need** to manually add the `[power printer]` block below (It has already been added automatically to your `moonraker.conf`).<br>
+> **Note:** If you have used the `♻️ automatic installer` via command line, you **do not need** to manually add the `[power printer]` block below (It has already been installed into your `moonraker.conf`).<br>
 > You can skip this section and continue with the rest of the setup.
 
 > **Note:** A complete setup guide by `tinntbg`, with more wiring options about **Auto Power Off** macros, <br>

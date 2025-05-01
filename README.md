@@ -244,9 +244,9 @@ This section briefly explains how Z homing works on the Sandworm printer, as it 
 - Just slice and print — the printer handles everything behind the scenes.
 
 **Differences from standard printer setups:** <br>
-If you're performing manual Z homing, it's a good idea to preheat the nozzle first.
+If you're performing manual Z-homing, it's a good idea to preheat the nozzle first.
 Preheating softens any filament residue (after a print, for example), allowing it to deform harmlessly when it contacts the probe — resulting in clean and accurate homing. <br>
-Especially for the first Z homing after the printer starts, subsequent homing operations can proceed normally — after the initial Z homing, the residual filament usually remains bent and will not interfere again.
+Especially for the first Z-homing after the printer starts, subsequent homing operations can proceed normally — after the initial Z-homing, the residual filament usually remains bent and will not interfere again.
 
 To prevent this, the Sandworm printer automatically preheats the nozzle using the `Temp_Homing` macro.
 
@@ -259,7 +259,7 @@ This macro runs automatically in several situations:
 **Technical Details: SN-04 Probe Behavior:** <br>
 The SN-04 inductive probe detects the brass nozzle at approximately Z ≈ 0.6 – 0.7 mm above the PEI bed surface.
 - The nozzle tip sits about 1 mm away from the probe’s recessed sensing face.
-- Using non-brass nozzles (e.g., carbide or hardened steel) may cause the probe to trigger slightly earlier,
+- Using non-brass nozzles (e.g., carbide or hardened steel) may cause the probe to trigger slightly earlier (further away from the bed),
 due to differing electromagnetic properties — this may affect the trigger height and require a Z offset recalibration. <br><br>
 
 

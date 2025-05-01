@@ -74,7 +74,7 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
 After this initial setup, future updates can be managed via the **Update Manager** in Mainsail/Fluidd. <br>
 Just like the initial installation, each update automatically backs up your entire `~/printer_data/config/` before applying any changes. <br><br>
 
-**❌ To uninstall Sandworm macros:** <br>
+**❌🗑️ To uninstall Sandworm macros:** <br>
 To completely uninstall Sandworm from your printer and restore previous settings, run the following command in an SSH terminal:
 ```
 bash ~/Sandworm/uninstall.sh

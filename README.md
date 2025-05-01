@@ -90,9 +90,6 @@ bash ~/Sandworm/uninstall.sh
 > **Note:** If you have used the `♻️ Automatic installer` via command line, you **do not need** to manually add the `[power printer]` block below (It has already been installed into your `moonraker.conf`).<br>
 > You can skip this section and continue with the rest of the setup.
 
-> **Note:** A complete setup guide by `tinntbg`, with more wiring options about **Auto Power Off** macros, <br>
-> can be found in his Github repository: [Auto Power Off Klipper](https://github.com/tinntbg/auto-power-off-klipper) <br>
-
 To enable relay-based power control, add the following to your `moonraker.conf` file:<br>
 
 ```
@@ -112,6 +109,9 @@ The included **Auto Power Off** macro serves as a safe temperature shutdown of t
 It is controlled using two macro buttons: `ACTIVATE_POWER_OFF` and `DEACTIVATE_POWER_OFF` during printing, <br> 
 or by direct writing `ACTIVATE_POWER_OFF` to `end_gcode`. <br>
 (The power off buttons will be set up later in this guide, along with the other macro buttons).
+
+> **Note:** A complete setup guide by `tinntbg`, with more wiring options about **Auto Power Off** macros, <br>
+> can be found in his Github repository: [Auto Power Off Klipper](https://github.com/tinntbg/auto-power-off-klipper) <br>
 
 <br>
 

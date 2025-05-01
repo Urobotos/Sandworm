@@ -111,8 +111,7 @@ It is controlled using two macro buttons: `ACTIVATE_POWER_OFF` and `DEACTIVATE_P
 or by direct writing `ACTIVATE_POWER_OFF` to `end_gcode`. <br>
 (The power off buttons will be set up later in this guide, along with the other macro buttons).
 
-> **Note:** A complete setup guide by `tinntbg`, with more wiring options about **Auto Power Off** macros, <br>
-> can be found in his Github repository: [Auto Power Off Klipper](https://github.com/tinntbg/auto-power-off-klipper) <br>
+> **Note:** `Tinntbg's` complete setup guide with more wiring options for **auto power off** macros can be found in his Github repository: [Auto Power Off Klipper](https://github.com/tinntbg/auto-power-off-klipper) <br>
 
 <br>
 

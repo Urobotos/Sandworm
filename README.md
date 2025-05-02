@@ -164,7 +164,7 @@ To change the language (Two option):
 
 ### 🖱️ Custom Macro Buttons in Mainsail:
 **To add buttons, in the web interface, select:** `⚙️ Settings` → `<> Macros` → `Add a group:` <br>
-Choose group name (For example, Movement), enter the group and search for macro names below from the list.
+Choose group name (For example, Movement), enter the group, and then search for the names below in the macro list.
 
 - **Movement (Hidden during prints)**:
   - `Temp_Homing`

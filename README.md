@@ -243,10 +243,9 @@ These two parameters are also set using **PrusaSlicer**:
 This section briefly explains how Z homing works on the Sandworm printer, as it slightly differs from typical setups due to the use of a proximity sensor that directly detects the nozzle.
 
 **In default on Sandworm:** <br>
-&nbsp;&nbsp;&nbsp;• Z homing is automated on the printer by `Temp_Homing` macro. <br>
-&nbsp;&nbsp;&nbsp;• You don’t need to manually clean the nozzle or worry about filament residue. <br>
-&nbsp;&nbsp;&nbsp;• Just slice and print — the printer handles everything behind the scenes, such as: <br>
-Adjusting the bed tilt (Z_TILT_ADJUST) and taking a bed surface print (BED_MESH_CALIBRATE) all automatically, to create a perfect first layer. <br>
+- Z homing is automated on the printer by `Temp_Homing` macro. <br>
+- You don’t need to manually clean the nozzle or worry about filament residue. <br>
+- **Just slice and print** — the printer handles everything behind the scenes, such as: Preheated homing, adjusting the bed tilt (Z_TILT_ADJUST) and taking an impression of the bed surface (BED_MESH_CALIBRATE) all automatically, to create a perfect first layer. <br>
 
 **Differences from standard printer setups:** <br>
 If you're performing manual Z-homing, it's a good idea to preheat the nozzle first.

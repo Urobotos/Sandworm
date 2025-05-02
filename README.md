@@ -249,7 +249,7 @@ This section briefly explains how Z homing works on the Sandworm printer, as it 
 - **Just slice and print** — the printer, combined with Proximity and BL-Touch probes, handles everything behind the scenes, such as:
     - Check if the nozzle is preheated for the Z-homing.
     - Adjusting the bed tilt (`Z_TILT_ADJUST`)
-    - Taking an impression of the bed surface (`BED_MESH_CALIBRATE`) — <i>all automatically, to create a perfect first layer.</i> <br>
+    - Taking an impression of the bed surface (`BED_MESH_CALIBRATE`) — <i>all points automatically, to create a perfect first layer.</i> <br>
 
 **Differences from standard printer setups:** <br>
 If you're performing manual Z-homing, it's a good idea to preheat the nozzle first.

@@ -247,7 +247,7 @@ This section briefly explains how Z homing works on the Sandworm printer, as it 
 - You don’t need to manually clean the nozzle or worry about filament residue. <br>
 - But if necessary, you can use the built-in brush on the bed to clean the nozzle, using the `Nozzle_Clean` macro.
 - **Just slice and print** — the printer, combined with Proximity and BL-Touch probes, handles everything behind the scenes, such as:
-    - Preheats the nozzle for homing
+    - Check if the nozzle is preheated for the Z-homing.
     - Adjusting the bed tilt (`Z_TILT_ADJUST`)
     - Taking an impression of the bed surface (`BED_MESH_CALIBRATE`) all automatically, to create a perfect first layer. <br>
 

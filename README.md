@@ -238,10 +238,10 @@ These two parameters are also set using **PrusaSlicer**:
 <br>
 
 ### 📡 Proximity Inductive Probe SN-04 PNP and Initial Z Homing:
-This section briefly explains how Z homing works on the Sandworm printer, as it slightly differs from typical setups due to the use of a proximity sensor that directly detects the nozzle.
+This section briefly explains how Z-homing works on the Sandworm printer, as it slightly differs from typical setups due to the use of a proximity sensor that directly detects (from below) the metal nozzle.
 
 **In default on Sandworm:** <br>
-- Z homing is automated on the printer by `Temp_Homing` macro. <br>
+- Z-homing is automated on the printer by `Temp_Homing` macro. <br>
 - You don’t need to manually clean the nozzle or worry about filament residue. <br>
 - But if necessary, you can use the built-in brush on the bed to clean the nozzle, using the `Nozzle_Clean` macro.
 - **Just slice and print** — the printer, combined with Proximity and BL-Touch probes, handles everything behind the scenes, such as:

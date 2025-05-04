@@ -8,7 +8,7 @@
 - ⚙️ [mainsail_custom.cfg](#%EF%B8%8F-mainsail_customcfg)
 - 🚦 &nbsp; [start_end_gcodes.cfg](#-start_end_gcodescfg)
 - 📭 [messages_on_startup.cfg](#-messages_on_startupcfg)
-- 📱 [LCD menu - Offer structure](#-lcd-menu---offer-structure-english-version)
+- 📱 &nbsp; [LCD menu - Offer structure](#-lcd-menu---offer-structure-english-version-only)
 
 	
 ### 📜 macros.cfg:
@@ -169,7 +169,6 @@
   - **[delayed_gcode update_message]** <br>
     *Message (run once) after installation/Update*
 
-<br>
 
 ### 📱 LCD menu - Offer structure (English version only):
 

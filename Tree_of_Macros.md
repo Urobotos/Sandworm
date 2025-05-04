@@ -7,16 +7,11 @@
 - 🌪️ [fans.cfg](#%EF%B8%8F-fanscfg)
 - ⚙️ [mainsail_custom.cfg](#%EF%B8%8F-mainsail_customcfg)
 - 🚦 &nbsp; [start_end_gcodes.cfg](#-start_end_gcodescfg)
+- 📭 [messages_on_startup.cfg](#-messages_on_startupcfg)
 - 📱 &nbsp; [LCD menu - Offer structure](#-lcd-menu---offer-structure-english-version)
 
 	
 ### 📜 macros.cfg:
-
-  - **[delayed_gcode strartup_message]** <br> 
-    *For Mainsail console message on Printer startup: Clickable* `Temp_Homing`
-
-  - **[delayed_gcode lcd_message]** <br> 
-    *LCD message on printer startup.*
 	
   - **[Z_ENDSTOP_CALIBRATE_01]** <br>
     *Z Endstop Calibrate for Mainsail macro button.*
@@ -162,6 +157,17 @@
 
   - **[start_gcode]** <br>
   - **[end_gcode]** <br>
+
+### 📭 messages_on_startup.cfg:
+
+  - **[delayed_gcode strartup_message]** <br> 
+    *For Mainsail console message on Printer startup: Clickable* `Temp_Homing`
+
+  - **[delayed_gcode lcd_message]** <br> 
+    *LCD message on printer startup.*
+
+  - **[delayed_gcode update_message]** <br>
+    *Message (run once) after installation/Update*
 
 <br>
 

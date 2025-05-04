@@ -8,7 +8,7 @@
 - ⚙️ [mainsail_custom.cfg](#%EF%B8%8F-mainsail_customcfg)
 - 🚦 &nbsp; [start_end_gcodes.cfg](#-start_end_gcodescfg)
 - 📭 [messages_on_startup.cfg](#-messages_on_startupcfg)
-- 📱 &nbsp; [LCD menu - Offer structure](#-lcd-menu---offer-structure-english-version)
+- 📱 [LCD menu - Offer structure](#-lcd-menu---offer-structure-english-version)
 
 	
 ### 📜 macros.cfg:

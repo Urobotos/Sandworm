@@ -144,7 +144,7 @@ or by direct writing `ACTIVATE_POWER_OFF` to `end_gcode`. <br>
 
 ### 🌐 Language Selection:
 > **Note:** If you have used the `♻️ Automatic installer`, the language was **already set** during the initial setup.<br>
-> • You only need to use the options below if you want to **change the language later** manually.
+> • If you want to change the language manually later, use the options below:
 
 The LCD menu and user-defined macros support multiple languages (not included in Klipper native macros).<br>
 To change the language (Two option):

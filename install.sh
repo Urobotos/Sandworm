@@ -245,7 +245,7 @@ backup_files() {
 
 backup_files_update() {
     echo ""
-    echo "──────────────────────────────────────────────"
+    echo "─────────────────────────────────────────────────────────────────────────────────────"
     echo "Creating backup of the printer config directory:"  
     echo "  ● from: $CONFIG_DIR"  
     echo "  ●   to: $BACKUP_DIR"  
@@ -288,7 +288,7 @@ copy_files() {
 
 copy_files_update() {
     echo ""
-    echo "──────────────────────────────────────────────"
+    echo "─────────────────────────────────────────────────────────────────────────────────────"
     echo "Copying new files:"
     echo "  ● from: $SANDWORM_REPO"
     echo "  ●   to: $CONFIG_DIR"
@@ -410,12 +410,12 @@ else
     set_variable_cfg "update_msg" 2
 
     echo -e ""
-    echo -e "┌─────────────────────────────────────────────────────────────────────────"
+    echo -e "┌────────────────────────────────────────────────────────────────────────────────────"
     echo -e "│ ** NOTES: **"
     echo -e "│ ✅ The Sandworm update was completed successfully!"
     echo -e "│ 💾 Your config folder was backed up at: $BACKUP_DIR"
     echo -e "│ 📜 For full update details, see the log: $LOGFILE"
-    echo -e "└─────────────────────────────────────────────────────────────────────────"
+    echo -e "└────────────────────────────────────────────────────────────────────────────────────"
     echo -e ""
 
     # Replace previous update block with new one in log

@@ -161,13 +161,13 @@
 ### 📭 messages_on_startup.cfg:
 
   - **[delayed_gcode strartup_message]** <br> 
-    *Clickable `Temp_Homing` in console*
+    *Clickable `Temp_Homing` in console.*
 
   - **[delayed_gcode lcd_message]** <br> 
     *LCD message on printer startup.*
 
   - **[delayed_gcode update_message]** <br>
-    *Post-install/update message (run once)*
+    *Post-install/update message (run once).*
 
 
 ### 📱 LCD menu - Offer structure (English version only):

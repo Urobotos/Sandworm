@@ -127,8 +127,7 @@ or by direct writing `ACTIVATE_POWER_OFF` to `end_gcode`. <br>
   - **In the LCD menu:** `Menu → Setup → Filament sens. → Where you can choose:`
       - **Extension:** `ON/OFF`  
           Where ON = Pause with extension, OFF = Pause will be performed immediately when the Filament Runout is triggered.
-      - **Distance:** `930`mm <br>
-          Adjust `Distance` to: `Your_measured_value_in_mm` <br>
+      - **Distance:** `930`mm — Adjust `Distance` to: `Your_measured_value_in_mm` <br>
           (Default 930mm, adjustment 10 mm per step, with auto-save function on select).
          
   - **Or directly by editing the variables.cfg file:**  

@@ -5,21 +5,16 @@ set -Ee
 trap 'echo -e "$ERROR Script failed at line $LINENO"' ERR
 
 ## --- Brake line after git clone messages ---
-echo -e ""
 
 # --- Paths ---
-SANDWORM_REPO="$HOME/Sandworm/config"
 CONFIG_DIR="$HOME/printer_data/config"
 MOONRAKER_CONF="$CONFIG_DIR/moonraker.conf"
+SANDWORM_REPO="$HOME/Sandworm/config"
 BACKUP_DIR="$HOME/Sandworm/backup/backup_config_$(date +%Y_%m_%d-%Hh%Mm)"
 HOOK_PATH="$HOME/Sandworm/.git/hooks/post-merge"
 LOGFILE="$HOME/printer_data/logs/sandworm_update.log"
 TMP_LOG_DIR="$HOME/Sandworm/tmp"
 TMP_UPDATE_LOG="$TMP_LOG_DIR/sandworm_tmp_update.log"
-
-# --- Sources ---
-source "$HOME/Sandworm/tools/game_intro.sh"
-source "$HOME/Sandworm/tools/game_intro_ascii.sh"
 
 ## --- Message status ---
 OK="[OK]"
@@ -29,9 +24,18 @@ ERROR="[ERROR]"
 MESS_DELAY=0.8
 MESS_sDELAY=0.2
 
+# --- Sources ---
+source "$HOME/Sandworm/tools/translate.sh"
+source "$HOME/Sandworm/tools/game_intro.sh"
+source "$HOME/Sandworm/tools/game_intro_ascii.sh"
+
 print_row() {
     local msg="$1"
-    printf "║ %-79s ║\n" "$msg"
+    local visible_length=$(echo -n "$msg" | wc -m)
+    local total_width=82
+    local padding=$((total_width - visible_length))
+    [ $padding -lt 0 ] && padding=0
+    printf "║ %s%*s ║\n" "$msg" "$padding" ""
 }
 
 ## --- Git Version ---
@@ -74,21 +78,97 @@ elif ! grep -q "^\[update_manager Sandworm\]" "$MOONRAKER_CONF"; then
     IS_COLD_INSTALL=true
 fi
 
+# Function: Interactive language selector (← →) + (Enter):
+select_lang() {
+    local options=("English" "Czech" "German")
+    local lang_codes=(1 2 3)
+    local selected=0
+
+    GREEN="\033[1;32m"
+    RESET="\033[0m"
+
+    echo "" > /dev/tty
+    echo -e "Select language using arrows ${GREEN}(← →)${RESET}, confirm with [Enter]:" > /dev/tty
+
+    draw_selector() {
+        echo -ne "\r\033[K" > /dev/tty
+        for i in "${!options[@]}"; do
+            if [[ $i -eq $selected ]]; then
+                echo -ne "${GREEN}[${options[$i]}]${RESET} " > /dev/tty
+            else
+                echo -ne " ${options[$i]}  " > /dev/tty
+            fi
+        done
+    }
+
+    draw_selector
+    while true; do
+        IFS= read -rsn1 key
+        if [[ $key == $'\x1b' ]]; then
+            read -rsn2 -t 0.1 key
+            if [[ $key == "[C" ]]; then
+                selected=$(( (selected + 1) % ${#options[@]} ))
+            elif [[ $key == "[D" ]]; then
+                selected=$(( (selected - 1 + ${#options[@]}) % ${#options[@]} ))
+            fi
+        elif [[ $key == "" ]]; then
+            break
+        fi
+        echo -ne "\r\033[K" > /dev/tty
+        draw_selector
+    done
+
+    echo "" > /dev/tty
+    export LANG_SELECTED=${lang_codes[$selected]}
+    echo "$OK Language selected: ${options[$selected]} (lang=$LANG_SELECTED)"
+}
+
+if [ "$IS_COLD_INSTALL" = true ]; then
+    select_lang
+fi
+
+# Set value in variables.cfg
+set_variable_cfg() {
+    local key="$1"
+    local value="$2"
+    local file="$HOME/printer_data/config/variables.cfg"
+
+    if [ ! -f "$file" ]; then
+        print_row "$(translate_string "$LANG_SELECTED" "skipped_variables")"
+        from_path="  ● $file"
+        formatted_at=$(printf "%-86s" "$from_path")
+        echo -e "║$formatted_at║"
+        return
+    fi
+
+    if grep -q "^$key\s*=" "$file"; then
+        sed -i "s/^$key\s*=.*/$key = $value/" "$file"
+        if [ "$IS_COLD_INSTALL" = true ]; then
+            # Dynamic key to the translator, e.g. "set_update_msg"
+            print_row "$(translate_string "$LANG_SELECTED" "set_${key}")"
+        else
+            echo -e "$OK Updated $key to $value in variables.cfg"
+        fi
+    else
+        print_row "$SKIPPED Variable '$key' not found in variables.cfg"
+    fi
+}
+
 ## ---  Logging setup ---
 mkdir -p "$TMP_LOG_DIR"
 if [ "$IS_COLD_INSTALL" = true ]; then
     set_game_variables
 
-    # ASCII intro to log
+    # ASCII intro do logu
     exec 4>"$LOGFILE"
     print_game_intro_ascii >&4
     exec 4>&-
 
-    # stdout/stderr to log and tee (append instead of rewrite)
+    # stdout/stderr do logu a tee (append místo přepisu)
     exec > >(tee -a "$LOGFILE") 2>&1
     exec 3>/dev/tty
 
-    # colors intro to console output
+    # barevné intro do konzole
     draw_game_intro >&3
 else
     exec > >(tee "$TMP_UPDATE_LOG") 2>&1
@@ -98,25 +178,24 @@ fi
 start_message() {
     if [[ "$IS_COLD_INSTALL" = true ]]; then
         echo -e "╔════════════════════════════════════════════╗"
-        echo -e "║             ** Cold Install **             ║"
-        echo -e "╠════════════════════════════════════════════╩════════════════════════════════════╗"     
-        print_row "Started: $(date)"    
-        print_row "Git version: $VERSION"     
-        print_row "Install version: $CUSTOM_VERSION"     
+        translate_echo "$LANG_SELECTED" "title_cold_install"
+        echo -e "╠════════════════════════════════════════════╩═══════════════════════════════════════╗"
+        print_row "$(translate_string "$LANG_SELECTED" "start_date")"
+        print_row "$(translate_string "$LANG_SELECTED" "git_version")"
+        print_row "$(translate_string "$LANG_SELECTED" "install_version")"
         print_row ""
-        print_row "Starting installation of automatic Sandworm updates..."
-		sleep $MESS_sDELAY
+        print_row "$(translate_string "$LANG_SELECTED" "description")"
         print_row ""
     else
         echo -e "╔════════════════════════════════════════════╗"
-        echo -e "║                ** Update **                ║"
+        echo -e "║           ** Sandworm Update **            ║"
         echo -e "╚════════════════════════════════════════════╝"
         echo -e "Started: $(date)"
         echo -e "Git version: $VERSION"
         echo -e "Game version: $CUSTOM_VERSION"
         echo -e ""
         echo -e "Starting update of Sandworm macros..."
-    fi		
+    fi
 }
 
 ## --- countdown progress bar ---
@@ -143,19 +222,85 @@ fancy_restart_bar() {
 }
 
 ## --- Functions ---
+backup_files() {
+    echo -e "╟────────────────────────────────────────────────────────────────────────────────────╢"
+    print_row "$(translate_string "$LANG_SELECTED" "backup")"
+   
+    from_path="  ● $(translate_string "$LANG_SELECTED" "from") $CONFIG_DIR"
+    to_path="  ● $(translate_string "$LANG_SELECTED" "to") $BACKUP_DIR"
 
-create_post_merge_hook() {
-    if [ ! -f "$HOOK_PATH" ]; then
-        cat << 'EOF' > "$HOOK_PATH"
-#!/bin/bash
-/home/biqu/Sandworm/install.sh
-EOF
-        chmod +x "$HOOK_PATH"
+    formatted_from=$(printf "%-85s" "$from_path")
+    formatted_to=$(printf "%-85s" "$to_path")
+    
+    echo -e "║ $formatted_from║"  
+    echo -e "║ $formatted_to║"
+   
+    mkdir -p "$BACKUP_DIR"
+    cp -r "$CONFIG_DIR/"* "$BACKUP_DIR/" || echo -e "$ERROR Backup failed!"
+    
+    echo -e "║                                                                                    ║"
+    print_row "$(translate_string "$LANG_SELECTED" "backup_done")"
+    sleep $MESS_sDELAY
+}
 
-        print_row "$OK Git post-merge hook created at: $HOOK_PATH"       
-    else
-        print_row "$SKIPPED Git post-merge hook already exists."
-    fi
+backup_files_update() {
+    echo ""
+    echo "──────────────────────────────────────────────"
+    echo "Creating backup of the printer config directory:"  
+    echo "  ● from: $CONFIG_DIR"  
+    echo "  ●   to: $BACKUP_DIR"  
+
+    mkdir -p "$BACKUP_DIR"
+    cp -r "$CONFIG_DIR/"* "$BACKUP_DIR/" || echo -e "$ERROR Backup failed!"
+    echo ""
+    echo "$OK Backup complete."
+    sleep $MESS_sDELAY
+}
+
+copy_files() {
+    echo -e "║                                                                                    ║"
+    echo -e "╟────────────────────────────────────────────────────────────────────────────────────╢"
+    print_row "$(translate_string "$LANG_SELECTED" "copy")"
+
+    from_path="  ● $(translate_string "$LANG_SELECTED" "from") $SANDWORM_REPO"
+    to_path="  ● $(translate_string "$LANG_SELECTED" "to") $CONFIG_DIR"
+
+    formatted_from=$(printf "%-85s" "$from_path")
+    formatted_to=$(printf "%-85s" "$to_path")
+
+    echo -e "║ $formatted_from║"  
+    echo -e "║ $formatted_to║" 
+    echo -e "║                                                                                    ║"
+
+    mkdir -p "$CONFIG_DIR"
+    RSYNC_OUTPUT=$(rsync -av "$SANDWORM_REPO/" "$CONFIG_DIR/")
+
+    # rsync output in rows:
+    while IFS= read -r line; do
+        formatted_line=$(printf "%-81s" "$line")
+        echo -e "║ $formatted_line  ║"
+    done <<< "$RSYNC_OUTPUT"
+
+    echo -e "║                                                                                    ║"
+    print_row "$(translate_string "$LANG_SELECTED" "copying_done")"
+    sleep $MESS_sDELAY
+}
+
+copy_files_update() {
+    echo ""
+    echo "──────────────────────────────────────────────"
+    echo "Copying new files:"
+    echo "  ● from: $SANDWORM_REPO"
+    echo "  ●   to: $CONFIG_DIR"
+
+    echo ""
+    mkdir -p "$CONFIG_DIR"
+    rsync -av "$SANDWORM_REPO/" "$CONFIG_DIR/"
+    sleep 0.5
+    echo ""
+    
+    echo "$OK Copying completed."
+    sleep $MESS_sDELAY
 }
 
 add_update_manager_block() {
@@ -166,9 +311,9 @@ path: ~/Sandworm
 primary_branch: test
 managed_services: klipper
 install_script: install.sh" >> "$MOONRAKER_CONF"
-    echo "║                                                                                 ║"
-    echo -e "╟─────────────────────────────────────────────────────────────────────────────────╢"
-    echo -e "║ $OK Added [update_manager Sandworm] config block to: moonraker.conf            ║"  
+    echo -e "║                                                                                    ║"
+    echo -e "╟────────────────────────────────────────────────────────────────────────────────────╢"
+    print_row "$(translate_string "$LANG_SELECTED" "add_update_manager")"
 }
 
 add_power_printer_block() {
@@ -181,89 +326,20 @@ locked_while_printing: True         # Prevent power-off during a print
 restart_klipper_when_powered: True
 restart_delay: 1
 bound_service: klipper              # Ensures Klipper service starts/restarts with power toggle" >> "$MOONRAKER_CONF"
-    echo -e "║ $OK Added [power printer] config block to: moonraker.conf                      ║"   
+    print_row "$(translate_string "$LANG_SELECTED" "add_power_printer")"
 }
 
-backup_files() {
-    echo -e "╟─────────────────────────────────────────────────────────────────────────────────╢"
-    echo -e "║ Creating backup of the printer config directory:                                ║"   
-
-    from_path="  ● from: $CONFIG_DIR"
-    to_path="  ●   to: $BACKUP_DIR"
-    
-    formatted_from=$(printf "%-82s" "$from_path")
-    formatted_to=$(printf "%-82s" "$to_path")
-    
-    echo -e "║ $formatted_from║"  
-    echo -e "║ $formatted_to║"  
-
-    mkdir -p "$BACKUP_DIR"
-    cp -r "$CONFIG_DIR/"* "$BACKUP_DIR/" || echo -e "$ERROR Backup failed!"
-    
-    echo "║                                                                                 ║"
-    echo -e "║ $OK Backup complete.                                                           ║"
-    sleep $MESS_sDELAY
-}
-
-backup_files_update() {
-    echo ""
-    echo "──────────────────────────────────────────────"
-    echo "Creating backup of the printer config directory:"  
-    echo "  ● from: $CONFIG_DIR" 
-    echo "  ●   to: $BACKUP_DIR"  
-
-    mkdir -p "$BACKUP_DIR"
-    cp -r "$CONFIG_DIR/"* "$BACKUP_DIR/" || echo -e "$ERROR Backup failed!"
-    echo ""
-    echo "$OK Backup complete."
-    sleep $MESS_DELAY
-}
-
-copy_files() {
-    echo "║                                                                                 ║"
-    echo -e "╟─────────────────────────────────────────────────────────────────────────────────╢"
-    echo -e "║ Copying new files:                                                              ║"  
-
-    from_path="  ● from: $SANDWORM_REPO"
-    to_path="  ●   to: $CONFIG_DIR"
-    
-    formatted_from=$(printf "%-82s" "$from_path")
-    formatted_to=$(printf "%-82s" "$to_path")
-
-    echo -e "║ $formatted_from║"   
-    echo -e "║ $formatted_to║"  
-
-    echo "║                                                                                 ║"
-
-    mkdir -p "$CONFIG_DIR"
-    RSYNC_OUTPUT=$(rsync -av "$SANDWORM_REPO/" "$CONFIG_DIR/")
-
-    # výpis zarovnaného rsync výstupu
-    while IFS= read -r line; do
-        formatted_line=$(printf "%-78s" "$line")
-        echo -e "║ $formatted_line  ║"
-    done <<< "$RSYNC_OUTPUT"
-
-    echo "║                                                                                 ║"
-    echo -e "║ $OK Copying completed.                                                         ║"
-    sleep $MESS_sDELAY
-}
-
-copy_files_update() {
-    echo ""
-    echo "──────────────────────────────────────────────"
-    echo "Copying new files:"  
-    echo "  ● from: $SANDWORM_REPO"
-    echo "  ●   to: $CONFIG_DIR"
-
-    echo ""
-    mkdir -p "$CONFIG_DIR"
-    rsync -av "$SANDWORM_REPO/" "$CONFIG_DIR/"
-    sleep 0.5
-    echo ""
-    
-    echo "$OK Copying completed."
-    sleep $MESS_DELAY
+create_post_merge_hook() {
+    if [ ! -f "$HOOK_PATH" ]; then
+        cat << 'EOF' > "$HOOK_PATH"
+#!/bin/bash
+/home/biqu/Sandworm/install.sh
+EOF
+        chmod +x "$HOOK_PATH"
+        print_row "$(translate_string "$LANG_SELECTED" "post-merge_hook")"
+    else
+        print_row "$(translate_string "$LANG_SELECTED" "skipped_post-merge_hook")"
+    fi
 }
 
 restart_klipper() {
@@ -274,20 +350,18 @@ restart_klipper() {
 }
 
 restart_moonraker() {
-    read -rp "Do you want to restart Moonraker now to apply changes? [y/N]: " answer
+    prompt=$(translate_string "$LANG_SELECTED" "restart_prompt")
+    read -rp "$prompt" answer
     if [[ "$answer" =~ ^[Yy]$ ]]; then
-
-        echo -e "Restarting Moonraker service in 5 seconds..."
+        translate_echo "$LANG_SELECTED" "restart_now"
         fancy_restart_bar
-
         curl --no-progress-meter -X POST http://localhost:7125/server/restart > /dev/null 2>&1
-
     else
         echo ""
-        echo -e "$INFO Moonraker restart skipped. Changes have not been applied!"
-        echo -e "But you can restart Moonraker manually later via:"
-        echo -e "  1. The web interface: Power -→ Service Control -→ Moonraker"
-        echo -e "  2. Command line: curl -X POST http://localhost:7125/server/restart"
+        translate_echo "$LANG_SELECTED" "restart_skipped"
+        translate_echo "$LANG_SELECTED" "restart_manual"
+        translate_echo "$LANG_SELECTED" "restart_manual_1"
+        translate_echo "$LANG_SELECTED" "restart_manual_2"
     fi
 }
 
@@ -304,20 +378,25 @@ if [ "$IS_COLD_INSTALL" = true ]; then
     if ! grep -q "^\[power printer\]" "$MOONRAKER_CONF" 2>/dev/null; then
         add_power_printer_block
     else
-        echo -e "║ $SKIPPED [power printer] already exists in moonraker.conf                      ║"
+        print_row "$(translate_string "$LANG_SELECTED" "skipped_power_printer")"
     fi
+
+    # Set message on startup and language:
+    set_variable_cfg "update_msg" 1
+    set_variable_cfg "lang" "$LANG_SELECTED"
 
     create_post_merge_hook  
 
-    echo -e "║ $OK The Sandworm installation was completed successfully!                      ║"   
-    echo "║                                                                                 ║"
-    echo -e "║ $INFO ⚠️ After restarting, please refresh the web interface (press F5)         ║"
-    echo -e "║ to clear the memory and avoid UI cache issues (duplicate folders, etc).         ║"
-    echo -e "╚═════════════════════════════════════════════════════════════════════════════════╝"
+    echo -e "║                                                                                    ║"
+    print_row "$(translate_string "$LANG_SELECTED" "install_success")"
+    echo -e "║                                                                                    ║"
+    echo -e "╚════════════════════════════════════════════════════════════════════════════════════╝"
     sleep $MESS_DELAY
     echo ""
     restart_moonraker
+
     echo ""
+    sleep $MESS_sDELAY
 else
     if [ ! -d "$SANDWORM_REPO" ]; then
         echo -e "$ERROR Source repo directory $SANDWORM_REPO not found!"
@@ -327,14 +406,15 @@ else
     backup_files_update
     copy_files_update
 
+    # Set message on startup:
+    set_variable_cfg "update_msg" 2
+
     echo -e ""
     echo -e "┌─────────────────────────────────────────────────────────────────────────"
     echo -e "│ ** NOTES: **"
     echo -e "│ ✅ The Sandworm update was completed successfully!"
     echo -e "│ 💾 Your config folder was backed up at: $BACKUP_DIR"
     echo -e "│ 📜 For full update details, see the log: $LOGFILE"
-    echo -e "│ ⚠️ After restarting, please refresh the Klipper web interface (press F5)"
-    echo -e "│ to clear the memory and avoid UI cache issues (duplicate folders, etc)."
     echo -e "└─────────────────────────────────────────────────────────────────────────"
     echo -e ""
 

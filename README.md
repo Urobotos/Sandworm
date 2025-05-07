@@ -120,7 +120,7 @@ or by direct writing `ACTIVATE_POWER_OFF` to `end_gcode`. <br>
 ### 🎞️ Filament Runout Sensor & `runout_distance` Macro:
 - **Description**: A configurable distance delay before `PAUSE` is triggered when the filament sensor is activated.
 - **Purpose**: Saves filament by allowing extra material to be used before pausing.
-- **Setup Instructions**: Measure your PTFE tube length (from filament sensor to extruder gear, <br>
+- **Setup Instructions**: Measure your PTFE tube length (From filament sensor to extruder gear, <br>
     include a ~100mm buffer for manual filament removal from extruder gear).<br>
   
 - **To set the measured value (Two option):**

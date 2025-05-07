@@ -59,7 +59,7 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
 <p align="left" width="100%">
 <img align="left" width="165px" src="images/git_clone_cmd.png">
 <img align="right" width="175px" src="https://github.com/Urobotos/Sandworm/actions/workflows/validate-install.yml/badge.svg"><br><br>
-← <b>Optional:</b> SSH command in QR code (For reference or sharing).<br><br><br><br><br>
+⮜⮜ <b>Optional:</b> SSH command in QR code (For reference or sharing).<br><br><br><br><br>
 </p>
 
 **This command will:** 

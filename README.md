@@ -69,7 +69,7 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
    - Copies new macro files from: `~/Sandworm/config/` to your printer’s config directory: `~/printer_data/config/`
    - Adds `[update_manager Sandworm]` config block to: `moonraker.conf`
    - Adds `[power printer]` config block to: `moonraker.conf`
-   - Creates a Git post-merge script at: `~/Sandworm/.git/hooks/post-merge` to enable future automatic updates
+   - Creates a Git post-merge script at: `~/Sandworm/.git/hooks/post-merge` to enable future automatic updates.
    - Sets the introductory message and selected language in the `variables.cfg` file.
    - Restarts Moonraker to apply changes.
 

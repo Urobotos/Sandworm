@@ -43,7 +43,7 @@ Project by: Urobotos Coding
 <br>
 
 ### 📂 Copy & Paste Config Files (Manual alternative):
-- If you prefer a manual install, copy all contents from the Sandworm/config folder into your printer’s configuration directory:
+- If you prefer a manual install, copy all contents from the `Sandworm/config` folder into your printer’s configuration directory:
   - Example path: `home/biqu/printer_data/config/`
   - Choose Yes if prompted to overwrite default `printer.cfg`.
 

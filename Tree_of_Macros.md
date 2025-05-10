@@ -26,7 +26,7 @@
     *Bed Mesh Calibrate for Mainsail macro button.*
 
   - **[gcode_macro G28]** <br>
-    *G28 Rename - Preheat for Z axis*  
+    *G28 Rename - Z Homing with preheated nozzle*  
 
   - **[runout_distance]** and **[delayed_gcode runout_check]** <br>
     *Filament Runout Distance.* 

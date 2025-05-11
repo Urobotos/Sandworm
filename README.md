@@ -171,7 +171,6 @@ To change the language (Two option):
 Choose group name (For example, Movement), enter the group, and then search for the names below in the macro list.
 
 - **Movement (Hidden during prints)**:
-  - `Temp_Homing`
   - `steppers_off`
   - `e_stepper_off`
   - `Park_Toolhead`

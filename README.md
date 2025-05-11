@@ -171,9 +171,10 @@ To change the language (Two option):
 Choose group name (For example, Movement), enter the group, and then search for the names below in the macro list.
 
 - **Movement (Hidden during prints)**:
+  - `Park_Toolhead`
   - `steppers_off`
   - `e_stepper_off`
-  - `Park_Toolhead`
+  - `FAKE_POSITION`
 
 - **Filament (Hidden during prints)**:
   - `FILAMENT_LOAD`  *(Customizable temperature button, default: 200°C for PLA)*

@@ -242,10 +242,10 @@ These two parameters are also set using **PrusaSlicer**:
 <br>
 
 ### 📡 Proximity Inductive Probe SN-04 PNP and Initial Z Homing:
-This section briefly explains how Z-homing works on the Sandworm printer, as it slightly differs from typical setups due to the use of a proximity sensor that directly detects (from below) the metal nozzle.
+This section briefly explains how Z-homing works on the Sandworm printer, as it slightly differs from typical setups due to the use of a bed-mounted proximity sensor that directly detects (from below) the metal nozzle.
 
 **In default on Sandworm:** <br>
-- Z-homing is automated on the printer by `Temp_Homing` macro. <br>
+- Z-homing is automated on the printer by `G28.1 rename` macro. <br>
 - You don’t need to manually clean the nozzle or worry about filament residue. But if necessary, you can use the built-in brush on the bed to clean the nozzle, using the `Nozzle_Clean` macro.
 - **Just slice and print** — the printer, combined with Proximity and BL-Touch probes, handles everything behind the scenes, such as:
     - Check if the nozzle is preheated for the proximity Z-homing.
@@ -257,9 +257,8 @@ This section briefly explains how Z-homing works on the Sandworm printer, as it 
 **Differences from standard printer setups:** <br>
 If you're performing manual Z-homing, it's a good idea to preheat the nozzle first.
 Preheating softens any filament residue (after a print, for example), allowing it to deform harmlessly when it contacts the probe — resulting in clean and accurate homing. <br>
-This is especially true for the first Z-homing after the printer starts up, subsequent homing operations can proceed normally (After the initial Z-homing, the residual filament usually remains bent by heat and will not interfere again).
 
-To prevent this, the Sandworm printer automatically preheats the nozzle using the `Temp_Homing` macro.
+To prevent this, the Sandworm printer automatically preheats the nozzle when any `G28 Z` homing is called.
 
 **When is `Temp_Homing` used?** <br>
 This macro runs automatically in several situations:

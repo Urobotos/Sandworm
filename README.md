@@ -258,13 +258,7 @@ This section briefly explains how Z-homing works on the Sandworm printer, as it 
 If you're performing manual Z-homing, it's a good idea to preheat the nozzle first.
 Preheating softens any filament residue (after a print, for example), allowing it to deform harmlessly when it contacts the probe — resulting in clean and accurate homing. <br>
 
-To prevent this, the Sandworm printer automatically preheats the nozzle when any `G28 Z` homing is called.
-
-**When is `Temp_Homing` used?** <br>
-This macro runs automatically in several situations:
-   - **Before every print** (in the Start G-code).
-   - **Before nozzle cleaning by brush** (at higher temperature when Z homing is needed).
-   - **As a clickable** `Temp_Homing` **macro in the Mainsail console after startup.**
+- To prevent this, the Sandworm printer automatically preheats the nozzle when any `G28 Z` homing is called.
 
 **Technical Details: SN-04 Probe Behavior:** <br>
 The SN-04 inductive probe detects the brass nozzle at approximately Z ≈ 0.6 – 0.7 mm above the PEI bed surface.

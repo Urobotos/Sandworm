@@ -240,7 +240,7 @@ These two parameters are also set using **PrusaSlicer**:
 
 <br>
 
-### 📡 Proximity Inductive Probe SN-04 PNP and Initial Z Homing:
+### 📡 Proximity Inductive Probe SN-04 PNP and Z Homing:
 This section briefly explains how Z-homing works on the Sandworm printer, as it slightly differs from typical setups due to the use of a bed-mounted proximity sensor that directly detects (from below) the metal nozzle.
 
 **In default on Sandworm:** <br>

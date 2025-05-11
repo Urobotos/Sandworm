@@ -173,7 +173,6 @@ Choose group name (For example, Movement), enter the group, and then search for 
 - **Movement (Hidden during prints)**:
   - `Park_Toolhead`
   - `steppers_off`
-  - `e_stepper_off`
   - `FAKE_POSITION`
 
 - **Filament (Hidden during prints)**:

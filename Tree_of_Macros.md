@@ -161,9 +161,6 @@
 
 ### 📭 messages_on_startup.cfg:
 
-  - **[delayed_gcode strartup_message]** <br> 
-    *Clickable `Temp_Homing` in console.*
-
   - **[delayed_gcode lcd_message]** <br> 
     *LCD message on printer startup.*
 

@@ -280,9 +280,9 @@ The Sandworm printer brings a custom-made `SET_LED rename` macro, its main advan
 Persistent SAVING of all configured lights, ensuring that their states are restored after a printer restart.<br>
 
 The `SET_LED rename` macro introduces also a new RGB(W) memory feature:<br>
-You can adjust the R, G, B, (W) values for a specific neopixel light individually, without resetting the other colors.<br><br>
+You can adjust the R, G, B, (W) values for a specific neopixel light individually, without resetting the other colors.<br>
 
-*You can skip saving LED states by calling `SET_LED` with parameter `SKIP=1`*
+*You can skip saving LED states by calling `SET_LED` with parameter `SKIP=1`* <br><br>
 
 ### ✂️ A modified `mainsail.cfg` file called `mainsail_custom.cfg` is used:
 The Sandworm printer uses a modified `mainsail.cfg` file called `mainsail_custom.cfg`, the redirected include is listed in `printer.cfg`, so no manual edits are needed. This is provided for information only.

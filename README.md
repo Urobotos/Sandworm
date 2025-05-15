@@ -259,7 +259,7 @@ Preheating softens any filament residue (after a print, for example), allowing i
 
 - To prevent this, the Sandworm printer automatically preheats the nozzle when any `G28 Z` homing is called.
 
-**Fallback mode without preheating Z:** <br>
+**Fallback mode without preheating Z-homing:** <br>
 If you still need homing with a cold nozzle (e.g. due to a thermistor error), use `G28 Z` with the `SKIP=1` parameter,<br>
 for example: `G28 SKIP=1`, `G28 Z SKIP=1`, etc...
   

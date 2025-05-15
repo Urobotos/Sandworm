@@ -258,7 +258,7 @@ If you're performing manual Z-homing, it's a good idea to preheat the nozzle fir
 Preheating softens any filament residue (after a print, for example), allowing it to deform harmlessly when it contacts the probe — resulting in clean and accurate homing. <br>
 
 - To prevent this, the Sandworm printer automatically preheats the nozzle when any `G28 Z` homing is called.<br>
-  (If you still need homing with a cold nozzle (e.g. due to a thermistor error), use G28 with the parameter: `G28 Z SKIPED=1`).
+  (If you still need homing with a cold nozzle (e.g. due to a thermistor error), use G28 with the parameter: `G28 Z SKIP=1`, `G28 SKIP=1`, etc...).
   
 **Technical Details: SN-04 Probe Behavior:** <br>
 The SN-04 inductive probe detects the brass nozzle at approximately Z ≈ 0.6 – 0.7 mm above the PEI bed surface.
@@ -278,6 +278,8 @@ Persistent SAVING of all configured lights, ensuring that their states are resto
 
 The `SET_LED rename` macro introduces also a new RGB(W) memory feature:<br>
 You can adjust the R, G, B, (W) values for a specific neopixel light individually, without resetting the other colors.<br><br>
+
+You can skip saving LED stats with call SET_LED with parameter SKIP=1
 
 ### ✂️ A modified `mainsail.cfg` file called `mainsail_custom.cfg` is used:
 The Sandworm printer uses a modified `mainsail.cfg` file called `mainsail_custom.cfg`, the redirected include is listed in `printer.cfg`, so no manual edits are needed. This is provided for information only.

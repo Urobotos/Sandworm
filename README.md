@@ -170,7 +170,7 @@ To change the language (Two option):
 **To add buttons, in the web interface, select:** `⚙️ Settings` → `<> Macros` → `Add a group:` <br>
 Choose group name (For example, Movement), enter the group, and then search for the names below in the macro list.
 
-- **Movement (Hidden during prints)**:
+- **Control (Hidden during prints)**:
   - `Park_Toolhead`
   - `steppers_off`
   - `FAKE_POSITION`

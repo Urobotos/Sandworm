@@ -3,12 +3,12 @@
 
 - 📜 [macros.cfg](#-macroscfg)
 - 💡 &nbsp; [lights_chamber.cfg](#-lights_chambercfg)
-- 🖥️ [display.cfg](#%EF%B8%8F-displaycfg)
 - 🌪️ [fans.cfg](#%EF%B8%8F-fanscfg)
 - ⚙️ [mainsail_custom.cfg](#%EF%B8%8F-mainsail_customcfg)
 - 🚦 &nbsp; [start_end_gcodes.cfg](#-start_end_gcodescfg)
 - 📭 [messages_on_startup.cfg](#-messages_on_startupcfg)
-- 📱 &nbsp; [LCD menu - Offer structure](#-lcd-menu---offer-structure-english-version-only)
+- 🖥️ [display.cfg](#%EF%B8%8F-displaycfg)
+- 📱 &nbsp; [Display.cfg - Offer structure (English version only):](#-displaycfg---offer-structure-english-version-only)
 
 	
 ### 📜 macros.cfg:
@@ -91,21 +91,6 @@
     *Display backlight ON/OFF (Toggle macro button).*
 
 
-### 🖥️ display.cfg:
-
-  - **[M300]** <br>
-    *M300 gcode for LCD Beeper.*
-	
-  - **[alert_beep]** <br>
-    *Macro tone for alert beep.*
-
-  - **[SET_MENU_LANGUAGE]** <br>
-    *To change the language using the LCD menu*.
-
-  - **[knob_feedback]** and **[delayed_gcode knob_return]** <br>
-    *Knob LED feedback when gcode macro is triggered via LCD menu.*
-
-
 ### 🌪️ fans.cfg:
 
   - **[M141]** <br>
@@ -168,7 +153,21 @@
     *Post-install/update message (run once).*
 
 
-### 📱 LCD menu - Offer structure (English version only):
+### 🖥️ display.cfg:
+
+  - **[M300]** <br>
+    *M300 gcode for LCD Beeper.*
+	
+  - **[alert_beep]** <br>
+    *Macro tone for alert beep.*
+
+  - **[SET_MENU_LANGUAGE]** <br>
+    *To change the language using the LCD menu*.
+
+  - **[knob_feedback]** and **[delayed_gcode knob_return]** <br>
+    *Knob LED feedback when gcode macro is triggered via LCD menu.*
+
+### 📱 Display.cfg - Offer structure (English version only):
 
  + **Content:**
    + **Adjust print:**

@@ -256,7 +256,7 @@
        + Green: 0.30
        + Blue: 0.30
    + **Chamber:**
-       + Current: <temperature> °C
+       + Current: Temperature °C
        + Heating: 0°C
        + Cooling: 0°C
        + All OFF

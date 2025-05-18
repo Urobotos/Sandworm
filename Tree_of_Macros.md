@@ -259,6 +259,7 @@
        + Current: <temperature> °C
        + Heating: 0°C
        + Cooling: 0°C
+       + All OFF
    + **Setup:**
        + Power Management
            + Restart

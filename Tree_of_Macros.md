@@ -256,9 +256,9 @@
        + Green: 0.30
        + Blue: 0.30
    + **Chamber:**
-       + Current: <temperature>
+       + Current: <temperature> °C
        + Heating: 0°C
-       + Cool at: 0°C
+       + Cooling: 0°C
    + **Setup:**
        + Power Management
            + Restart

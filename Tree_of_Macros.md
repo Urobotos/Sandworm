@@ -8,7 +8,7 @@
 - 🚦 &nbsp; [start_end_gcodes.cfg](#-start_end_gcodescfg)
 - 📭 [messages_on_startup.cfg](#-messages_on_startupcfg)
 - 🖥️ [display.cfg](#%EF%B8%8F-displaycfg)
-- 📱 &nbsp; [Display.cfg - Offer structure (English version only):](#-displaycfg---offer-structure-english-version-only)
+- 📱 &nbsp; [display.cfg - Offer structure (English version only):](#-displaycfg---offer-structure-english-version-only)
 
 	
 ### 📜 macros.cfg:
@@ -167,7 +167,7 @@
   - **[knob_feedback]** and **[delayed_gcode knob_return]** <br>
     *Knob LED feedback when gcode macro is triggered via LCD menu.*
 
-### 📱 Display.cfg - Offer structure (English version only):
+### 📱 display.cfg - Offer structure (English version only):
 
  + **Content:**
    + **Adjust print:**

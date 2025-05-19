@@ -239,9 +239,9 @@ These two parameters are also set using **PrusaSlicer**:
 > - Bed: 50°C | Ambient: 12°C | Chamber: 28°C
 >
 > **PTC chamber heater, heating power (Alone, without bed heating):**
-> - Chamber: 20°C | Minute: 0
-> - Chamber: 30°C | Minute: 1
-> - Chamber: 40°C | Minute: 5
+> - Chamber: 20°C | Minute: 00
+> - Chamber: 30°C | Minute: 01
+> - Chamber: 40°C | Minute: 05
 > - Chamber: 50°C | Minute: 13
 >
 > **PTC chamber heater, heating power (With bed heating targeted at 90°C):**

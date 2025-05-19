@@ -231,7 +231,8 @@ These two parameters are also set using **PrusaSlicer**:
 <br>
 
 > [!NOTE]
-> Always set the **minimum chamber temperature** with respect to ambient conditions. The macro relies on ```TEMPERATURE_WAIT``` (similar to M190, wait loop for the bed temp), meaning the printer **pauses all commands** during this phase. If needed, you can cancel the wait loop, during the print preparation phase, by performing an `Emergency Stop` and restarting the print with a different chamber temperature setting.
+> **Chamber heating with PTC Heater (230V, 300W, with fan):** <br>
+> Always set the minimum chamber temperature (using M191) with respect to the type of heater and the installed parts inside the chamber. Compared to using passive heating only on the bed, some temperatures may be unattainable - in contrast, the PTC heater can reliably reach up to 50-60 °C. For safety reasons, the macro enforces a maximum limit of 60 °C, especially to protect the PETG parts inside the printer.
 >
 > **Example of chamber temperatures on Sandworm printer (after ~1 hour of printing, only Bed heating):**
 > - Bed: 60°C | Ambient: 25°C | Chamber: 41°C

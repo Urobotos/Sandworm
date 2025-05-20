@@ -231,21 +231,24 @@ These two parameters are also set using **PrusaSlicer**:
 <br>
 
 > [!NOTE]
-> **Chamber heating with PTC Heater (230V, 300W, with fan):** <br>
-> Always set the minimum chamber temperature (using M191) with respect to the type of heater and the installed parts inside the chamber. Compared to using passive heating only on the bed, some temperatures may be unattainable - in contrast, the PTC heater can reliably reach up to 50-60 °C. For safety reasons, the macro enforces a maximum limit of 60 °C, especially to protect the PETG parts inside the printer. **Example of chamber temperatures on Sandworm printer:**
+> **Sandworm uses a PTC heater (230V, 300W, with fan) to heat the chamber:** <br>
+> Always set the minimum chamber temperature (via `M191`) with respect to the type of heater and the materials used inside the chamber.
+> When using passive heating via the bed, some temperatures may be unreachable — in contrast, the **PTC heater** can reliably reach up to 50–60 °C.
+> For safety, the macro enforces a maximum **limit of 60 °C**, especially to protect PETG parts located inside the printer.<br>
+> **Example of chamber temperatures on Sandworm printer:** <br>
 > 
 > **After ~1 hour of printing (only Bed heating):**
 > - Bed: 60°C | Ambient: 25°C | Chamber: 41°C
 > - Bed: 95°C | Ambient: 20°C | Chamber: 46°C
 > - Bed: 50°C | Ambient: 12°C | Chamber: 28°C
 >
-> **PTC chamber heater, heating power (Alone, without bed heating):**
+> **PTC chamber heater, heating power (Alone, without Bed heating):**
 > - Chamber: 20°C | Minute: 00
 > - Chamber: 30°C | Minute: 01
 > - Chamber: 40°C | Minute: 05
 > - Chamber: 50°C | Minute: 13
 >
-> **PTC chamber heater, heating power (With bed heating targeted at 90°C):**
+> **PTC chamber heater, heating power (With Bed heating targeted at 90°C):**
 > - Chamber: 20°C | Bed: 21°C | Minute: 00
 > - Chamber: 30°C | Bed: 50°C | Minute: 01
 > - Chamber: 40°C | Bed: 80°C | Minute: 03

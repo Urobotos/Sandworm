@@ -202,7 +202,7 @@ Choose group name (For example, Movement), enter the group, and then search for 
 
 <br>
 
-### 🏁 PrusaSlicer - START & END Gcodes:
+### 🏁 PrusaSlicer - START & END G-codes:
 In **PrusaSlicer**, insert the following G-code snippets into the `Start G-codes` and `End G-codes` sections:
 
 #### 🟢 Start G-codes:

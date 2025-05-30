@@ -3,7 +3,7 @@
 
 - 📜 [macros.cfg](#-macroscfg)
 - 💡 &nbsp; [lights_chamber.cfg](#-lights_chambercfg)
-- 🌪️ [fans.cfg](#%EF%B8%8F-fanscfg)
+- 🌪️ [fans_and_chamber_heating.cfg](#%EF%B8%8F-fans_and_chamber_heatingcfg)
 - ⚙️ [mainsail_custom.cfg](#%EF%B8%8F-mainsail_customcfg)
 - 🚦 &nbsp; [start_end_gcodes.cfg](#-start_end_gcodescfg)
 - 📭 [messages_on_startup.cfg](#-messages_on_startupcfg)
@@ -91,7 +91,7 @@
     *Display backlight ON/OFF (Toggle macro button).*
 
 
-### 🌪️ fans.cfg:
+### 🌪️ fans_and_chamber_heating.cfg:
 
   - **[M141]** <br>
     *Target chamber temperature for automatic Cooling/Filtering.*

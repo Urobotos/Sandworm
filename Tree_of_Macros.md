@@ -58,9 +58,6 @@
 
   - **[idle_timeout]** <br>
     *Turns off steppers, heaters etc. after 8 minutes of inactivity.*
-
-  - **[clear_display]** <br> 
-    *Empty M117 message for auto-clear LCD display, with 25sec delay.*
 	
   - **[ACTIVATE_POWER_OFF], [DEACTIVATE_POWER_OFF], [POWER_OFF_PRINTER_CHECK_ACT] and [_POWER_OFF_PRINTER]** <br>
     *To turn OFF the printer at the end of printing.*
@@ -148,6 +145,9 @@
 
   - **[delayed_gcode lcd_message]** <br> 
     *LCD message on printer startup.*
+
+  - **[delayed_gcode clear_display]**
+    *Message showed on empty LCD (for auto-clear LCD display, with 25sec delay).*
 
   - **[delayed_gcode update_message]** <br>
     *Post-install/update message (run once).*

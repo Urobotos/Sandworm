@@ -137,7 +137,8 @@
 
 
 ### 🚦 start_end_gcodes.cfg:
-
+  - **[gcode_macro print_msg_info]** <br>
+    *Print start info message: Print Settings, Filament, Extruder temp, Bed temp and Chamber temp* <br>
   - **[start_gcode]** <br>
   - **[end_gcode]** <br>
 

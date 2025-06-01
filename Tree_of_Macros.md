@@ -148,7 +148,7 @@
     *LCD message on printer startup.*
 
   - **[delayed_gcode clear_display]**
-    *Message showed on empty LCD (for auto-clear LCD display, with 25sec delay).*
+    *Message showed on empty LCD (for auto-clear LCD display, with 25sec delay).* <br> 
 
   - **[delayed_gcode update_message]** <br>
     *Post-install/update message (run once).*

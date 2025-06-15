@@ -279,7 +279,7 @@ The SN-04 inductive probe detects the brass nozzle at approximately Z ≈ 0.6 �
 - The nozzle tip sits about 1 mm away from the probe’s recessed sensing face.
 - Using non-brass nozzles (e.g., carbide or hardened steel) may cause the probe to trigger slightly earlier (further away from the bed),
 due to differing electromagnetic properties — this may affect the trigger height and require a Z offset recalibration.
-- Height sensing using a proximity probe is for orientation purposes for non-printing movements (3D-Touch is used for precise height during printing). <br><br>
+- Height sensing using a proximity probe is for orientation purposes for non-printing movements (3D-Touch is used to sense precise height for printing). <br><br>
 
 ### ♘ Sandworm (Non-Print) Movements:
 The Sandworm printer in the macros uses a **Chess Knight Movement Style** for non-printing movements (no diagonal movements), 

@@ -190,7 +190,7 @@ Choose group name (For example, Movement), enter the group, and then search for 
 
 - **Calibration (Hidden during prints & pauses)**:
   - `Z_ENDSTOP_CALIBRATE_01`
-  - `PROBE_CALIBRATE_02`
+  - `BL_TOUCH_CALIBRATE_02`
   - `Z_TILT_ADJUST_03`
   - `BED_MESH_CALIBRATE_04`
 

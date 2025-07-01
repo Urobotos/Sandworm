@@ -16,7 +16,7 @@
   - **[Z_ENDSTOP_CALIBRATE_01]** <br>
     *Z Endstop Calibrate for Mainsail macro button.*
 	
-  - **[PROBE_CALIBRATE_02]** <br>
+  - **[BL-TOUCH_CALIBRATE_02]** <br>
     *Probe Calibrate for Mainsail macro button.*
 
   - **[Z_TILT_ADJUST_03]** <br>
@@ -43,7 +43,10 @@
   
   - **[Nozzle_Clean]** <br>
     *Wipe nozzle by brush.* 
-  
+
+  - **[Quick_Nozzle_Clean]** <br>
+    *Quick nozzle clean with a brush (for start print bed mesh procedures)* 
+
   - **[FAKE_POSITION]** <br>
     *Set Fake position: X100 Y100 Z100.*
 	

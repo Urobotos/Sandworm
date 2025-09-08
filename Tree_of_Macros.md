@@ -171,7 +171,7 @@
   - **[knob_feedback]** and **[delayed_gcode knob_return]** <br>
     *Knob LED feedback when gcode macro is triggered via LCD menu.*
 
-### 📱 display.cfg - Offer structure (English version only):
+### 📱 display.cfg - Offer structure (English version):
 
  + **Content:**
    + **Adjust print:**

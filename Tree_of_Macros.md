@@ -68,12 +68,12 @@
     
 ### 💡 lights_chamber.cfg:
 
-  - **[delayed_gcode set_lights_onstartup]** <br>
+  - **[delayed_gcode restore_lights_onstartup]** <br>
     *Chamber lights, Extruder LEDs and LCD Display:*<br>
     *Restores saved lights settings on printer start / restart.*
 
   - **[SET_LED]** <br>
-    *SET_LED rename - Persistent saving of all configured lights, ensuring that their states are restored after a printer restart.*
+    *SET_LED rename to SET_SAVE_LED - Persistent saving of all configured lights, ensuring that their states are restored after a printer restart.*
 
   - **[SET_LED_BLINK]** <br>
     *Makro helper for Led blinks.*   

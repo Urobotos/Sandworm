@@ -308,7 +308,7 @@ add_update_manager_block() {
 type: git_repo
 origin: https://github.com/zacharcc/Klipper.git
 path: ~/Sandworm
-primary_branch: test
+primary_branch: main
 managed_services: klipper
 install_script: install.sh" >> "$MOONRAKER_CONF"
     echo -e "║                                                                                    ║"

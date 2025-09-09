@@ -306,7 +306,7 @@ copy_files_update() {
 add_update_manager_block() {
     echo -e "\n[update_manager Sandworm]
 type: git_repo
-origin: https://github.com/zacharcc/Klipper.git
+origin: https://github.com/Urobotos/Sandworm.git
 path: ~/Sandworm
 primary_branch: main
 managed_services: klipper

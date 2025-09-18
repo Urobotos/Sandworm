@@ -27,7 +27,7 @@
 
 ```
 Author: Zachar Čuřík
-Launch Date: Q2 2025
+Launch Date: Q3 2025
 Code Name: Sandworm Mach3 Y2025 GS556
 Version: game_save=556, level=03, game_over="unknown"
 Project by: Urobotos Coding

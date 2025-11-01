@@ -36,9 +36,9 @@ Project by: Urobotos Coding
 <br>
 
 > [!NOTE]
-> These **Klipper macros** are part of the instructions and their continuation for building the **Sandworm printer** on the
-> [**Printables.com/Sandworm**](https://www.printables.com/model/976901-sandworm-3d-printer) website,
-> where (in addition to the instructions) you can also find the **3D printable models** needed to build this printer.
+> These **Klipper macros** are part of the setup instructions for the **Sandworm 3D printer**,  
+> continued on [**Printables.com/Sandworm**](https://www.printables.com/model/976901-sandworm-3d-printer),  
+> where you can also find all **3D printable parts and detailed build guides** for this printer.
 
 <br>
 

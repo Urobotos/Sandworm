@@ -295,7 +295,7 @@ copy_files_update() {
 
     echo ""
     mkdir -p "$CONFIG_DIR"
-    rsync -av "$SANDWORM_REPO/" "$CONFIG_DIR/"
+    rsync -av --exclude 'printer.cfg' "$SANDWORM_REPO/" "$CONFIG_DIR/"
     sleep 0.5
     echo ""
     

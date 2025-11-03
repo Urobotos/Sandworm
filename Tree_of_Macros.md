@@ -2,13 +2,13 @@
 ### Jump Navigation:
 
 - 📜 [macros.cfg](#-macroscfg)
-- 💡 &nbsp;[lights_chamber.cfg](#-lights_chambercfg)
+- 💡 [lights_chamber.cfg](#-lights_chambercfg)
 - 🌪️ [fans_and_chamber_heating.cfg](#%EF%B8%8F-fans_and_chamber_heatingcfg)
 - ⚙️ [mainsail_custom.cfg](#%EF%B8%8F-mainsail_customcfg)
-- 🚦 &nbsp;[start_end_gcodes.cfg](#-start_end_gcodescfg)
+- 🚦 [start_end_gcodes.cfg](#-start_end_gcodescfg)
 - 📭 [messages_on_startup.cfg](#-messages_on_startupcfg)
 - 🖥️ [display.cfg](#%EF%B8%8F-displaycfg)
-- 📱 &nbsp;[display.cfg - Offer structure (English version only):](#-displaycfg---offer-structure-english-version-only)
+- 📱 [display.cfg - Offer structure (English version only):](#-displaycfg---offer-structure-english-version-only)
 
 	
 ### 📜 macros.cfg:

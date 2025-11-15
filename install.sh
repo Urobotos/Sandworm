@@ -38,6 +38,14 @@ print_row() {
     printf "║ %s%*s ║\n" "$msg" "$padding" ""
 }
 
+open_box() {
+    echo -e "╔════════════════════════════════════════════════════════════════════════════════════╗"
+}
+
+close_box() {
+    echo -e "╚════════════════════════════════════════════════════════════════════════════════════╝"
+}
+
 ## --- Git Version ---
 if [ -d "$HOME/Sandworm/.git" ]; then
     VERSION=$(git -C "$HOME/Sandworm" describe --tags --exact-match 2>/dev/null || \
@@ -159,7 +167,7 @@ mkdir -p "$TMP_LOG_DIR"
 if [ "$IS_COLD_INSTALL" = true ]; then
     set_game_variables
 
-    # ASCII intro do logu
+    # ASCII intro to log
     exec 4>"$LOGFILE"
     print_game_intro_ascii >&4
     exec 4>&-
@@ -168,11 +176,78 @@ if [ "$IS_COLD_INSTALL" = true ]; then
     exec > >(tee -a "$LOGFILE") 2>&1
     exec 3>/dev/tty
 
-    # barevné intro do konzole
+    # color intro to console
     draw_game_intro >&3
 else
     exec > >(tee "$TMP_UPDATE_LOG") 2>&1
 fi
+
+## ---  Conditional GPIO settings ---
+setup_gpio_permissions() {
+    echo -e "║                                                                                    ║"
+    echo -e "╟────────────────────────────────────────────────────────────────────────────────────╢"
+    print_row "$(translate_string "$LANG_SELECTED" "gpio_header")"
+    echo -e "║                                                                                    ║"
+
+    LOCAL_USER=$(logname 2>/dev/null || echo "$USER")
+    MODEL=$(tr -d '\0' < /proc/device-tree/model 2>/dev/null || echo "unknown")
+
+    print_row "$(translate_string "$LANG_SELECTED" "gpio_info")"
+    print_row ""
+
+    # Raspberry Pi = everything without sudo → no table breaks
+    if echo "$MODEL" | grep -qi "Raspberry Pi"; then
+        print_row "$(translate_string "$LANG_SELECTED" "gpio_rpi_skip")"
+        return
+    fi
+
+    GROUP_CREATE_NEEDED=0
+    USER_ADD_NEEDED=0
+
+    # check whether groupadd is needed
+    if ! getent group gpio >/dev/null; then
+        GROUP_CREATE_NEEDED=1
+    fi
+
+    # check if usermod is needed
+    if ! groups "$LOCAL_USER" | grep -qw gpio; then
+        USER_ADD_NEEDED=1
+    fi
+
+    # If sudo is not needed → everything inside the table
+    if [ $GROUP_CREATE_NEEDED -eq 0 ] && [ $USER_ADD_NEEDED -eq 0 ]; then
+        print_row "$(translate_string "$LANG_SELECTED" "gpio_exists")"
+        print_row "$(translate_string "$LANG_SELECTED" "gpio_user_exists")"
+        return
+    fi
+
+    # Table break due to sudo
+    close_box
+
+    # Sudo section
+    if [ $GROUP_CREATE_NEEDED -eq 1 ]; then
+        sudo groupadd gpio
+    fi
+
+    if [ $USER_ADD_NEEDED -eq 1 ]; then
+        sudo usermod -aG gpio "$LOCAL_USER"
+    fi
+
+    sudo udevadm control --reload-rules
+    sudo udevadm trigger
+
+    open_box
+
+    # all sudo-rows in one table:
+    [ $GROUP_CREATE_NEEDED -eq 1 ] && \
+        print_row "$(translate_string "$LANG_SELECTED" "gpio_create")"
+
+    [ $USER_ADD_NEEDED -eq 1 ] && \
+        print_row "$(translate_string "$LANG_SELECTED" "gpio_add_user")"
+
+    print_row ""
+    print_row "$(translate_string "$LANG_SELECTED" "gpio_done")"
+}
 
 ## --- Message Header ---
 start_message() {
@@ -236,7 +311,7 @@ backup_files() {
     echo -e "║ $formatted_to║"
    
     mkdir -p "$BACKUP_DIR"
-    cp -r "$CONFIG_DIR/"* "$BACKUP_DIR/" || echo -e "$ERROR Backup failed!"
+    cp -r "$CONFIG_DIR"/. "$BACKUP_DIR"/ || echo -e "$ERROR Backup failed!"
     
     print_row ""
     print_row "$(translate_string "$LANG_SELECTED" "backup_done")"
@@ -251,7 +326,7 @@ backup_files_update() {
     echo "  ●   to: $BACKUP_DIR"  
 
     mkdir -p "$BACKUP_DIR"
-    cp -r "$CONFIG_DIR/"* "$BACKUP_DIR/" || echo -e "$ERROR Backup failed!"
+    cp -r "$CONFIG_DIR"/. "$BACKUP_DIR"/ || echo -e "$ERROR Backup failed!"
     echo ""
     echo "$OK Backup complete."
     sleep $MESS_sDELAY
@@ -303,29 +378,42 @@ copy_files_update() {
     sleep $MESS_sDELAY
 }
 
+ensure_trailing_newline() {
+    # Pokud poslední byte není newline → přidáme jeden
+    if [ -f "$MOONRAKER_CONF" ] && [ -s "$MOONRAKER_CONF" ]; then
+        if [ "$(tail -c1 "$MOONRAKER_CONF" | wc -l)" -eq 0 ]; then
+            echo "" >> "$MOONRAKER_CONF"
+        fi
+    fi
+}
+
 add_update_manager_block() {
-    echo -e "\n[update_manager Sandworm]
-type: git_repo
-origin: https://github.com/Urobotos/Sandworm.git
-path: ~/Sandworm
-primary_branch: main
-managed_services: klipper
-install_script: install.sh" >> "$MOONRAKER_CONF"
+    ensure_trailing_newline
+    printf "\n[update_manager Sandworm]\n\
+type: git_repo\n\
+origin: https://github.com/Urobotos/Sandworm.git\n\
+path: ~/Sandworm\n\
+primary_branch: main\n\
+managed_services: klipper\n\
+install_script: install.sh\n" >> "$MOONRAKER_CONF"
+
     echo -e "║                                                                                    ║"
     echo -e "╟────────────────────────────────────────────────────────────────────────────────────╢"
     print_row "$(translate_string "$LANG_SELECTED" "add_update_manager")"
 }
 
 add_power_printer_block() {
-    echo -e "\n[power printer]
-type: gpio
-pin: gpiochip0/gpio72               # Can be reversed with "!", (Bigtreetech PI V1.2 GPIO pin PC8)
-initial_state: off
-off_when_shutdown: True             # Turn off power on shutdown/error
-locked_while_printing: True         # Prevent power-off during a print
-restart_klipper_when_powered: True
-restart_delay: 1
-bound_service: klipper              # Ensures Klipper service starts/restarts with power toggle" >> "$MOONRAKER_CONF"
+    ensure_trailing_newline
+    printf "\n[power printer]\n\
+type: gpio\n\
+pin: gpiochip0/gpio72               # Can be reversed with \"!\", (Bigtreetech PI V1.2 GPIO pin PC8)\n\
+initial_state: off\n\
+off_when_shutdown: True             # Turn off power on shutdown/error\n\
+locked_while_printing: True         # Prevent power-off during a print\n\
+restart_klipper_when_powered: True\n\
+restart_delay: 1\n\
+bound_service: klipper              # Ensures Klipper service starts/restarts with power toggle\n" >> "$MOONRAKER_CONF"
+
     print_row "$(translate_string "$LANG_SELECTED" "add_power_printer")"
 }
 
@@ -380,6 +468,12 @@ if [ "$IS_COLD_INSTALL" = true ]; then
     else
         print_row "$(translate_string "$LANG_SELECTED" "skipped_power_printer")"
     fi
+
+    setup_gpio_permissions
+
+    echo -e "║                                                                                    ║"
+    echo -e "╟────────────────────────────────────────────────────────────────────────────────────╢"
+	echo -e "║                                                                                    ║"
 
     # Set message on startup and language:
     set_variable_cfg "update_msg" 1

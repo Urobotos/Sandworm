@@ -69,9 +69,9 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
    - Copies new macro files from: `~/Sandworm/config/` to your printer’s config directory: `~/printer_data/config/`
    - Adds `[update_manager Sandworm]` config block to: `moonraker.conf`
    - Adds `[power printer]` config block to: `moonraker.conf`
-  	- Creates and configures the gpio group (if not already existing)
-  	- Adds the current user to the gpio group (if not already yet)
-  	- Creates udev rules to allow non-root access to GPIO chip devices → /etc/udev/rules.d/99-gpio-permissions.rules
+  	- Creates and configures the `gpio` group (if not already existing)
+  	- Adds the `current user` to the `gpio` group (if not already yet)
+  	- Creates udev rules to allow non-root access to GPIO chip devices → `/etc/udev/rules.d/99-gpio-permissions.rules`
    - Creates a Git post-merge script at: `~/Sandworm/.git/hooks/post-merge` to enable future automatic updates.
    - Sets the introductory message and selected language in the `variables.cfg` file.
    - Restarts Moonraker to apply changes.

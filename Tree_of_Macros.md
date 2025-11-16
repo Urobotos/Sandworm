@@ -8,7 +8,7 @@
 - 🚦 [start_end_gcodes.cfg](#-start_end_gcodescfg)
 - 📭 [messages_on_startup.cfg](#-messages_on_startupcfg)
 - 🖥️ [display.cfg](#%EF%B8%8F-displaycfg)
-- 📱 [display.cfg - Offer structure (English version only):](#-displaycfg---offer-structure-english-version-only)
+- 📱 [display.cfg - Offer structure (English version):](#-displaycfg---offer-structure-english-version)
 
 	
 ### 📜 macros.cfg:

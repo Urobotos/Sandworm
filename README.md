@@ -171,7 +171,7 @@ To change the language (Two option):
 
 ### 🖱️ Custom Macro Buttons in Mainsail:
 **To add buttons, in the web interface, select:** `⚙️ Settings` → `<> Macros` → `Add a group:` <br>
-Choose group name (For example, Control), enter the group, and then search for the names below in the macro list.
+Choose group name (For example, Control), enter the group, and then search for the macros names below in the group list.
 
 - **Control (Hidden during prints)**:
   - `Park_Toolhead`

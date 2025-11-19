@@ -63,7 +63,7 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
 </p>
 
 **This command will:** 
-- Clone the Sandworm repository into the `~/Sandworm` folder. <br>
+- Clone the Sandworm repository into the `~/Sandworm` folder <br>
 - Run the installation script `install.sh`, which: <br>
    - Creates a backup of your current configuration at: `~/Sandworm/backup/backup_config_date+time/`
    - Copies new macro files from: `~/Sandworm/config/` to your printer’s config directory: `~/printer_data/config/`
@@ -72,9 +72,9 @@ git clone https://github.com/Urobotos/Sandworm.git ~/Sandworm && bash ~/Sandworm
   	- Creates and configures the `gpio` group (if not already existing)
   	- Adds the `current user` to the `gpio` group (if not already yet)
   	- Creates udev rules to allow non-root access to GPIO chip devices → `/etc/udev/rules.d/99-gpio-permissions.rules`
-   - Creates a Git post-merge script at: `~/Sandworm/.git/hooks/post-merge` to enable future automatic updates.
-   - Sets the introductory message and selected language in the `variables.cfg` file.
-   - Restarts Moonraker to apply changes.
+   - Creates a Git post-merge script at: `~/Sandworm/.git/hooks/post-merge` to enable future automatic updates
+   - Sets the introductory message and selected language in the `variables.cfg` file
+   - Restarts Moonraker to apply changes
 
 After this initial setup, future updates can be managed via the **Update Manager** in Mainsail/Fluidd. <br>
 Just like the initial installation, each update automatically backs up your entire `~/printer_data/config/` before applying any changes. <br><br>

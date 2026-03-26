@@ -212,7 +212,7 @@ In **PrusaSlicer**, insert the following G-code snippets into the `Start G-codes
 #### 🟢 Start G-codes:
 ```gcode
 SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
-print_msg_info SETTINGS="[print_settings_id]" FILAMENT=[filament_type] EXT_TMP=[temperature] BED_TMP=[bed_temperature] CHAMBER_MIN_TMP=[chamber_minimal_temperature]
+print_msg_info SETTINGS="[print_settings_id]" FILAMENT=[filament_type] EXT_TMP=[temperature] BED_TMP=[bed_temperature] CHAMBER_COOLING=[chamber_temperature] CHAMBER_MIN_TMP=[chamber_minimal_temperature]
 start_gcode BED_TMP=[first_layer_bed_temperature] EXT_TMP=[first_layer_temperature] CHAMBER_COOLING=[chamber_temperature] CHAMBER_MIN_TMP=[chamber_minimal_temperature]
 ```
 
